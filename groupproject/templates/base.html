@@ -1,0 +1,35 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>She Who Codes</title>
+        <meta name="description" content="">
+        <meta name="author" content="Pilbara Plus Cohort 2021">
+        <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet"> 
+        <!-- change font to suit project -->
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+        {% block stylesheets %}{%endblock %}
+    </head>
+
+    <body>
+        <header>
+            <div id="header-text">
+                <a id="header-link" href="{% url 'news:index' %}">
+                    <h1>Title</h1>
+                    <p class="header_paragraph">Subtitle</p>
+                </a>
+            </div>
+            {% include './nav.html' %}<!-- includes nav on every page -->
+        </header>
+
+        <!-- content blocks here -->
+        <div id ="container"> {% block content %}{% endblock %}</div>
+    </body>
+
+        <footer>
+            {% include '/footer.html' %}<!-- includes footer on every page -->
+        </footer>
+</html>
