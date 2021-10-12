@@ -3,14 +3,36 @@
 
   {% block content %}
 
-  
   <div id="KPI-counter"> 
     KPI Counter 
   </div>
-  <div>
-    Button 
+  
+  <div id="Heatmap-filter-buttons">
+    
+  </div>
+  
+  <div id="Heatmap">
+    HEATMAP
   </div>
 
+<div>
+  <div id="panel-pathways">
+    <h3>Pathways</h3>
+    <p>paragraph text</p>
+    <a id="pathways_container_button" href="">Find out more</a>
+  </div>
 
+  <div id="panel-alumni">
+    <h3>Alumni</h3>
+    <p>paragraph text</p>
+    <a id="alumni_container_button" href="{% url 'swc:alumni' %}">Find out more</a>
+  </div>
+
+  <div id="panel-sponsors">
+    <h3>Partner with us</h3>
+    <p>paragraph text</p>
+    <a id="sponsors_container_button" href="{% url 'swc:sponsors' %}">Find out more</a>
+  </div>
+</div>
 
   {% endblock %}
