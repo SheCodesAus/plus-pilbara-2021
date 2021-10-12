@@ -12,6 +12,9 @@ def alumni (request):
 def sponsors (request):
     return HttpResponse("You're looking at question.")
 
+def pathways (request):
+    return HttpResponse("You're looking at question.")
+
 def stats (request):
     return HttpResponse("You're voting on the question.")
 
