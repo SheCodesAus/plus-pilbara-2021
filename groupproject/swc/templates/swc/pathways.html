@@ -1,9 +1,42 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block stylesheets %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}"> -->
+{% endblock %}
+
 {% block content %}
 
+
+
 <!-- Enter page content -->
+
+<h1>Pathways - Learners Page</h1>
+
+<!-- insert graph of participants in programs past, present and future -->
+<div id="pathways-graph"> 
+    <img src="{{ static... }}">
+</div>
+
+<div id="pathway">
+    <div class="pathway-boxes" id="workshop">
+        <h2>Workshop</h2>
+    </div>
+    <div class="pathway-boxes" id="flash">
+        <h2>Flash</h2>
+    </div>
+    <div class="pathway-boxes" id="plus">
+        <h2>Plus</h2>
+    </div>
+    <div class="pathway-boxes" id="internship">
+        <h2>Internship</h2>
+    </div>
+    <div class="pathway-boxes" id="mentor">
+        <h2>Mentor</h2>
+    </div>
+</div>
+
+
 
 
 {% endblock %}
