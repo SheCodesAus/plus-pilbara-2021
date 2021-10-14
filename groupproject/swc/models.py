@@ -1,10 +1,13 @@
 from django.db import models
 from django.db.models import fields
+from django.db.models.deletion import CASCADE
 
 
 class Location(models.Model):
     region = models.CharField(max_length=30)
     state = models.CharField(max_length=5)
+    def __unicode__(self):
+        return self.region + " / " + self.state
 
 class Language(models.Model):
     name = models.CharField(max_length=50)

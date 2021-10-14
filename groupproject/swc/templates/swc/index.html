@@ -10,5 +10,13 @@
   {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
   <p>cats cats cats</p>
   {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+  {% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="submit">
+  </form>
+  {% endblock %}
+
 </body>
 </html>
