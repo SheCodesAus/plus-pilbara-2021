@@ -6,22 +6,27 @@ from django.db.models.deletion import CASCADE
 class Location(models.Model):
     region = models.CharField(max_length=30)
     state = models.CharField(max_length=5)
-    def __unicode__(self):
+    def __str__(self):
         return self.region + " / " + self.state
 
 class Language(models.Model):
     name = models.CharField(max_length=50)
+    def __str__(self):
+        return self.name 
 
 class Course(models.Model):
     program = models.CharField(max_length=50)
     date_started = models.DateTimeField()
     date_completed = models.DateTimeField()
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.program + " - " + self.location.region
+
 
 class Participant(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    age = models.IntegerField(max_length=5)
+    age = models.IntegerField()
     gender = models.CharField(max_length=30)
     home_location = models.CharField(max_length=100)
     phone = models.CharField(max_length=30)
@@ -30,13 +35,17 @@ class Participant(models.Model):
     bio = models.TextField()
     tech_life_balance = models.CharField(max_length=30)
     in_mentor = models.CharField(max_length=30)  
-    language = models.ManyToManyField(Language )
+    language = models.ManyToManyField(Language)
+    def __str__(self):
+        return self.first_name + " "+ self.last_name
 
 class Schedule(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    language = models.ForeignKey(Language, on_delete=models.CASCADE)
+    course = models.ManyToManyField(Course)
+    language = models.ManyToManyField(Language)
     date = models.DateTimeField()
+    def __str__(self):
+        return self.location.region 
 
 
 
