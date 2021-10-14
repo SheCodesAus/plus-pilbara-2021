@@ -1,6 +1,20 @@
 from django.db import models
 from django.db.models import fields
 
+
+class Location(models.Model):
+    region = models.CharField(max_length=30)
+    state = models.CharField(max_length=5)
+
+class Language(models.Model):
+    name = models.CharField(max_length=50)
+
+class Course(models.Model):
+    program = models.CharField(max_length=50)
+    date_started = models.DateTimeField()
+    date_completed = models.DateTimeField()
+    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+
 class Participant(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
@@ -10,42 +24,16 @@ class Participant(models.Model):
     phone = models.CharField(max_length=30)
     email = models.CharField(max_length=30)
     profile_pic = models.URLField()
-    bio = models.TextField(max_length=500)
+    bio = models.TextField()
     tech_life_balance = models.CharField(max_length=30)
-    in_mentor = models.CharField(max_length=30)
-
-class Course(models.Model):
-    program = models.CharField(max_length=50)
-    date_started = models.DateTimeField()
-    date_completed = models.DateTimeField()
-    location = models.CharField(max_length=50)
-
-class Paticipant_Course(models.Model):
-    participation = models.CharField(max_length=50)
-    Courses = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
-
-class Location(models.Model):
-    region = models.CharField(max_length=30)
-    state = models.CharField(max_length=5)
-
-class Language(models.Model):
-    name = models.CharField(max_length=50)
-
-class Participant_language(models.Model):
-    Languages = models.CharField(max_length=50)
-    participant = models.CharField(max_length=200)
+    in_mentor = models.CharField(max_length=30)  
+    language = models.ManyToManyField(Language )
 
 class Schedule(models.Model):
-    location = models.CharField(max_length=50))
-    Courses = models.CharField(max_length=200)
-    Languages = models.IntegerField(default=0)
-    date = models.CharField(max_length=30)
-
-
-    
-
-
+    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    language = models.ForeignKey(Language, on_delete=models.CASCADE)
+    date = models.DateTimeField()
 
 
 

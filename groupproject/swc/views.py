@@ -1,26 +1,23 @@
 from django.shortcuts import render
-from .models import Question
+from .models import Location, Language, Course, Participant, Schedule
 
 def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    context = {'latest_question_list': latest_question_list}
-    return render(request, 'swc/index.html', context)
+    return render(request, 'swc/index.html')
 
 def alumni (request):
-    return HttpResponse("You're looking at question.")
+    return render(request, 'swc/index.html')
 
 def sponsors (request):
-    return HttpResponse("You're looking at question.")
+    return render(request, 'swc/index.html')
 
 def stats (request):
-    return HttpResponse("You're voting on the question.")
+    return render(request, 'swc/index.html')
 
-def detail(request, question_id):
-    return HttpResponse("You're looking at question %s." % question_id)
+# def detail(request):
+#     return render(request, 'swc/index.html')
 
-def results(request, question_id):
-    response = "You're looking at the results of question %s."
-    return HttpResponse(response % question_id)
+# def results(request, question_id):
+#     return render(request, 'swc/index.html')
 
-def vote(request, question_id):
-    return HttpResponse("You're voting on question %s." % question_id)
+# def vote(request, question_id):
+#     return render(request, 'swc/index.html')
