@@ -16,15 +16,6 @@ def sponsors (request):
 def stats (request):
     return render(request, 'swc/index.html')
 
-# def detail(request):
-#     return render(request, 'swc/index.html')
-
-# def results(request, question_id):
-#     return render(request, 'swc/index.html')
-
-# def vote(request, question_id):
-#     return render(request, 'swc/index.html')
-
 class AddLocationView(Generic.CreateView):
     form_class = LocationForm
     context_object_name = 'locationForm'
