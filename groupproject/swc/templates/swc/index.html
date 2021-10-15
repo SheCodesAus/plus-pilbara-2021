@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
-  {% block content %}
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'swc/index.css' %}">
+{% endblock %}
+
+{% block content %}
 
   <div id="KPI-counter"> 
     KPI Counter 
@@ -15,23 +19,23 @@
     HEATMAP
   </div>
 
-<div>
-  <div id="panel-pathways">
-    <h3>Pathways</h3>
-    <p>paragraph text</p>
-    <a id="pathways_container_button" href="">Find out more</a>
+<div class="container-1">
+  <div class="panel-pathways">
+    <h3 class="panel-title">Pathways</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, qui animi? Veniam consequuntur, expedita non, fugiat labore dolore culpa ullam, ipsum est doloremque optio reiciendis.</p>
+    <a class="Panel_button" href="url 'swc:pathways' ">Find out more</a>
   </div>
 
-  <div id="panel-alumni">
-    <h3>Alumni</h3>
-    <p>paragraph text</p>
-    <a id="alumni_container_button" href="{% url 'swc:alumni' %}">Find out more</a>
+  <div class="panel-alumni">
+    <h3 class="panel-title">Alumni</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea non fugit quisquam optio sed iste quidem quam libero doloribus magni natus, eius, nobis hic adipisci.</p>
+    <a class="Panel_button" href="{% url 'swc:alumni' %}">Find out more</a>
   </div>
 
-  <div id="panel-sponsors">
-    <h3>Partner with us</h3>
-    <p>paragraph text</p>
-    <a id="sponsors_container_button" href="{% url 'swc:sponsors' %}">Find out more</a>
+  <div class="panel-sponsors">
+    <h3 class="panel-title">Partner with us</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nam, officia architecto suscipit assumenda molestiae tempore consectetur minus rem voluptatem illum exercitationem unde vero nemo.</p>
+    <a class="Panel_button" href="{% url 'swc:sponsors' %}">Find out more</a>
   </div>
 </div>
 
