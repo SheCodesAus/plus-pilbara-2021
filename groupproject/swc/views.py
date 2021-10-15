@@ -1,29 +1,31 @@
+from typing import Generic
 from django.shortcuts import render
-from .models import Question
+from django.views.generic import DetailView, ListView
+from django.urls import reverse_lazy
+from .models import Location, Language, Course, Participant, Schedule
 
 def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    context = {'latest_question_list': latest_question_list}
-    return render(request, 'swc/index.html', context)
+    return render(request, 'swc/index.html')
 
 def alumni (request):
-    return HttpResponse("You're looking at question.")
+    return render(request, 'swc/alumni.html')
 
 def sponsors (request):
-    return HttpResponse("You're looking at question.")
+    return render(request, 'swc/index.html')
 
 def pathways (request):
     return HttpResponse("You're looking at question.")
 
 def stats (request):
-    return HttpResponse("You're voting on the question.")
+    return render(request, 'swc/index.html')
 
-def detail(request, question_id):
-    return HttpResponse("You're looking at question %s." % question_id)
+# class AddLocationView(Generic.CreateView):
+#     form_class = LocationForm
+#     context_object_name = 'locationForm'
+#     template_name = 'swc/index.html'
+#     success_url = reverse_lazy('swc:index')
 
-def results(request, question_id):
-    response = "You're looking at the results of question %s."
-    return HttpResponse(response % question_id)
-
-def vote(request, question_id):
-    return HttpResponse("You're voting on question %s." % question_id)
+class AlumniView(DetailView):
+    model = Participant
+    template_name = 'swc/alumni.html'
+    context_object_name = 'story'
