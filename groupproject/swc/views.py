@@ -13,6 +13,9 @@ def alumni (request):
 def sponsors (request):
     return render(request, 'swc/index.html')
 
+def pathways (request):
+    return HttpResponse("You're looking at question.")
+
 def stats (request):
     return render(request, 'swc/index.html')
 
