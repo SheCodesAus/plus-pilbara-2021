@@ -37,18 +37,23 @@ class Location(models.Model):
 
 class Language(models.Model):
     name = models.CharField(max_length=50)
+    constraned_by = models.CharField(max_length=50)
     def __str__(self):
         return self.name 
 
 class Course(models.Model):
     program = models.CharField(max_length=50)
+    language = models.ManyToManyField(Language)
     date_started = models.DateTimeField()
     date_completed = models.DateTimeField()
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     def __str__(self):
         return self.program
 
-
+class Completion_status(models.Model):
+    course = models.ManyToManyField(Course)
+    completion_date = models.DateTimeField()
+    completion_result = models.CharField(max_length=50)
 
 class Participant(models.Model):
     first_name = models.CharField(max_length=50)
@@ -63,6 +68,7 @@ class Participant(models.Model):
     tech_life_balance = models.CharField(max_length=30)
     in_mentor = models.CharField(max_length=30) 
     course = models.ManyToManyField(Course)
+    completion = models.ManyToManyField(Completion_status)
     language = models.ManyToManyField(Language)
     def __str__(self):
         return self.first_name
@@ -71,7 +77,7 @@ class Schedule(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     course = models.ManyToManyField(Course)
     language = models.ManyToManyField(Language)
-    date = models.DateTimeField()
+    start_date = models.DateTimeField()
     def __str__(self):
         return self.location.region 
 
@@ -81,6 +87,7 @@ class Sponsors(models.Model):
     sponsor_tier = models.CharField(max_length=5, choices=SPONSOR_TIER)
     def __str__(self):
         return self.sponsor_name
+
 
 
 
