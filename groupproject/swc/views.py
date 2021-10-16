@@ -26,3 +26,4 @@ class AlumniView(DetailView):
     model = Participant
     template_name = 'swc/alumni.html'
     context_object_name = 'story'
+
