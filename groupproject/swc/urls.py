@@ -2,6 +2,7 @@ from os import name
 from django.urls import path
 from django.urls.resolvers import URLPattern
 from . import views
+from swc.views import AlumniView
 
 app_name = 'swc'
 
@@ -16,6 +17,8 @@ urlpatterns = [
     # path('<int:question_id>/', views.detail, name='detail'),
     # path('<int:question_id>/results/', views.results, name='results'),
     # path('<int:question_id>/vote/', views.vote, name='vote'),
+    path('add-participant/', views.AddParticipantView.as_view(), name='participantView')
+    
 ]
 
 

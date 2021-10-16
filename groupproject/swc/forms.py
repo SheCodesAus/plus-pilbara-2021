@@ -1,14 +1,8 @@
 from django import forms
-from django.forms import ModelForm
-from .models import Location, Language, Course, Participant, Schedule
+from django.forms import ModelForm, fields, models
+from .models import Location, Language, Course, Participant, Schedule, Sponsors, Completion_status
 
-# class LocationForm(ModelForm):
-#     class Meta:
-#         model = Location
-#         fields = ['State', 'Region']
-
-#     def __init__(self,*args, **kwargs):
-#         super(LocationForm, self).__init__(*args, **kwargs)
-#         self.fields['title']({'class': 'title_class'})
-
-
+class ParticipantForm(ModelForm):
+    class Meta:
+        model = Participant
+        fields = ['first_name','last_name','age','gender','home_location','phone','email','profile_pic','bio','tech_life_balance','in_mentor','course','completion','language']

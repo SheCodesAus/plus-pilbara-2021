@@ -55,6 +55,7 @@ class Completion_status(models.Model):
     completion_date = models.DateTimeField()
     completion_result = models.CharField(max_length=50)
 
+
 class Participant(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
