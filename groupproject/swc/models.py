@@ -54,6 +54,8 @@ class Completion_status(models.Model):
     course = models.ManyToManyField(Course)
     completion_date = models.DateTimeField()
     completion_result = models.CharField(max_length=50)
+    def __str__(self):
+        return self.completion_result
 
 
 class Participant(models.Model):
