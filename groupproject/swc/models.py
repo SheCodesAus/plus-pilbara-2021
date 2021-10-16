@@ -61,7 +61,8 @@ class Participant(models.Model):
     profile_pic = models.URLField()
     bio = models.TextField()
     tech_life_balance = models.CharField(max_length=30)
-    in_mentor = models.CharField(max_length=30)  
+    in_mentor = models.CharField(max_length=30) 
+    course = models.ManyToManyField(Course)
     language = models.ManyToManyField(Language)
     def __str__(self):
         return self.first_name
