@@ -9,6 +9,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('alumni/', views.alumni, name='alumni'),
     path('sponsors/', views.sponsors, name='sponsors'),
+    path('pathways/', views.pathways, name='pathways'),
     path('stats/', views.stats, name='stats'),
     # path('add-location/', views.AddLocationView.as_view(), name='locationView'),
     path('<int:pk>/', views.AlumniView.as_view(), name='story'),
