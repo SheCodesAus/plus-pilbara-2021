@@ -2,12 +2,38 @@ from django.db import models
 from django.db.models import fields
 from django.db.models.deletion import CASCADE
 
+GENDER_CHOICES = [
+('F','Female'),
+('M','Male'),
+('N','Non-Binary'),
+('O','Other'),
+]
+
+STATE_CHOICES = [
+('WA','WESTERN AUST'),
+('QLD','QUEENSLAND'),
+('NT','NORTHERN TERRITORY'),
+('ACT','AUST CAPITAL TERRITORY'),
+('SA','SOUTH AUST'),
+('NSW','NEW SOUTH WALES'),
+('VIC','VICTORIA'),
+('EXT','EXTERNAL TERRITORIES'),
+]
+
+SPONSOR_TIER = [
+('PL','PLATNIUM'),
+('G','GOLD'),
+('S','SILVER'),
+('B','BRONZE'),
+]
 
 class Location(models.Model):
-    region = models.CharField(max_length=30)
-    state = models.CharField(max_length=5)
+    state = models.CharField(max_length=5, choices=STATE_CHOICES)
+    region = models.CharField(max_length=300)
+    long = models.FloatField()
+    lat = models.FloatField()
     def __str__(self):
-        return self.region + " / " + self.state
+        return self.state
 
 class Language(models.Model):
     name = models.CharField(max_length=50)
@@ -20,20 +46,15 @@ class Course(models.Model):
     date_completed = models.DateTimeField()
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     def __str__(self):
-        return self.program + " - " + self.location.region
+        return self.program
 
-GENDER_CHOICES = [
-('F','Female'),
-('M','Male'),
-('N','Non-Binary'),
-('O','Other'),
-]
+
 
 class Participant(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     age = models.IntegerField()
-    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    gender = models.CharField(max_length=5, choices=GENDER_CHOICES)
     home_location = models.CharField(max_length=100)
     phone = models.CharField(max_length=30)
     email = models.CharField(max_length=30)
@@ -43,7 +64,7 @@ class Participant(models.Model):
     in_mentor = models.CharField(max_length=30)  
     language = models.ManyToManyField(Language)
     def __str__(self):
-        return self.first_name + " "+ self.last_name + self.gender
+        return self.first_name
 
 class Schedule(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
@@ -52,6 +73,14 @@ class Schedule(models.Model):
     date = models.DateTimeField()
     def __str__(self):
         return self.location.region 
+
+class Sponsors(models.Model):
+    sponsor_name = models.CharField(max_length=50)
+    logo_url = models.URLField()
+    sponsor_tier = models.CharField(max_length=5, choices=SPONSOR_TIER)
+    def __str__(self):
+        return self.sponsor_name
+
 
 
 
