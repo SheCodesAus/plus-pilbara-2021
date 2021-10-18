@@ -7,8 +7,8 @@ import json
 
 def index(request):
     data =  {
-      "WA": 120,
-      "NSW": 40,
+      "Western Australia": 120,
+      "New South Wales": 40,
     }
     json_data = json.dumps(data)
     context = { "jsonData": json_data }

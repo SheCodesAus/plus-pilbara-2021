@@ -44,13 +44,14 @@ const drawMap = function() {
 	}
 
 	function style(feature) {
+    const number = statedata[feature.properties.STATE_NAME];
 		return {
 			weight: 2,
 			opacity: 1,
 			color: 'white',
 			dashArray: '3',
 			fillOpacity: 0.7,
-			fillColor: getColor(feature.properties.density)
+			fillColor: getColor(number)
 		};
 	}
 
@@ -95,7 +96,7 @@ const drawMap = function() {
 		onEachFeature: onEachFeature
 	}).addTo(map);
 
-	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+	// map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
 
 	var legend = L.control({position: 'bottomright'});
