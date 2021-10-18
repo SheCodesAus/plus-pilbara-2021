@@ -3,9 +3,16 @@ from django.shortcuts import render
 from django.views.generic import DetailView, ListView
 from django.urls import reverse_lazy
 from .models import Location, Language, Course, Participant, Schedule
+import json
 
 def index(request):
-    return render(request, 'swc/index.html')
+    data =  {
+      "WA": 120,
+      "NSW": 40,
+    }
+    json_data = json.dumps(data)
+    context = { "jsonData": json_data }
+    return render(request, 'swc/index.html', context)
 
 def alumni (request):
     return render(request, 'swc/alumni.html')
