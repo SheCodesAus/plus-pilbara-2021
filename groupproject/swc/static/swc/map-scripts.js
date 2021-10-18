@@ -23,8 +23,8 @@ const drawMap = function() {
 	};
 
 	info.update = function (props) {
-		this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-			'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+		this._div.innerHTML = '<h4>Australian SheCodes Participants</h4>' +  (props ?
+			'<b>' + STATE_NAME + '</b><br />' + number + 'SheCodes Participants'
 			: 'Hover over a state');
 	};
 
@@ -33,14 +33,14 @@ const drawMap = function() {
 
 	// get color depending on population density value
 	function getColor(d) {
-		return d > 1000 ? '#800026' :
-				d > 500  ? '#BD0026' :
-				d > 200  ? '#E31A1C' :
-				d > 100  ? '#FC4E2A' :
-				d > 50   ? '#FD8D3C' :
-				d > 20   ? '#FEB24C' :
-				d > 10   ? '#FED976' :
-							'#FFEDA0';
+		return d > 1000 ? '#6e016b':
+				d > 500  ? '#88419d':
+				d > 200  ? '#8c6bb1' :
+				d > 100  ? '#8c96c6':
+				d > 50   ? '#9ebcda' :
+				d > 20   ? '#bfd3e6' :
+				d > 10   ? '#e0ecf4' :
+                '#f7fcfd';
 	}
 
 	function style(feature) {

@@ -6,11 +6,20 @@ from .models import Location, Language, Course, Participant, Schedule
 import json
 
 def index(request):
-    data =  {
-      "Western Australia": 120,
+    Shecode_statedata =  {
+      "Western Australia": 1500,
+      "Northern Territory": 0,
+      "South Australia": 150,
+      "Queensland": 600,
       "New South Wales": 40,
+      "Australian Capital Territory":60,
+      "Victoria":250,
+      "Tasmania": 30,
+      
+
+
     }
-    json_data = json.dumps(data)
+    json_data = json.dumps(Shecode_statedata)
     context = { "jsonData": json_data }
     return render(request, 'swc/index.html', context)
 
