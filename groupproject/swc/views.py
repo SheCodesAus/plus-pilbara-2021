@@ -7,8 +7,6 @@ from .forms import ParticipantForm
 def index(request):
     return render(request, 'swc/index.html')
 
-def alumni (request):
-    return render(request, 'swc/alumni.html')
 
 def sponsors (request):
     return render(request, 'swc/index.html')
@@ -25,10 +23,10 @@ def stats (request):
 #     template_name = 'swc/index.html'
 #     success_url = reverse_lazy('swc:index')
 
-class AlumniView(generic.DetailView):
+class AlumniView(generic.ListView):
     model = Participant
     template_name = 'swc/participant.html'
-    context_object_name = 'story'
+    context_object_name = 'participants'
 
 class AddParticipantView(generic.CreateView):
     form_class = ParticipantForm
