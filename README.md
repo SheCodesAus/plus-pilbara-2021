@@ -19,4 +19,4 @@ python3 manage.py loaddata participant
 6. Schedule
 python3 manage.py loaddata schedule
 7. Sponsors
-python3 manage.py loaddata sponsor
+python3 manage.py loaddata sponsors

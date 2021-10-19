@@ -1,14 +1,10 @@
 <div class="sponsor-card" id="sponsor-card-{{ position }}">
-    <a href="">
         {% if position < 5 %}
             <img src="{{ sponsor.logo_url }}">
         {% else %}
             <img src="{{ sponsor.logo_url }}">
         {% endif %}
         <div class="sponsor-card-text">
-            <h3>{{ sponsor.title }}</h3>
-            <h4>{{ sponsor.author }}</h4>
-            <h4>{{ sponsor.pub_date }}</h4>
+            <h3>{{ sponsor.sponsor_name }}</h3>
         </div>
-    </a>
 </div>

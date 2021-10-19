@@ -9,12 +9,18 @@
 
 <div>
     <div id="participants-block">
-        <div class="square">
-        <img></img>
+        <div class="block">
+            <img src=https://i.stack.imgur.com/y9DpT.jpg></img>
         </div>
     </div>
-    <div></div>
-    <div></div>
+    <div id="location-block">
+        <div class="block">
+            <img src=https://i.stack.imgur.com/y9DpT.jpg></img>
+    </div>
+    <div id="course-block">
+        <div class="block">
+            <img src=https://i.stack.imgur.com/y9DpT.jpg></img>
+    </div>
 </div>
 
 <div id="sponsor-heatmap">
@@ -25,7 +31,6 @@
     <h2>PR SECTION - I.E OUR SPONSORS</h2>
     {% for sponsor in sponsors %}
     
-    <!-- add for look - look at sc news for this on the index page -->
     <p>{{ sponsor.id }}</p>
 
     {% include "swc/sponsorCard.html" with sponsor=sponsor position=forloop.counter %}
