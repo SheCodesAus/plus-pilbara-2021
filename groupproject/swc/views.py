@@ -11,7 +11,7 @@ def index(request):
 def sponsors (request):
     return render(request, 'swc/index.html')
 
-class PathwaysView(generic.ListView):
+class PathwaysView(generic.TemplateView):
     template_name = 'swc/pathways.html'
 
 def stats (request):
