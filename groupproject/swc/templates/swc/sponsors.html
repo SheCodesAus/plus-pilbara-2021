@@ -7,17 +7,29 @@
 
 {% block content %}
 
-<h1>Our Sponsors</h1>
-        <div id="sponsor-wrapper">
-            {% for sponsor in sponsors %}
-            
-            <!-- add for look - look at sc news for this on the index page -->
-            <p>{{ sponsor.id }}</p>
+<div>
+    <div id="participants-block">
+        <img></img>
+    </div>
+    <div></div>
+    <div></div>
+</div>
 
-            {% include "swc/sponsorCard.html" with sponsor=sponsor position=forloop.counter %}
+<div id="sponsor-heatmap">
+    <h2>HEATMAP GOES HERE</h2>
+    <div class="square"></div>
+</div>
+<div id="sponsor-wrapper">
+    <h2>PR SECTION - I.E OUR SPONSORS</h2>
+    {% for sponsor in sponsors %}
+    
+    <!-- add for look - look at sc news for this on the index page -->
+    <p>{{ sponsor.id }}</p>
 
-            {% endfor %}
-        </div>
+    {% include "swc/sponsorCard.html" with sponsor=sponsor position=forloop.counter %}
+
+    {% endfor %}
+</div>
 
 <!-- Enter page content -->
 
