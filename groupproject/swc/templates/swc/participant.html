@@ -11,7 +11,11 @@
     <body>
 <h1>Participant page</h1>
         <div id="story-wrapper">
-            <p>{% 'swc:story' story.id %}</p>
+            {% for person in participants %}
+            
+            <!-- add for look - look at sc news for this on the index page -->
+            <p>{{ person.id }}</p>
+            {% endfor %}
         </div>
 
 

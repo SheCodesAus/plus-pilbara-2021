@@ -8,7 +8,7 @@ app_name = 'swc'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('alumni/', views.alumni, name='alumni'),
+    path('participant/', views.AlumniView.as_view(), name='partipant'),
     path('sponsors/', views.sponsors, name='sponsors'),
     path('pathways/', views.pathways, name='pathways'),
     path('stats/', views.stats, name='stats'),
