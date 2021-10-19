@@ -25,7 +25,7 @@ def stats (request):
 
 class AlumniView(generic.ListView):
     model = Participant
-    template_name = 'swc/participant.html'
+    template_name = 'swc/alumni.html'
     context_object_name = 'participants'
 
 class AddParticipantView(generic.CreateView):
