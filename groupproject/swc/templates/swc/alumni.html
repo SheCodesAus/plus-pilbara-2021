@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
-<h1>{{ story.first_name }}</h1>
-
 {% block content %}
 
-<!-- Enter page content -->
-
+<h1>Participant page</h1>
+        <div id="story-wrapper">
+            {% for person in participants %}
+            
+            <!-- add for look - look at sc news for this on the index page -->
+            <p>{{ person.id }}</p>
+            {% endfor %}
+        </div>
 
 {% endblock %}
