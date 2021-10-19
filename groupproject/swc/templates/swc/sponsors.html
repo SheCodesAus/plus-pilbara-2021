@@ -3,6 +3,18 @@
 
 {% block content %}
 
+<h1>Our Sponsors</h1>
+        <div id="sponsor-wrapper">
+            {% for sponsor in sponsors %}
+            
+            <!-- add for look - look at sc news for this on the index page -->
+            <p>{{ sponsor.id }}</p>
+
+            {% include "swc/sponsorCard.html" with sponsor=sponsor position=forloop.counter %}
+
+            {% endfor %}
+        </div>
+
 <!-- Enter page content -->
 
 

@@ -1,15 +1,12 @@
 from django.views import generic
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from .models import Location, Language, Course, Participant, Schedule
+from .models import Location, Language, Course, Participant, Schedule, Sponsors
 from .forms import ParticipantForm
 
 def index(request):
     return render(request, 'swc/index.html')
 
-
-def sponsors (request):
-    return render(request, 'swc/index.html')
 
 def pathways (request):
     return HttpResponse("You're looking at question.")
@@ -33,3 +30,9 @@ class AddParticipantView(generic.CreateView):
     context_object_name = 'participantForm'
     template_name = 'swc/createParticipant.html'
     success_url = reverse_lazy('swc:index')
+
+
+class SponsorView(generic.ListView):
+    model = Sponsors
+    template_name = 'swc/sponsors.html'
+    context_object_name = 'sponsors'
