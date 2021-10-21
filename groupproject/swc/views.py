@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from .models import Location, Language, Course, Participant, Schedule, Sponsors
 from .forms import ParticipantForm
+from django.db.models import Avg, aggregates
 
 
 class IndexView(generic.ListView):
@@ -34,5 +35,5 @@ class SponsorView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['number'] = 100
+        context['number'] = Participant.objects.all().aggregate(Avg('age'))['age__avg']
         return context
