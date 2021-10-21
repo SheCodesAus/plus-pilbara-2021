@@ -1,9 +1,59 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block stylesheets %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'swc/sponsors.css' %}">
+{% endblock %}
 
 {% block content %}
 
+<h1 class="page-title">{{ number }}</h1>
+<div class="path">{{ path }}</div>
+
+<div id="hero-container">
+    <div id="participants-block">
+        <div class="block">
+            <img src="https://i.stack.imgur.com/y9DpT.jpg" alt="image" style="width:100%;"></img>
+            <div class="text-block">
+                <h4> {{ sponsor.id|length }} </h4>
+                <p>What a beautiful sunrise</p>
+            </div>
+        </div>
+    </div>
+    <div id="location-block">
+        <div class="block">
+            <img src=https://i.stack.imgur.com/y9DpT.jpg></img>
+        </div>
+    </div>
+    <div id="course-block">
+        <div class="block">
+            <img src=https://i.stack.imgur.com/y9DpT.jpg></img>
+        </div>
+    </div>
+</div>
+<div>
+    <h2>This is a heading</h2>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button>Click me to hide paragraphs</button>
+</div>
+
+<div id="sponsor-heatmap">
+    <h2>HEATMAP GOES HERE</h2>
+    <div class="square"></div>
+</div>
+<div id="sponsor-wrapper">
+    <h2>PR SECTION - I.E OUR SPONSORS</h2>
+    {% for sponsor in sponsors %}
+
+    <p>{{ sponsor.id }}</p>
+
+    {% include "swc/sponsorCard.html" with sponsor=sponsor position=forloop.counter %}
+
+    {% endfor %}
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'swc/sponsors.js' %}"></script>
 <!-- Enter page content -->
-
-
 {% endblock %}

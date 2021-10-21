@@ -1,27 +1,20 @@
 from django.views import generic
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from .models import Location, Language, Course, Participant, Schedule
+from .models import Location, Language, Course, Participant, Schedule, Sponsors
 from .forms import ParticipantForm
-
-def index(request):
-    return render(request, 'swc/index.html')
+from django.db.models import Avg, aggregates
 
 
-def sponsors (request):
-    return render(request, 'swc/index.html')
+class IndexView(generic.ListView):
+    template_name = 'swc/index.html'
+    model = Participant
 
-def pathways (request):
-    return HttpResponse("You're looking at question.")
 
-def stats (request):
-    return render(request, 'swc/index.html')
-
-# class AddLocationView(Generic.CreateView):
-#     form_class = LocationForm
-#     context_object_name = 'locationForm'
-#     template_name = 'swc/index.html'
-#     success_url = reverse_lazy('swc:index')
+class PathwayView(generic.ListView):
+    model = Course
+    template_name = 'swc/pathways.html'
+    context_object_name = 'pathways'
 
 class AlumniView(generic.ListView):
     model = Participant
@@ -33,3 +26,14 @@ class AddParticipantView(generic.CreateView):
     context_object_name = 'participantForm'
     template_name = 'swc/createParticipant.html'
     success_url = reverse_lazy('swc:index')
+
+
+class SponsorView(generic.ListView):
+    model = Sponsors
+    template_name = 'swc/sponsors.html'
+    context_object_name = 'sponsors'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['number'] = Participant.objects.all().aggregate(Avg('age'))['age__avg']
+        return context
