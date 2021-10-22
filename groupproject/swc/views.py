@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from .models import Location, Language, Course, Participant, Schedule, Sponsors
 from .forms import ParticipantForm
-from django.db.models import Avg, aggregates
+from django.db.models import Avg, aggregates, Count
 
 
 class IndexView(generic.ListView):
@@ -38,6 +38,8 @@ class SponsorView(generic.ListView):
         context['number'] = Participant.objects.all().aggregate(Avg('age'))['age__avg']
         context['statsone'] = Participant.objects.count()
         context['stat'] = (context['statsone']/30)*100
+        context['industries'] = Participant.objects.aggregate(Count('tech_life_balance'))
+        context['upskilling'] = Participant.objects.filter(tech_life_balance__contains='working').count()
 
         return context 
 
