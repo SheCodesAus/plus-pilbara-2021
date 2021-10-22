@@ -37,7 +37,7 @@ class SponsorView(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['number'] = Participant.objects.all().aggregate(Avg('age'))['age__avg']
         context['statsone'] = Participant.objects.count()
-        context['stat'] = (context['statsone']/30000)*100
+        context['stat'] = (context['statsone']/30)*100
 
         return context 
 
