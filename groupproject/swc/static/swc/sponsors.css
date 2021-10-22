@@ -1,16 +1,34 @@
-img {
+.hero-img {
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+}
+
+.sponsor-img {
     max-height: 150px;
     max-width: 275px;
 }
 
 .square {
-    height: 50px;
-    width: 50px;
-    background-color: #555;
+    height: 250px;
+    width: 250px;
+    background-color: #bbb;
+    border-radius: 50%;
 }
+
+
+.hero-block {
+    height: 255px;
+    width: 255px;
+}
+
 
 .block {
     background-color: antiquewhite;
+    border-radius: 50%;
+    height: 235px;
+    width: 235px;
+
 }
 
 .sponsor-wrapper {

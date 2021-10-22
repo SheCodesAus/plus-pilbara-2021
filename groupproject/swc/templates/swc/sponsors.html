@@ -8,26 +8,30 @@
 {% block content %}
 
 <h1 class="page-title">{{ number }}</h1>
-<div class="path">{{ path }}</div>
+<div class="path">{{ statsone }}</div>
+
+<div class="meter">
+	<span style="width: {{ stat }}%"></span>
+</div>
 
 <div id="hero-container">
-    <div id="participants-block">
+    <div id="participants-block" class="hero-block">
         <div class="block">
-            <img src="https://i.stack.imgur.com/y9DpT.jpg" alt="image" style="width:100%;"></img>
+            <img class="hero-img" src="https://i.stack.imgur.com/y9DpT.jpg" alt="image"></img>
             <div class="text-block">
-                <h4> {{ sponsor.id|length }} </h4>
-                <p>What a beautiful sunrise</p>
+                <h4>{{ statsone }}</h4>
+                <p>Participants Through SheCodes</p>
             </div>
         </div>
     </div>
-    <div id="location-block">
+    <div id="location-block" class="hero-block">
         <div class="block">
-            <img src=https://i.stack.imgur.com/y9DpT.jpg></img>
+            <img class="hero-img" src=https://i.stack.imgur.com/y9DpT.jpg></img>
         </div>
     </div>
-    <div id="course-block">
+    <div id="course-block" class="hero-block">
         <div class="block">
-            <img src=https://i.stack.imgur.com/y9DpT.jpg></img>
+            <img class="hero-img" src=https://i.stack.imgur.com/y9DpT.jpg></img>
         </div>
     </div>
 </div>
