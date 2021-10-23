@@ -113,7 +113,7 @@ class Sponsors(models.Model):
 
 class KeyStatistics(models.Model):
     social_reach = models.IntegerField()
-    participation_traget = models.IntegerField()
+    participation_target = models.IntegerField()
 
 class ParticipantROI(models.Model):
     participant = models.ManyToManyField(Participant)

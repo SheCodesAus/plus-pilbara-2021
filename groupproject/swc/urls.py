@@ -11,7 +11,8 @@ urlpatterns = [
     path('alumni/', views.AlumniView.as_view(), name='participant'),
     path('sponsors/', views.SponsorView.as_view(), name='sponsors'),
     path('pathways/', views.PathwayView.as_view, name='pathways'),
-    path('add-participant/', views.AddParticipantView.as_view(), name='participantView')
+    path('add-participant/', views.AddParticipantView.as_view(), name='participantView'),
+    path('participant-interview/', views.ParticipantInterviewView.as_view(), name='participantInterview')
     
 ]
 

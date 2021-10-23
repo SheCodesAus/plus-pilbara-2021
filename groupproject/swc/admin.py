@@ -1,5 +1,5 @@
 from django.contrib import admin
-from swc.models import Location, Language, Course, Participant, Schedule, Sponsors, Completion_status, KeyStatistics, ParticipantROI
+from swc.models import Location, Language, Course, Participant, Schedule, Sponsors, Completion_status, KeyStatistics, ParticipantROI, SponsorROI
 
 class PaticipantAdmin(admin.ModelAdmin):
     list_display = ('first_name','last_name','email')
@@ -22,6 +22,11 @@ class SponsorsAdmin(admin.ModelAdmin):
 class Completion_statusAdmin(admin.ModelAdmin):
     list_display = ('completion_date', 'completion_result')
 
+class KeyStatisticsAdmin(admin.ModelAdmin):
+    list_display = ('social_reach', 'participation_target')
+
+class ParticipantROIAdmin(admin.ModelAdmin):
+    list_display = ('better_equipped', 'more_confident')
 
 admin.site.register(Language, LanguageAdmin)
 admin.site.register(Course, CourseAdmin)
@@ -29,7 +34,13 @@ admin.site.register(Participant, PaticipantAdmin)
 admin.site.register(Schedule, ScheduleAdmin)
 admin.site.register(Sponsors, SponsorsAdmin)
 admin.site.register(Location,LocationAdmin)
+admin.site.register(KeyStatistics, KeyStatisticsAdmin)
 admin.site.register(Completion_status, Completion_statusAdmin)
+admin.site.register(ParticipantROI, ParticipantROIAdmin)
+
+
+
+
 
 
 
