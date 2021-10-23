@@ -9,6 +9,7 @@ import json
 class IndexView(generic.ListView):
     template_name = 'swc/index.html'
     model = Participant
+
     
     def get_context_data(self, **kwargs):
         context= super().get_context_data(**kwargs)
@@ -25,6 +26,7 @@ class IndexView(generic.ListView):
 
         }
         json_data = json.dumps(Shecode_statedata)
+
         context["jsonData"]=json_data
 
 
