@@ -24,7 +24,7 @@ const drawMap = function() {
 
 	info.update = function (props) {
 		this._div.innerHTML = '<h4>Australian SheCodes Participants</h4>' +  (props ?
-			'<b>' + STATE_NAME + '</b><br />' + number + 'SheCodes Participants'
+			'<b>' + STATE_NAME + '</b><br />' + participant_number + 'SheCodes Participants'
 			: 'Hover over a state');
 	};
 
@@ -95,9 +95,6 @@ const drawMap = function() {
 		style: style,
 		onEachFeature: onEachFeature
 	}).addTo(map);
-
-	// map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
-
 
 	var legend = L.control({position: 'bottomright'});
 
