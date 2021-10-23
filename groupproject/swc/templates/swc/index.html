@@ -9,7 +9,7 @@
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
-  <script type="text/javascript"> const statedata = {{ jsonData | safe }}; </script>
+  <script type="text/javascript"> const statedata = "{{ jsonData | safe }}"; </script>
   <script type="text/javascript" src="{% static 'swc/states.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'swc/map-scripts.js' %}"></script>
  
@@ -45,7 +45,7 @@
   <div class="panel-alumni">
     <h3 class="panel-title">Alumni</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea non fugit quisquam optio sed iste quidem quam libero doloribus magni natus, eius, nobis hic adipisci.</p>
-    <a class="Panel_button" href="{% url 'swc:alumni' %}">Find out more</a>
+    <a class="Panel_button" href="{% url 'swc:participant' %}">Find out more</a>
   </div>
 
   <div class="panel-sponsors">

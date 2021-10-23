@@ -4,11 +4,29 @@ from django.urls import reverse_lazy
 from .models import Location, Language, Course, Participant, Schedule, Sponsors
 from .forms import ParticipantForm, ParticipantInterviewForm
 from django.db.models import Avg, aggregates, Count
-
+import json
 
 class IndexView(generic.ListView):
     template_name = 'swc/index.html'
     model = Participant
+    
+    def get_context_data(self, **kwargs):
+        context= super().get_context_data(**kwargs)
+        Shecode_statedata =  {
+        "Western Australia": 1500,
+        "Northern Territory": 0,
+        "South Australia": 150,
+        "Queensland": 600,
+        "New South Wales": 40,
+        "Australian Capital Territory":60,
+        "Victoria":250,
+        "Tasmania": 30,
+        
+
+        }
+        json_data = json.dumps(Shecode_statedata)
+        context["jsonData"]=json_data
+
 
 
 class PathwayView(generic.ListView):
