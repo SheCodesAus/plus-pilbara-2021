@@ -1,26 +1,47 @@
+from django.views import generic
 from django.shortcuts import render
-from .models import Question
+from django.urls import reverse_lazy
+from .models import Location, Language, Course, Participant, Schedule, Sponsors
+from .forms import ParticipantForm
+from django.db.models import Avg, aggregates, Count
 
-def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    context = {'latest_question_list': latest_question_list}
-    return render(request, 'swc/index.html', context)
 
-def alumni (request):
-    return HttpResponse("You're looking at question.")
+class IndexView(generic.ListView):
+    template_name = 'swc/index.html'
+    model = Participant
 
-def sponsors (request):
-    return HttpResponse("You're looking at question.")
 
-def stats (request):
-    return HttpResponse("You're voting on the question.")
+class PathwayView(generic.ListView):
+    model = Course
+    template_name = 'swc/pathways.html'
+    context_object_name = 'pathways'
 
-def detail(request, question_id):
-    return HttpResponse("You're looking at question %s." % question_id)
+class AlumniView(generic.ListView):
+    model = Participant
+    template_name = 'swc/alumni.html'
+    context_object_name = 'participants'
 
-def results(request, question_id):
-    response = "You're looking at the results of question %s."
-    return HttpResponse(response % question_id)
+class AddParticipantView(generic.CreateView):
+    form_class = ParticipantForm
+    context_object_name = 'participantForm'
+    template_name = 'swc/createParticipant.html'
+    success_url = reverse_lazy('swc:index')
 
-def vote(request, question_id):
-    return HttpResponse("You're voting on question %s." % question_id)
+
+class SponsorView(generic.ListView):
+    model = Sponsors
+    template_name = 'swc/sponsors.html'
+    context_object_name = 'sponsors'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['number'] = Participant.objects.all().aggregate(Avg('age'))['age__avg']
+        context['statsone'] = Participant.objects.count()
+        context['stat'] = (context['statsone']/30)*100
+        context['industries'] = Participant.objects.aggregate(Count('tech_life_balance'))
+        context['upskilling'] = Participant.objects.filter(tech_life_balance__contains='working').count()
+
+        return context 
+
+    
+

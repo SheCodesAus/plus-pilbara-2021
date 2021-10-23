@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!doctype html>
 
 <html lang="en">
@@ -17,7 +18,7 @@
     <body>
         <header>
             <div id="header-text">
-                <a id="header-link" href="{% url 'news:index' %}">
+                <a id="header-link" href="{% url 'swc:index' %}">
                     <h1>Title</h1>
                     <p class="header_paragraph">Subtitle</p>
                 </a>
@@ -27,9 +28,9 @@
 
         <!-- content blocks here -->
         <div id ="container"> {% block content %}{% endblock %}</div>
+        
+        {% include './footer.html' %}<!-- includes footer on every page -->
+
     </body>
 
-        <footer>
-            {% include '/footer.html' %}<!-- includes footer on every page -->
-        </footer>
 </html>

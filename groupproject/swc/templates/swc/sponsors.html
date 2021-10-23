@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block stylesheets %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'swc/sponsors.css' %}">
+{% endblock %}
 
 {% block stylesheets %}
 <!-- <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}"> -->
@@ -39,25 +43,66 @@
 
 {% block content %}
 
-<div class="container-bargraph">
+<h1 class="page-title">{{ number }}</h1>
+<div class="path">{{ statsone }}</div>
+<div id="target-tracker">
+    <div class="target">
+        <h2> Our 30k Target Progress </h2>
+    </div>
+    <div class="meter">
+        <span style="width: {{ stat }}%"></span>
+    </div>
 </div>
 
-<div class="container-testimonial">
+<div id="hero-container">
+    <div id="participants-block" class="hero-block">
+        <div class="block">
+            <div class="text-block">
+                <h4>{{ statsone }}</h4>
+                <p>Participants Through SheCodes</p>
+            </div>
+        </div>
+    </div>
+    <div id="location-block" class="hero-block">
+        <div class="block">
+            <div class="text-block">
+                <h4>{{ industries }}</h4>
+                <p>Industries SheCodes</p>
+            </div>
+        </div>
+    </div>
+    <div id="course-block" class="hero-block">
+        <div class="block">
+            <div class="text-block">
+                <h4>{{ upskilling }}</h4>
+                <p>Participants Upskilling Through SheCodes</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <h2>This is a heading</h2>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button>Click me to hide paragraphs</button>
 </div>
 
-<div class="container-piegraph">
+<div id="sponsor-heatmap">
+    <h2>HEATMAP GOES HERE</h2>
+    <div class="square"></div>
 </div>
+<div id="sponsor-wrapper">
+    <h2>PR SECTION - I.E OUR SPONSORS</h2>
+    {% for sponsor in sponsors %}
 
-<div class="container-heatmap">
+    <p>{{ sponsor.id }}</p>
+
+    {% include "swc/sponsorCard.html" with sponsor=sponsor position=forloop.counter %}
+
+    {% endfor %}
 </div>
-
-<div class="container-media">
-</div>
-
-<div class="container-languages">
-</div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'swc/sponsors.js' %}"></script>
 <!-- Enter page content -->
-
-
 {% endblock %}

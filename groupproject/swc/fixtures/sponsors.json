@@ -1,0 +1,47 @@
+[
+    {
+        "model": "swc.sponsors",
+        "pk": 1,
+        "fields": {
+            "sponsor_name": "PHCCI",
+            "logo_url": "https://shecodes.b-cdn.net/wp-content/uploads/2020/10/HighRes_Landscape.jpg",
+            "sponsor_tier": "G"
+        }
+    },
+    {
+        "model": "swc.sponsors",
+        "pk": 2,
+        "fields": {
+            "sponsor_name": "BHP",
+            "logo_url": "https://shecodes.b-cdn.net/wp-content/uploads/2020/10/bhp-orange-master-logo.jpg",
+            "sponsor_tier": "PL"
+        }
+    },
+    {
+        "model": "swc.sponsors",
+        "pk": 3,
+        "fields": {
+            "sponsor_name": "Web Business Hub",
+            "logo_url": "https://shecodes.b-cdn.net/wp-content/uploads/2020/10/HighRes_Landscape.jpg",
+            "sponsor_tier": "S"
+        }
+    },
+    {
+        "model": "swc.sponsors",
+        "pk": 4,
+        "fields": {
+            "sponsor_name": "Spacecubed",
+            "logo_url": "https://shecodes.b-cdn.net/wp-content/uploads/2021/01/Spacecubed_Landscape.jpg",
+            "sponsor_tier": "S"
+        }
+    },
+    {
+        "model": "swc.sponsors",
+        "pk": 5,
+        "fields": {
+            "sponsor_name": "VISAGIO",
+            "logo_url": "https://shecodes.b-cdn.net/wp-content/uploads/2021/01/Visagio_logo.png",
+            "sponsor_tier": "B"
+        }
+    }
+]
