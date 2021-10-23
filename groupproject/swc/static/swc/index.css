@@ -121,3 +121,72 @@ p {
     margin-right: 8px;
     opacity: 0.7;
 }
+
+
+
+
+/* Heatmap buttons */
+button {
+    width: 160px;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    position: relative;
+    float: left;
+}
+
+
+#allcourse-map{
+    color: #fff;
+    background-color: rgb(206, 164, 53);
+    border-color:rgb(206, 164, 53);
+}
+
+#One-day-map {
+    color: #fff;
+    background-color: rgb(212, 99, 151);
+    border-color: rgb(212, 99, 151);
+}
+
+
+#flash-map {
+    color: #fff;
+    background-color: rgb(167, 70, 144);
+    border-color: rgb(167, 70, 144);
+}
+
+#plus-map {
+    color: #fff;
+    background-color: rgb(119,46, 132);
+    border-color: rgb(119,46, 132);
+}
+
+
+#alumni-map {
+    color: #fff;
+    background-color: rgb(12, 18, 94);
+    border-color: rgb(12, 18, 94);
+}
+
+.btn-group>.btn:first-child(.btn-group) {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.btn-group>.btn:last-child(.btn-group) {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* //heatmap buttons */
+
