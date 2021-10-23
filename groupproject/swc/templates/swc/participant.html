@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>She Who Codes</title>
+          <meta name="description" content="Showcasing women in tech." />
+          <meta name="author" content="your name" />
+          <link rel="stylesheet" href="/stylesheets/styles.css" />
+    </head>
+    <body>
+<h1>Participant page</h1>
+        <div id="story-wrapper">
+            {% for person in participants %}
+            <p>{{ person.id }}</p>
+            {% endfor %}
+        </div>
+
+
+    </body>
+</html>

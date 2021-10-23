@@ -1,0 +1,13 @@
+[
+    {
+        "model": "swc.completion_status",
+        "pk": 1,
+        "fields": {
+            "completion_date": "2021-10-04T04:54:35Z",
+            "completion_result": "Pass",
+            "course": [
+                3
+            ]
+        }
+    }
+]

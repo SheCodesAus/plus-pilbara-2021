@@ -1,0 +1,126 @@
+[
+    {
+        "model": "swc.participant",
+        "pk": 1,
+        "fields": {
+            "first_name": "Sally",
+            "last_name": "Demo",
+            "age": 25,
+            "gender": "F",
+            "home_location": "Port Hedland",
+            "phone": "0891721234",
+            "email": "sally.demo@demo.com",
+            "profile_pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgdlxYLiVlvRbulHkg_aclH-P7ii4uFU3KvQ&usqp=CAU",
+            "bio": "Short bios are concise, biographical paragraphs that professionals use to introduce themselves. You can often find short bios on social media profiles, personal websites and company team directories. Short bios are typically used to provide a summary of an individual's accomplishments, an overview of their career history and a description of their professional goals.\r\n\r\nYour short bio is often the first (and perhaps only) thing a potential employer, client or contact will read before deciding to contact you, so it is important that your bio be accurate, informative and memorable. ItÆs a good idea to include:\r\n\r\nYour name\r\nYour current job title\r\nYour company name or personal brand statement\r\nYour hometown\r\nYour alma mater\r\nYour personal and professional goals\r\nA relevant achievement or accomplishment\r\nYour hobbies\r\nYour skills and areas of expertise\r\nShort bios are brief by definition so it is important to determine which of these topics is most important to make the best impression on your readers.",
+            "tech_life_balance": "interesting",
+            "in_mentor": "no",
+            "course": [
+                3
+            ],
+            "completion": [
+                1
+            ],
+            "language": [
+                2,
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "swc.participant",
+        "pk": 2,
+        "fields": {
+            "first_name": "Anika",
+            "last_name": "Rundle",
+            "age": 34,
+            "gender": "F",
+            "home_location": "Port Hedland",
+            "phone": "123456789",
+            "email": "anika@anika.com",
+            "profile_pic": "https://www.treehugger.com/thmb/jW7AJdxhmumgojTkEqtOMsThdmQ=/889x667/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2016__09__gecko-on-sand-e5f7facb4d8e4",
+            "bio": "A bio is a detailed description of someoneÆs life, professional background, education history, achievements, and skill set. Unlike a curriculum vitae, a bio presents a personÆs life by highlighting important aspects such as their unique skill set, details of their professional experience, notable projects they are involved in, and an analysis of their personality.",
+            "tech_life_balance": "Shift Work",
+            "in_mentor": "No",
+            "course": [
+                3,
+                4,
+                5
+            ],
+            "completion": [
+                1
+            ],
+            "language": [
+                1,
+                2,
+                3,
+                4,
+                7
+            ]
+        }
+    },
+    {
+        "model": "swc.participant",
+        "pk": 3,
+        "fields": {
+            "first_name": "Bob",
+            "last_name": "Smith",
+            "age": 28,
+            "gender": "N",
+            "home_location": "Albany",
+            "phone": "987654321",
+            "email": "Test@test.com",
+            "profile_pic": "https://cdn.shopify.com/s/files/1/0471/1464/9768/products/36505_b__21085_681x700.jpg?v=1615448729",
+            "bio": "So You've Been Asked to Submit a Biography\r\n\r\nIn a library, the word biography refers both to a kind of book and to a section where books of that kind are found. Each biography tells the story of a real person's life. A biography may be about someone who lived long ago, recently, or even someone who is still living, though in the last case it must necessarily be incomplete. The term autobiography refers to a biography written by the person it's about. Autobiographies are of course also necessarily incomplete.\r\n\r\nSometimes biographies are significantly shorter than a bookùsomething anyone who's been asked to submit a biography for, say, a conference or a community newsletter will be glad to know. Often the word in these contexts is shortened to bio, a term that can be both a synonym of biography and a term for what is actually a biographical sketch: a brief description of a person's life. These kinds of biographiesùbiosùvary, but many times they are only a few sentences long. Looking at bios that have been used in the same context can be a useful guide in determining what to put in your own.",
+            "tech_life_balance": "Full Time",
+            "in_mentor": "Yes",
+            "course": [
+                3
+            ],
+            "completion": [
+                1
+            ],
+            "language": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "swc.participant",
+        "pk": 4,
+        "fields": {
+            "first_name": "Tara",
+            "last_name": "Jones",
+            "age": 23,
+            "gender": "O",
+            "home_location": "Yanchep",
+            "phone": "456789123",
+            "email": "Tara.jones@email.com",
+            "profile_pic": "https://img.etimg.com/thumb/msid-60988845,width-1200,height-900,imgsize-99562,overlay-economictimes/photo.jpg",
+            "bio": "So You've Been Asked to Submit a Biography\r\n\r\nIn a library, the word biography refers both to a kind of book and to a section where books of that kind are found. Each biography tells the story of a real person's life. A biography may be about someone who lived long ago, recently, or even someone who is still living, though in the last case it must necessarily be incomplete. The term autobiography refers to a biography written by the person it's about. Autobiographies are of course also necessarily incomplete.\r\n\r\nSometimes biographies are significantly shorter than a bookùsomething anyone who's been asked to submit a biography for, say, a conference or a community newsletter will be glad to know. Often the word in these contexts is shortened to bio, a term that can be both a synonym of biography and a term for what is actually a biographical sketch: a brief description of a person's life. These kinds of biographiesùbiosùvary, but many times they are only a few sentences long. Looking at bios that have been used in the same context can be a useful guide in determining what to put in your own.",
+            "tech_life_balance": "Part time",
+            "in_mentor": "No",
+            "course": [
+                3,
+                4
+            ],
+            "completion": [
+                1
+            ],
+            "language": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        }
+    }
+]
