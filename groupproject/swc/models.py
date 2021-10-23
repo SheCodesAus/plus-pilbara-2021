@@ -27,6 +27,23 @@ SPONSOR_TIER = [
 ('B','BRONZE'),
 ]
 
+INDUSTRIES = [
+('M', 'MINING'),
+('AG', 'AGRICULTURE'),
+('MN', 'MINING'),
+('MF', 'MANUFACTURING'),
+('UT', 'UTILITIES'),
+('CS', 'CONSTRUCTION'),
+('AR', 'ARTS AND RECREATION'),
+('HC', 'HEALTH CARE'),
+('ED', 'EDUCATION AND TRAINING'),
+('PS', 'PROFESSIONAL SERVICES'),
+('RE', 'REAL ESTATE'),
+('TA', 'TOURISM AND ACCOMMODATION'),
+('IT', 'INFORMATION AND MEDIA'),
+('OT', 'OTHER'),
+]
+
 class Location(models.Model):
     state = models.CharField(max_length=5, choices=STATE_CHOICES)
     region = models.CharField(max_length=300)
@@ -73,6 +90,7 @@ class Participant(models.Model):
     course = models.ManyToManyField(Course)
     completion = models.ManyToManyField(Completion_status)
     language = models.ManyToManyField(Language)
+    industry = models.CharField(max_length=50, choices=INDUSTRIES)
     def __str__(self):
         return self.first_name
 

@@ -1,85 +1,4 @@
-#target-tracker {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-}
-
-.target {
-    grid-column-start: 2;
-    grid-column-end: 5;
-    max-width: 50%;
-}
-.hero-img {
-    height: 220px;
-    width: 220px;
-    border-radius: 50%;
-}
-
-.sponsor-img {
-    max-height: 150px;
-    max-width: 275px;
-}
-
-.square {
-    height: 250px;
-    width: 250px;
-    background-color: #bbb;
-    border-radius: 50%;
-}
-
-
-.hero-block {
-    height: 255px;
-    width: 255px;
-}
-
-
-.block {
-    background-color: antiquewhite;
-    border-radius: 50%;
-    height: 235px;
-    width: 235px;
-
-}
-
-.sponsor-wrapper {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-}
-
-
-
-.sponsor-card {
-    max-width: 280px;
-}
-
-#hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-}
-
-#participants-block {
-    grid-column-start: 2
-}
-#location-block {
-    grid-column-start: 4
-}
-
-#course-block { 
-    grid-column-start: 6
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .meter {
-    grid-column-start: 5;
-    grid-column-end: 8;
-    max-width: 300px;
     box-sizing: content-box;
     height: 20px; /* Can be anything */
     position: relative;
@@ -153,7 +72,12 @@
     width: 490px;
     margin: 80px auto;
   }
-
+  body {
+    background: #333;
+    text-align: center;
+    color: #eee;
+    font-family: system-ui, sans-serif;
+  }
   h1 {
     font-size: 42px;
     font-weight: 600;
@@ -169,4 +93,3 @@
   * {
     box-sizing: border-box;
   }
-

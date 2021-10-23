@@ -1,6 +1,10 @@
 # plus-pilbara-2021
 
-spelling mistake test
+As you load fixture add here to list please and add commandline below: 
+
+correct order of fixtures to load:
+
+python3 manage.py loaddata <>
 
 1. Location
 python3 manage.py loaddata location
@@ -15,4 +19,4 @@ python3 manage.py loaddata participant
 6. Schedule
 python3 manage.py loaddata schedule
 7. Sponsors
-python3 manage.py loaddata sponsor
+python3 manage.py loaddata sponsors
