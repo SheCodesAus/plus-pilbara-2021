@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm, fields, models
-from .models import Location, Language, Course, Participant, Schedule, Sponsors, Completion_status
+from .models import Location, Language, Course, Participant, Schedule, Sponsors, Completion_status, KeyStatistics, ParticipantROI
 
 class ParticipantForm(ModelForm):
     class Meta:

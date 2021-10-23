@@ -1,5 +1,5 @@
 from django.contrib import admin
-from swc.models import Location, Language, Course, Participant, Schedule, Sponsors, Completion_status
+from swc.models import Location, Language, Course, Participant, Schedule, Sponsors, Completion_status, KeyStatistics, ParticipantROI
 
 class PaticipantAdmin(admin.ModelAdmin):
     list_display = ('first_name','last_name','email')
