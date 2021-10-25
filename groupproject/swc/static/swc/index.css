@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Raleway',sans-serif;
+    background-color: red;
 }
 
 .container-1 {
@@ -30,8 +31,8 @@ body {
 .panel-pathways {
     flex:1;
     order:1;
-    background-image: url(images/Group_photo.jpg);
-    background-size: auto;
+    background-image: url(images/Pathway_pic.jpg);
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -39,15 +40,15 @@ body {
 .panel-alumni {
     flex:1;
     order:2;
-    background-image: url(images/Group_photo2.jpg);
-    background-size: auto;
-    background-repeat: no-repeat;
+    background-image: url(images/Group_photo.jpg);
+    background-image: contain;
+ 
 }
 
 .panel-sponsors {
     flex:1;
     order:3;
-    background-image: url(images/Group_photo.jpg);
+    background-image: url(images/Sponsor_pic.jpg);
     background-size: auto;
     background-repeat: no-repeat;
 }
