@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Raleway',sans-serif;
-    background-color: red;
 }
 
 .container-1 {
@@ -31,26 +30,51 @@ body {
 .panel-pathways {
     flex:1;
     order:1;
-    background-image: url(images/Pathway_pic.jpg);
-    background-size: contain;
+    background-image: 
+    linear-gradient(
+        rgba(169, 96, 228, 0.562),
+        rgba(169, 96, 228, 0.562)
+      ),
+    url(images/Pathway_pic.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
+    height: 500px;
+    background-position: center;
+    position: relative;
 }
 
 
 .panel-alumni {
     flex:1;
     order:2;
-    background-image: url(images/Group_photo.jpg);
-    background-image: contain;
+    background-image: 
+    linear-gradient(
+        rgba(169, 96, 228, 0.452),
+        rgba(169, 96, 228, 0.452)
+      ),
+    url(images/Group_photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    background-position: center;
+    position: relative;
  
 }
 
 .panel-sponsors {
     flex:1;
     order:3;
-    background-image: url(images/Sponsor_pic.jpg);
-    background-size: auto;
+    background-image: 
+    linear-gradient(
+        rgba(169, 96, 228, 0.562),
+        rgba(169, 96, 228, 0.562)
+    ),
+    url(images/Sponsor_pic.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
+    height: 500px;
+    background-position: center;
+    position: relative;
 }
 
 .panel-title {
