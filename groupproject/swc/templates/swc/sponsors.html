@@ -5,18 +5,11 @@
 <link rel="stylesheet" type="text/css" href="{% static 'swc/sponsors.css' %}">
 {% endblock %}
 
-{% block stylesheets %}
-<!-- <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}"> -->
-{% endblock %}
-
 {% block content %}
 
 <!-- Enter page content -->
 
 <h1>Pathways - Sponsors Page</h1>
-
-{% extends 'base.html' %}
-{% load static %}
 
 <div class="container">
     <div class="left">
@@ -40,8 +33,6 @@
     What regions are involved? <br>
     </p></div>
     </div> 
-
-{% block content %}
 
 <h1 class="page-title">{{ number }}</h1>
 <div class="path">{{ statsone }}</div>
@@ -96,11 +87,13 @@
     <h2>PR SECTION - I.E OUR SPONSORS</h2>
     <a href=" https://shecodes.com.au/blog/</a>
 
-    <p>{{ sponsor.id }}</p>
+        {% for sponsor in sponsors %}
 
-    {% include "swc/sponsorCard.html" with sponsor=sponsor position=forloop.counter %}
+        <p>{{ sponsor.id }}</p>
 
-    {% endfor %}
+        {% include "swc/sponsorCard.html" with sponsor=sponsor position=forloop.counter %}
+
+        {% endfor %}
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="{% static 'swc/sponsors.js' %}"></script>
