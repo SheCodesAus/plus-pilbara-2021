@@ -12,8 +12,8 @@ python3 manage.py loaddata location
 python3 manage.py loaddata language
 3. Course
 python3 manage.py loaddata course
-4. Course_status
-python3 manage.py loaddata course_status
+4. Completion_status
+python3 manage.py loaddata completion_status
 5. Participant
 python3 manage.py loaddata participant
 6. Schedule
@@ -23,7 +23,7 @@ python3 manage.py loaddata sponsors
 8. KeyStatistics
 python3 manage.py loaddata keystatistics
 9. ParticipantROI
-python3 manage.py loaddata participantROI
+python3 manage.py loaddata participantroi
 10. SponsorROI
 python3 manage.py loaddata sponsorROI
 
