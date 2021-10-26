@@ -67,8 +67,9 @@ class Course(models.Model):
     def __str__(self):
         return self.program
 
+
+
 class Completion_status(models.Model):
-    course = models.ManyToManyField(Course)
     completion_date = models.DateTimeField()
     completion_result = models.CharField(max_length=50)
     def __str__(self):
@@ -87,12 +88,24 @@ class Participant(models.Model):
     bio = models.TextField()
     tech_life_balance = models.CharField(max_length=30)
     in_mentor = models.CharField(max_length=30) 
-    course = models.ManyToManyField(Course)
-    completion = models.ManyToManyField(Completion_status)
     language = models.ManyToManyField(Language)
     industry = models.CharField(max_length=50, choices=INDUSTRIES)
     def __str__(self):
         return self.first_name
+
+class StudentCourse(models.Model):
+    student = models.ForeignKey(Participant, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    completion_status = models.ForeignKey(Completion_status, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.student.first_name 
+    
+    def course_enrolled(self):
+        return ",".join([str(p) for p in self.course.all()])
+
+    def get_result(self):
+        return ",".join([str(p) for p in self.student.all()])
+    
 
 class Schedule(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
@@ -114,6 +127,8 @@ class Sponsors(models.Model):
 class KeyStatistics(models.Model):
     social_reach = models.IntegerField()
     participation_target = models.IntegerField()
+    def __str__(self):
+        return self.social_reach
 
 class ParticipantROI(models.Model):
     participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
@@ -123,6 +138,9 @@ class ParticipantROI(models.Model):
     pursue_tech_career = models.IntegerField()
     another_course = models.IntegerField()
     interested_mentor = models.IntegerField()
+    def __str__(self):
+        return self.participant.first_name
+ 
 
 class SponsorROI(models.Model):
     sponsor = models.ManyToManyField(Sponsors)
@@ -130,6 +148,8 @@ class SponsorROI(models.Model):
     support_tech_women = models.IntegerField()
     wider_tech_commitments = models.IntegerField()
 
+    def get_sponsor_name(self):
+        return ",".join([str(p) for p in self.sponsor.all()])
 
 
 
