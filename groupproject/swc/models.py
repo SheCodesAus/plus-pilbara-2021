@@ -116,7 +116,7 @@ class KeyStatistics(models.Model):
     participation_target = models.IntegerField()
 
 class ParticipantROI(models.Model):
-    participant = models.ManyToManyField(Participant)
+    participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
     course = models.ManyToManyField(Course)
     better_equipped = models.IntegerField()
     more_confident = models.IntegerField()

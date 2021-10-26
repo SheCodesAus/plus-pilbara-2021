@@ -5,6 +5,42 @@
 <link rel="stylesheet" type="text/css" href="{% static 'swc/sponsors.css' %}">
 {% endblock %}
 
+{% block stylesheets %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}"> -->
+{% endblock %}
+
+{% block content %}
+
+<!-- Enter page content -->
+
+<h1>Pathways - Sponsors Page</h1>
+
+{% extends 'base.html' %}
+{% load static %}
+
+<div class="container">
+    <div class="left">
+        <p> SheCodes Sponsors </p>
+
+    <div class="center">
+    
+    <p> SheCodes Sponsorship Benefits </p>
+
+    <img src="XXXXXXXXX" width="400" height="267" alt="XXXXXX" />
+    </div>
+
+    <div class="right">
+
+    <p>
+    Our histories are unique. The places that we root ourselves, the communities that we are part of, and the ways those relationships change over time are both personal and shared experiences. 
+    <br><br>
+    Whats the benefit?<br>
+    Why would I sponsor?<br>
+    Who else has sponsored? <br>
+    What regions are involved? <br>
+    </p></div>
+    </div> 
+
 {% block content %}
 
 <h1 class="page-title">{{ number }}</h1>
