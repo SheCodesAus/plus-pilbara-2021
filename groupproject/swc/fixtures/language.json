@@ -46,5 +46,13 @@
             "name": "React",
             "constraned_by": "2021-10-16 05:07:54.524197+00:00"
         }
+    },
+    {
+        "model": "swc.language",
+        "pk": 7,
+        "fields": {
+            "name": "Java Script",
+            "constraned_by": "N/A"
+        }
     }
 ]

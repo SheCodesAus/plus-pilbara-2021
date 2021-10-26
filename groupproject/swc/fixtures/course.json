@@ -42,5 +42,19 @@
             "location": 2,
             "language": []
         }
+    },
+    {
+        "model": "swc.course",
+        "pk": 5,
+        "fields": {
+            "program": "Workshop",
+            "date_started": "2021-08-28T08:00:00Z",
+            "date_completed": "2021-08-28T17:00:00Z",
+            "location": 5,
+            "language": [
+                3,
+                4
+            ]
+        }
     }
 ]

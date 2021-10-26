@@ -7,12 +7,12 @@ from swc.views import AlumniView
 app_name = 'swc'
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.IndexView.as_view(), name='index'),
     path('alumni/', views.AlumniView.as_view(), name='participant'),
-    path('sponsors/', views.sponsors, name='sponsors'),
-    path('pathways/', views.pathways, name='pathways'),
-    path('stats/', views.stats, name='stats'),
-    path('add-participant/', views.AddParticipantView.as_view(), name='participantView')
+    path('sponsors/', views.SponsorView.as_view(), name='sponsors'),
+    path('pathways/', views.PathwayView.as_view(), name='pathways'),
+    path('add-participant/', views.AddParticipantView.as_view(), name='participantView'),
+    path('participant-interview/', views.ParticipantInterviewView.as_view(), name='participantInterview')
     
 ]
 

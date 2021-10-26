@@ -1,5 +1,6 @@
 h1  {
-    color:#a46497; ; /change to SheCodes colours and font/
+    color:#a46497; 
+    /* /change to SheCodes colours and font/ */
     font-size: 1em;
     margin-bottom: .3em;
     text-align: center;
@@ -16,8 +17,8 @@ h1  {
   }
   
   td {
-    background-color:;
-    border: 1px solid;
+    background-color:white;
+    border: 1px solid #900;
     padding-left: .5em;
     padding-right: .5em;
   }

@@ -27,6 +27,23 @@ SPONSOR_TIER = [
 ('B','BRONZE'),
 ]
 
+INDUSTRIES = [
+('M', 'MINING'),
+('AG', 'AGRICULTURE'),
+('MN', 'MINING'),
+('MF', 'MANUFACTURING'),
+('UT', 'UTILITIES'),
+('CS', 'CONSTRUCTION'),
+('AR', 'ARTS AND RECREATION'),
+('HC', 'HEALTH CARE'),
+('ED', 'EDUCATION AND TRAINING'),
+('PS', 'PROFESSIONAL SERVICES'),
+('RE', 'REAL ESTATE'),
+('TA', 'TOURISM AND ACCOMMODATION'),
+('IT', 'INFORMATION AND MEDIA'),
+('OT', 'OTHER'),
+]
+
 class Location(models.Model):
     state = models.CharField(max_length=5, choices=STATE_CHOICES)
     region = models.CharField(max_length=300)
@@ -50,8 +67,9 @@ class Course(models.Model):
     def __str__(self):
         return self.program
 
+
+
 class Completion_status(models.Model):
-    course = models.ManyToManyField(Course)
     completion_date = models.DateTimeField()
     completion_result = models.CharField(max_length=50)
     def __str__(self):
@@ -70,11 +88,24 @@ class Participant(models.Model):
     bio = models.TextField()
     tech_life_balance = models.CharField(max_length=30)
     in_mentor = models.CharField(max_length=30) 
-    course = models.ManyToManyField(Course)
-    completion = models.ManyToManyField(Completion_status)
     language = models.ManyToManyField(Language)
+    industry = models.CharField(max_length=50, choices=INDUSTRIES)
     def __str__(self):
         return self.first_name
+
+class StudentCourse(models.Model):
+    student = models.ForeignKey(Participant, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    completion_status = models.ForeignKey(Completion_status, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.student.first_name 
+    
+    def course_enrolled(self):
+        return ",".join([str(p) for p in self.course.all()])
+
+    def get_result(self):
+        return ",".join([str(p) for p in self.student.all()])
+    
 
 class Schedule(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
@@ -88,9 +119,37 @@ class Sponsors(models.Model):
     sponsor_name = models.CharField(max_length=50)
     logo_url = models.URLField()
     sponsor_tier = models.CharField(max_length=5, choices=SPONSOR_TIER)
+    sponsor_why = models.CharField(max_length=500)
+    sponsor_industry = models.CharField(max_length=50, choices=INDUSTRIES)
     def __str__(self):
         return self.sponsor_name
 
+class KeyStatistics(models.Model):
+    social_reach = models.IntegerField()
+    participation_target = models.IntegerField()
+    def __str__(self):
+        return self.social_reach
+
+class ParticipantROI(models.Model):
+    participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
+    course = models.ManyToManyField(Course)
+    better_equipped = models.IntegerField()
+    more_confident = models.IntegerField()
+    pursue_tech_career = models.IntegerField()
+    another_course = models.IntegerField()
+    interested_mentor = models.IntegerField()
+    def __str__(self):
+        return self.participant.first_name
+ 
+
+class SponsorROI(models.Model):
+    sponsor = models.ManyToManyField(Sponsors)
+    engagement = models.IntegerField()
+    support_tech_women = models.IntegerField()
+    wider_tech_commitments = models.IntegerField()
+
+    def get_sponsor_name(self):
+        return ",".join([str(p) for p in self.sponsor.all()])
 
 
 

@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "state": "WA",
-            "region": "not specified",
+            "region": "Perth",
             "long": 0.0,
             "lat": 0.0
         }
@@ -14,7 +14,7 @@
         "pk": 2,
         "fields": {
             "state": "WA",
-            "region": "not specified",
+            "region": "Port Hedland",
             "long": 0.0,
             "lat": 0.0
         }
@@ -24,7 +24,7 @@
         "pk": 3,
         "fields": {
             "state": "WA",
-            "region": "not specified",
+            "region": "Albany",
             "long": 0.0,
             "lat": 0.0
         }
@@ -34,7 +34,17 @@
         "pk": 4,
         "fields": {
             "state": "QLD",
-            "region": "not specified",
+            "region": "Brisbane",
+            "long": 0.0,
+            "lat": 0.0
+        }
+    },
+    {
+        "model": "swc.location",
+        "pk": 5,
+        "fields": {
+            "state": "SA",
+            "region": "Adelaide",
             "long": 0.0,
             "lat": 0.0
         }
