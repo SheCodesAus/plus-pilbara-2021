@@ -147,7 +147,7 @@ class Sponsors(models.Model):
 class KeyStatistics(models.Model):
     social_reach = models.IntegerField()
     participation_target = models.IntegerField()
-    def __str__(self):
+    def __int__(self):
         return self.social_reach
 
 class ParticipantROI(models.Model):

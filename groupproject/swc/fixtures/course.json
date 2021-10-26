@@ -1,0 +1,55 @@
+[
+    {
+        "model": "swc.course",
+        "pk": 1,
+        "fields": {
+            "program": "Flash",
+            "language": [],
+            "course_bio": "words go here",
+            "course_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+        }
+    },
+    {
+        "model": "swc.course",
+        "pk": 2,
+        "fields": {
+            "program": "Plus",
+            "language": [],
+            "course_bio": "words go here",
+            "course_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+        }
+    },
+    {
+        "model": "swc.course",
+        "pk": 3,
+        "fields": {
+            "program": "Plus",
+            "language": [],
+            "course_bio": "words go here",
+            "course_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+        }
+    },
+    {
+        "model": "swc.course",
+        "pk": 4,
+        "fields": {
+            "program": "Flash",
+            "language": [],
+            "course_bio": "words go here",
+            "course_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+        }
+    },
+    {
+        "model": "swc.course",
+        "pk": 5,
+        "fields": {
+            "program": "Workshop",
+            "language": [
+                3,
+                4
+            ],
+            "course_bio": "words go here",
+            "course_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+        }
+    }
+]
