@@ -8,7 +8,7 @@ class LocationAdmin(admin.ModelAdmin):
     list_display =('state','region','long','lat')
 
 class CourseAdmin(admin.ModelAdmin):
-    list_display =('program','location','date_started','date_completed')
+    list_display =('program','course_language','course_bio','course_img')
 
 class LanguageAdmin(admin.ModelAdmin):
     list_display =('name',)
@@ -29,10 +29,10 @@ class ParticipantROIAdmin(admin.ModelAdmin):
     list_display = ('better_equipped', 'more_confident')
 
 class StudentCourseAdmin(admin.ModelAdmin):
-    list_display = ('get_result', 'course_enrolled' )
+    list_display = ('student_name','course_enrolled', 'course_location','get_result', 'get_complete_date'  )
 
 class SponsorROIAdmin(admin.ModelAdmin):
-    list_display = ('get_sponsor_name')
+    list_display = ('get_sponsor_name','support_tech_women')
 
 admin.site.register(Language, LanguageAdmin)
 admin.site.register(Course, CourseAdmin)
@@ -44,6 +44,7 @@ admin.site.register(KeyStatistics, KeyStatisticsAdmin)
 admin.site.register(Completion_status, Completion_statusAdmin)
 admin.site.register(ParticipantROI, ParticipantROIAdmin)
 admin.site.register(StudentCourse, StudentCourseAdmin)
+admin.site.register(SponsorROI, SponsorROIAdmin)
 
 
 
