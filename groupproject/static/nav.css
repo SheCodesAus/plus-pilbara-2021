@@ -1,0 +1,38 @@
+body {
+    font-family: system-ui, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #8246af;
+    position: relative;
+}
+  
+.topnav a {
+    float: left;
+    color: #ebe9eb;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'DM Sans', sans-serif;
+    padding: 10px;
+}
+  
+.topnav a:hover {
+    background-color: rgb (224, 164, 35);
+    color: #f2f2f2;
+}
+
+#wns {
+    float: right;
+}
+
+.logo {
+    border-radius: 40%;
+    max-width: 70px;
+    height: auto;  
+}
+
+.logos {
+    display: flex;
+    justify-content: space-evenly;
+}
