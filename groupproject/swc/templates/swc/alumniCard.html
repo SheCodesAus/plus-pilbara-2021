@@ -1,16 +1,13 @@
 <div class="alumni-card" id="alumni-card-{{ position }}">
-    {% if position < 5 %}
+    {% if position < 4 %}
         <img class="participant-pic" src="{{ participant.profile_pic }}"></img>
         <img class="participant-badge" src="https://rachelburford.github.io/images/FLASH.png"></img>
         <h3>About {{ participant.first_name }}</h3>
-            <h4>{{ participant.bio }}</h4>
+            <h5 class="participant-bio">{{ participant.bio }}</h4>
             
-            <li>{{ language }}</li>
+            <li class="participant-languges">{{ language }}</li>
 
 
     {% else %}
     {% endif %}
-    <div class="sponsor-card-text">
-        <h3>{{ participant.first_name }}</h3>
-    </div>
 </div>

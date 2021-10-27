@@ -10,14 +10,10 @@
 <img id="alumni-hero" src="https://rachelburford.github.io/images/1.png"></img>
 
 <h1>Our Cohorts Tech Journey</h1>
-        <div id="story-wrapper">
-
+        <div class="story-wrapper">
+            {% for participant in participants %}
+            {% include "swc/alumniCard.html" with participant=participant position=forloop.counter %}
+            {% endfor %}
         </div>
-
-        {% for participant in participants %}
-
-        {% include "swc/alumniCard.html" with participant=participant position=forloop.counter %}
-
-        {% endfor %}
 
 {% endblock %}
