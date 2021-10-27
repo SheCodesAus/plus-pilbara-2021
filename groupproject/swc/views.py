@@ -10,26 +10,28 @@ class IndexView(generic.ListView):
     template_name = 'swc/index.html'
     model = Participant
 
-    
     def get_context_data(self, **kwargs):
         context= super().get_context_data(**kwargs)
-        Shecode_statedata =  {
-        "Western Australia": 1500,
-        "Northern Territory": 0,
-        "South Australia": 150,
-        "Queensland": 600,
-        "New South Wales": 40,
-        "Australian Capital Territory":60,
-        "Victoria":250,
-        "Tasmania": 30,
-        
-
+        shecodes_statedata = { 
+                'WA': {
+                    'regional': {
+                        '1 day': Participant.objects.all().filter(studentcourse__course__program="Workshop", studentcourse__location__state="WA").exclude(studentcourse__location__region__contains="Perth").count(), # ....
+                        'flash': Participant.objects.all().filter(studentcourse__course__program="Flash", studentcourse__location__state="WA").exclude(studentcourse__location__region__contains="Perth").count(), # ....
+                        'plus': Participant.objects.all().filter(studentcourse__course__program="Plus", studentcourse__location__state="WA").exclude(studentcourse__location__region__contains="Perth").count(), # ....
+                        'alumni_mentor': Participant.objects.all().filter(in_mentor="yes", studentcourse__location__state="WA").exclude(studentcourse__location__region__contains="Perth").count(),
+                    },
+                    'metro': {
+                        '1 day': Participant.objects.all().filter(studentcourse__course__program="Workshop", studentcourse__location__state="WA", studentcourse__location__region__contains="Perth").count(), # ....
+                        'flash': Participant.objects.all().filter(studentcourse__course__program="Flash", studentcourse__location__state="WA", studentcourse__location__region__contains="Perth").count(), # .... statedata['wa'][metro][flash], statedata.wa.metro.flash
+                        'plus': Participant.objects.all().filter(studentcourse__course__program="Plus", studentcourse__location__state="WA", studentcourse__location__region__contains="Perth").count(),
+                        'alumni_mentor': Participant.objects.all().filter(in_mentor="yes", studentcourse__location__state="WA", studentcourse__location__region__contains="Perth").count(), # ....
+                    },
+                },
         }
-        json_data = json.dumps(Shecode_statedata)
+        json_data = json.dumps(shecodes_statedata)
 
-        context["jsonData"]=json_data
-
-
+        context = { "jsonData": json_data }
+        return context
 
 class PathwayView(generic.ListView):
     model = Course
