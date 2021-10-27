@@ -23,9 +23,11 @@ python3 manage.py loaddata sponsors
 8. KeyStatistics
 python3 manage.py loaddata keystatistics
 9. ParticipantROI
-python3 manage.py loaddata participantROI
+python3 manage.py loaddata participantroi
 10. SponsorROI
-python3 manage.py loaddata sponsorROI
+python3 manage.py loaddata sponsorroi
+11. StudentCourse
+python3 manage.py loaddata studentcourse
 
 She codes Pathway colour
 1. One day workshop 

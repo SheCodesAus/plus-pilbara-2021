@@ -1,8 +1,8 @@
 from django.views import generic
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from .models import Location, Language, Course, Participant, Schedule, Sponsors
-from .forms import ParticipantForm, ParticipantInterviewForm
+from .models import Location, Language, Course, Participant, Schedule, Sponsors,Completion_status,StudentCourse,KeyStatistics,ParticipantROI,SponsorROI
+from .forms import ParticipantForm, ParticipantInterviewForm, StudentEnrollmentsForm
 from django.db.models import Avg, aggregates, Count
 import json
 
@@ -160,6 +160,12 @@ class ParticipantInterviewView(generic.CreateView):
     form_class = ParticipantInterviewForm
     context_object_name = 'participantInterviewForm'
     template_name = 'swc/participantInterview.html'
+    success_url = reverse_lazy('swc:index')
+
+class StudentEnrollmentView(generic.CreateView):
+    form_class = StudentEnrollmentsForm
+    context_object_name = 'studentEnrollmentsForm'
+    template_name = 'swc/studentEnrollment.html'
     success_url = reverse_lazy('swc:index')
 
 
