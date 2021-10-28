@@ -1,4 +1,5 @@
 console.log(statedata)
+let stateCounts;
 // function filterMap(allcoursefilterMap) {
 //  // does some math and gets numbers from the context data
 //  statedata['WA']['SA']['NT']['QLD']['NSW']['VIC']['ACT']['TAS']
@@ -34,7 +35,7 @@ function totalFlashAustralia() {
     return flashWA() + flashSA() + flashNT() + flashQLD() + flashNSW() + flashVIC() + flashACT() + flashTAS()
 }
 function metroWorkshopAustralia() {
-    return metroflashWA() + metroflashSA () + metroflashNT () + metroflashQLD () + metroflashNSW () + metroflashVIC () + metroflashACT () + metroflashTAS () 
+    return metroflashWA() + metroflashSA() + metroflashNT() + metroflashQLD() + metroflashNSW() + metroflashVIC() + metroflashACT() + metroflashTAS()
 }
 function regionalWorkshopAustralia() {
     return regionalflashWA() + regionalflashSA() + regionalflashNT() + regionalflashQLD() + regionalflashNSW() + regionalflashVIC() + regionalflashACT() + regionalflashTAS()
@@ -64,88 +65,88 @@ function regionalWorkshopAustralia() {
 
 //  WA Total hover -  All courses course button - map output box when selected ALL COURSES filter and hovering over WA
 function totalWA() {
-    return shecodes_statedata['WA']['regional']['1 day'] + shecodes_statedata['WA']['regional']['flash'] + shecodes_statedata['WA']['regional']['plus'] + shecodes_statedata['WA']['regional']['alumni_mentor'] + shecodes_statedata['WA']['metro']['1 day'] + shecodes_statedata['WA']['metro']['flash'] + shecodes_statedata['WA']['metro']['plus'] + shecodes_statedata['WA']['metro']['alumni_mentor']
+    return statedata['WA']['regional']['1 day'] + statedata['WA']['regional']['flash'] + statedata['WA']['regional']['plus'] + statedata['WA']['regional']['alumni_mentor'] + statedata['WA']['metro']['1 day'] + statedata['WA']['metro']['flash'] + statedata['WA']['metro']['plus'] + statedata['WA']['metro']['alumni_mentor']
 }
 
 function metroallcoursesWA() {
-	return metroworkshopWA() + metroflashWA() + metroplusWA() + metroalumni_mentorWA()
+    return metroworkshopWA() + metroflashWA() + metroplusWA() + metroalumni_mentorWA()
 }
 
 function regionalallcoursesWA() {
-	return regionalworkshopWA() + regionalflashWA() + regionalplusWA() + regionalalumni_mentorWA()
+    return regionalworkshopWA() + regionalflashWA() + regionalplusWA() + regionalalumni_mentorWA()
 }
 
 //  WA hover -  workshop course button - map output box when selected WORKSHOP filter and hovering over WA
 function workshopWA() {
-    return shecodes_statedata['WA']['regional']['1 day'] + shecodes_statedata['WA']['metro']['1 day']
+    return statedata['WA']['regional']['1 day'] + statedata['WA']['metro']['1 day']
 }
 function metroworkshopWA() {
-    return shecodes_statedata['WA']['metro']['1 day']
+    return statedata['WA']['metro']['1 day']
 }
 function regionalworkshopWA() {
-    return shecodes_statedata['WA']['regional']['1 day']
+    return statedata['WA']['regional']['1 day']
 }
 
 // WA hover -  flash course button - map output box when selected FLASH filter and hovering over WA
 function flashWA() {
-    return shecodes_statedata['WA']['regional']['flash'] + shecodes_statedata['WA']['metro']['flash']
+    return statedata['WA']['regional']['flash'] + statedata['WA']['metro']['flash']
 }
 function metroflashWA() {
-    return shecodes_statedata['WA']['metro']['flash']
+    return statedata['WA']['metro']['flash']
 }
 function regionalflashWA() {
-    return shecodes_statedata['WA']['regional']['flash']
+    return statedata['WA']['regional']['flash']
 }
 
 // WA hover -  plus course button - map output box when selected PLUS filter and hovering over WA
 function plusWA() {
-    return shecodes_statedata['WA']['regional']['plus'] + shecodes_statedata['WA']['metro']['plus']
+    return statedata['WA']['regional']['plus'] + statedata['WA']['metro']['plus']
 }
 function metroplusWA() {
-    return shecodes_statedata['WA']['metro']['plus']
+    return statedata['WA']['metro']['plus']
 }
 function regionalplusWA() {
-    return shecodes_statedata['WA']['regional']['plus']
+    return statedata['WA']['regional']['plus']
 }
 // WA hover -  alumi mentor course button - map output box when selected ALUMNI MENTOR filter and hovering over WA
 function alumni_mentorWA() {
-    return shecodes_statedata['WA']['regional']['alumni_mentor'] + shecodes_statedata['WA']['metro']['alumni_mentor']
+    return statedata['WA']['regional']['alumni_mentor'] + statedata['WA']['metro']['alumni_mentor']
 }
 function metroalumni_mentorWA() {
-    return shecodes_statedata['WA']['metro']['alumni_mentor']
+    return statedata['WA']['metro']['alumni_mentor']
 }
 function regionalalumni_mentorWA() {
-    return shecodes_statedata['WA']['regional']['alumni_mentor']
+    return statedata['WA']['regional']['alumni_mentor']
 }
 
 
 // State total all courses
 
 function totalSA() {
-    return shecodes_statedata['SA']['regional']['1 day'] + shecodes_statedata['SA']['regional']['flash'] + shecodes_statedata['SA']['regional']['plus'] + shecodes_statedata['SA']['regional']['alumni_mentor'] + shecodes_statedata['SA']['metro']['1 day'] + shecodes_statedata['SA']['metro']['flash'] + shecodes_statedata['SA']['metro']['plus'] + shecodes_statedata['SA']['metro']['alumni_mentor']
+    return statedata['SA']['regional']['1 day'] + statedata['SA']['regional']['flash'] + statedata['SA']['regional']['plus'] + statedata['SA']['regional']['alumni_mentor'] + statedata['SA']['metro']['1 day'] + statedata['SA']['metro']['flash'] + statedata['SA']['metro']['plus'] + statedata['SA']['metro']['alumni_mentor']
 }
 function totalNT() {
-    return shecodes_statedata['NT']['regional']['1 day'] + shecodes_statedata['NT']['regional']['flash'] + shecodes_statedata['NT']['regional']['plus'] + shecodes_statedata['NT']['regional']['alumni_mentor'] + shecodes_statedata['NT']['metro']['1 day'] + shecodes_statedata['NT']['metro']['flash'] + shecodes_statedata['NT']['metro']['plus'] + shecodes_statedata['NT']['metro']['alumni_mentor']
+    return statedata['NT']['regional']['1 day'] + statedata['NT']['regional']['flash'] + statedata['NT']['regional']['plus'] + statedata['NT']['regional']['alumni_mentor'] + statedata['NT']['metro']['1 day'] + statedata['NT']['metro']['flash'] + statedata['NT']['metro']['plus'] + statedata['NT']['metro']['alumni_mentor']
 }
 function totalQLD() {
-    return shecodes_statedata['QLD']['regional']['1 day'] + shecodes_statedata['QLD']['regional']['flash'] + shecodes_statedata['QLD']['regional']['plus'] + shecodes_statedata['QLD']['regional']['alumni_mentor'] + shecodes_statedata['QLD']['metro']['1 day'] + shecodes_statedata['QLD']['metro']['flash'] + shecodes_statedata['QLD']['metro']['plus'] + shecodes_statedata['QLD']['metro']['alumni_mentor']
+    return statedata['QLD']['regional']['1 day'] + statedata['QLD']['regional']['flash'] + statedata['QLD']['regional']['plus'] + statedata['QLD']['regional']['alumni_mentor'] + statedata['QLD']['metro']['1 day'] + statedata['QLD']['metro']['flash'] + statedata['QLD']['metro']['plus'] + statedata['QLD']['metro']['alumni_mentor']
 }
 function totalNSW() {
-    return shecodes_statedata['NSW']['regional']['1 day'] + shecodes_statedata['NSW']['regional']['flash'] + shecodes_statedata['NSW']['regional']['plus'] + shecodes_statedata['NSW']['regional']['alumni_mentor'] + shecodes_statedata['NSW']['metro']['1 day'] + shecodes_statedata['NSW']['metro']['flash'] + shecodes_statedata['NSW']['metro']['plus'] + shecodes_statedata['NSW']['metro']['alumni_mentor']
+    return statedata['NSW']['regional']['1 day'] + statedata['NSW']['regional']['flash'] + statedata['NSW']['regional']['plus'] + statedata['NSW']['regional']['alumni_mentor'] + statedata['NSW']['metro']['1 day'] + statedata['NSW']['metro']['flash'] + statedata['NSW']['metro']['plus'] + statedata['NSW']['metro']['alumni_mentor']
 }
 function totalVIC() {
-    return shecodes_statedata['VIC']['regional']['1 day'] + shecodes_statedata['VIC']['regional']['flash'] + shecodes_statedata['VIC']['regional']['plus'] + shecodes_statedata['VIC']['regional']['alumni_mentor'] + shecodes_statedata['VIC']['metro']['1 day'] + shecodes_statedata['VIC']['metro']['flash'] + shecodes_statedata['VIC']['metro']['plus'] + shecodes_statedata['VIC']['metro']['alumni_mentor']
+    return statedata['VIC']['regional']['1 day'] + statedata['VIC']['regional']['flash'] + statedata['VIC']['regional']['plus'] + statedata['VIC']['regional']['alumni_mentor'] + statedata['VIC']['metro']['1 day'] + statedata['VIC']['metro']['flash'] + statedata['VIC']['metro']['plus'] + statedata['VIC']['metro']['alumni_mentor']
 }
 function totalACT() {
-    return shecodes_statedata['ACT']['regional']['1 day'] + shecodes_statedata['ACT']['regional']['flash'] + shecodes_statedata['ACT']['regional']['plus'] + shecodes_statedata['ACT']['regional']['alumni_mentor'] + shecodes_statedata['ACT']['metro']['1 day'] + shecodes_statedata['ACT']['metro']['flash'] + shecodes_statedata['ACT']['metro']['plus'] + shecodes_statedata['ACT']['metro']['alumni_mentor']
+    return statedata['ACT']['regional']['1 day'] + statedata['ACT']['regional']['flash'] + statedata['ACT']['regional']['plus'] + statedata['ACT']['regional']['alumni_mentor'] + statedata['ACT']['metro']['1 day'] + statedata['ACT']['metro']['flash'] + statedata['ACT']['metro']['plus'] + statedata['ACT']['metro']['alumni_mentor']
 }
 function totalTAS() {
-    return shecodes_statedata['TAS']['regional']['1 day'] + shecodes_statedata['TAS']['regional']['flash'] + shecodes_statedata['TAS']['regional']['plus'] + shecodes_statedata['TAS']['regional']['alumni_mentor'] + shecodes_statedata['TAS']['metro']['1 day'] + shecodes_statedata['TAS']['metro']['flash'] + shecodes_statedata['TAS']['metro']['plus'] + shecodes_statedata['TAS']['metro']['alumni_mentor']
+    return statedata['TAS']['regional']['1 day'] + statedata['TAS']['regional']['flash'] + statedata['TAS']['regional']['plus'] + statedata['TAS']['regional']['alumni_mentor'] + statedata['TAS']['metro']['1 day'] + statedata['TAS']['metro']['flash'] + statedata['TAS']['metro']['plus'] + statedata['TAS']['metro']['alumni_mentor']
 }
 
 
-const drawMap = function(courseType) {
-  var map = L.map('map').setView([-27.833, 133.583], 4);
+const drawMap = function (courseType) {
+    var map = L.map('map').setView([-27.833, 133.583], 4);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
@@ -156,7 +157,7 @@ const drawMap = function(courseType) {
     }).addTo(map);
 
     // DATA COLOUR ON MAP
-    let stateCounts = {
+    stateCounts = {
         WA: 0,
         SA: 0,
         NT: 0,
@@ -166,9 +167,9 @@ const drawMap = function(courseType) {
         ACT: 0,
         TAS: 0,
     }
-        if (courseType == 'all') {
-            // call the function taht counts all  numbers
-            stateCounts.WA = totalWA(),
+    if (courseType == 'all') {
+        // call the function taht counts all  numbers
+        stateCounts.WA = totalWA(),
             stateCounts.SA = totalSA(),
             stateCounts.NT = totalNT(),
             stateCounts.QLD = totalQLD(),
@@ -177,8 +178,8 @@ const drawMap = function(courseType) {
             stateCounts.ACT = totalACT(),
             stateCounts.TAS = totalTAS()
     };
-        if (courseType == '1 day') {
-            stateCounts.WA = workshopWA(),
+    if (courseType == '1 day') {
+        stateCounts.WA = workshopWA(),
             stateCounts.SA = workshopSA(),
             stateCounts.NT = workshopNT(),
             stateCounts.QLD = workshopQLD(),
@@ -187,17 +188,17 @@ const drawMap = function(courseType) {
             stateCounts.ACT = workshopACT(),
             stateCounts.TAS = workshopTAS()
     };
-        if (courseType == 'flash') {
-            stateCounts.WA = flashWA()
+    if (courseType == 'flash') {
+        stateCounts.WA = flashWA()
     };
-        if (courseType == 'plus') {
-            stateCounts.WA = plusWA()
+    if (courseType == 'plus') {
+        stateCounts.WA = plusWA()
     };
-        if (courseType == 'alumni_mentor') {
-            stateCounts.WA = alumni_mentorWA()
+    if (courseType == 'alumni_mentor') {
+        stateCounts.WA = alumni_mentorWA()
     };
 
-	let metrostateCounts = {
+    let metrostateCounts = {
         WA: 0,
         SA: 0,
         NT: 0,
@@ -207,55 +208,52 @@ const drawMap = function(courseType) {
         ACT: 0,
         TAS: 0,
     }
-        if (courseType == 'all') {
-            // call the function taht counts all  numbers
-            metrostateCounts.WA = metroallcoursesWA,
+    if (courseType == 'all') {
+        // call the function taht counts all  numbers
+        metrostateCounts.WA = metroallcoursesWA()
     };
-        if (courseType == '1 day') {
-            metrostateCounts.WA = metroworkshopWA(),
+    if (courseType == '1 day') {
+        metrostateCounts.WA = metroworkshopWA()
     };
-        if (courseType == 'flash') {
-			metrostateCounts.WA = metroflashWA()
+    if (courseType == 'flash') {
+        metrostateCounts.WA = metroflashWA()
     };
-        if (courseType == 'plus') {
-            metrostateCounts.WA = metroplusWA()
+    if (courseType == 'plus') {
+        metrostateCounts.WA = metroplusWA()
     };
-        if (courseType == 'alumni_mentor') {
-			metrostateCounts.WA = metroalumni_mentorWA()
+    if (courseType == 'alumni_mentor') {
+        metrostateCounts.WA = metroalumni_mentorWA()
     };
 
-	let regionalstateCounts = {
-        WA: 0,
-        SA: 0,
-        NT: 0,
-        QLD: 0,
-        NSW: 0,
-        VIC: 0,
-        ACT: 0,
-        TAS: 0,
-    }
-        if (courseType == 'all') {
-            // call the function taht counts all  numbers
-            regionalstateCounts.WA = regionalallcoursesWA,
-    };
-        if (courseType == '1 day') {
-            regionalstateCounts.WA = regionalworkshopWA(),
-    };
-        if (courseType == 'flash') {
-			regionalstateCounts.WA = regionalflashWA()
-    };
-        if (courseType == 'plus') {
-            regionalstateCounts.WA = regionalplusWA()
-    };
-        if (courseType == 'alumni_mentor') {
-			regionalstateCounts.WA = regionalalumni_mentorWA()
-    };
-// output box rules
+    // let regionalstateCounts = {
+    //     WA: 0,
+    //     SA: 0,
+    //     NT: 0,
+    //     QLD: 0,
+    //     NSW: 0,
+    //     VIC: 0,
+    //     ACT: 0,
+    //     TAS: 0,
+    // }
+    // if (courseType == 'all') {
+    //     // call the function taht counts all  numbers
+    //     regionalstateCounts.WA = regionalallcoursesWA()
+    // };
+    // if (courseType == '1 day') {
+    //     regionalstateCounts.WA = regionalworkshopWA()
+    // };
+    // if (courseType == 'flash') {
+    //     regionalstateCounts.WA = regionalflashWA()
+    // };
+    // if (courseType == 'plus') {
+    //     regionalstateCounts.WA = regionalplusWA()
+    // };
+    // if (courseType == 'alumni_mentor') {
+    //     regionalstateCounts.WA = regionalalumni_mentorWA()
+    // };
+    // output box rules
 
-	info.update = function () {
-        this._div.innerHTML = STATE_NAME +'<h4>SheCodes Participants = </h4>' +  (stateCounts)
-            '<b>' + '<h4>Metro Participants = </h4>' + (metrostateCounts) + '</b>' +'<h4>Regional Participants = </h4>'+ (regionalstateCounts);
-    };
+  
 
 
 
@@ -268,27 +266,41 @@ const drawMap = function(courseType) {
         this.update();
         return this._div;
     };
+
+    const sum = (obj) => {
+        return Object.values(obj).reduce((a, b) => a + b, 0);
+    }
+
     info.update = function (props) {
-        this._div.innerHTML = '<h4>Australian SheCodes Participants</h4>' +  (props ?
-            '<b>' + STATE_NAME + '</b><br />' + participant_number + 'SheCodes Participants'
-            : 'Hover over a state');
+        if (!props) return;
+        const count = stateCounts[props.STATE_NAME]
+        const regional = courseType === 'all'? sum(statedata[props.STATE_NAME].regional) : statedata[props.STATE_NAME].regional[courseType];
+        const metro =  courseType === 'all'? sum(statedata[props.STATE_NAME].metro):statedata[props.STATE_NAME].metro[courseType]; // TODO same as above
+        
+        this._div.innerHTML = props.STATE_NAME + '<h4>SheCodes Participants = </h4>' + count +
+         '<b>' + '<h4>Metro Participants = </h4>' + metro + '</b>' + '<h4>Regional Participants = </h4>' + regional;
     };
+    // info.update = function (props) {
+    //     this._div.innerHTML = '<h4>Australian SheCodes Participants</h4>' + (props ?
+    //         '<b>' + STATE_NAME + '</b><br />' + participant_number + 'SheCodes Participants'
+    //         : 'Hover over a state');
+    // };
 
     info.addTo(map);
 
     // get color depending on population density value
     function getColor(d) {
-        return d > 1000 ? '#6e016b':
-                d > 500  ? '#88419d':
-                d > 200  ? '#8c6bb1' :
-                d > 100  ? '#8c96c6':
-                d > 50   ? '#9ebcda' :
-                d > 20   ? '#bfd3e6' :
-                d > 10   ? '#e0ecf4' :
-                '#f7fcfd';
+        return d > 1000 ? '#6e016b' :
+            d > 500 ? '#88419d' :
+                d > 200 ? '#8c6bb1' :
+                    d > 100 ? '#8c96c6' :
+                        d > 50 ? '#9ebcda' :
+                            d > 20 ? '#bfd3e6' :
+                                d > 10 ? '#e0ecf4' :
+                                    '#f7fcfd';
     }
     function style(feature) {
-    const number = statedata[feature.properties.STATE_NAME];
+        const number = stateCounts[feature.properties.STATE_NAME];
         return {
             weight: 2,
             opacity: 1,
@@ -330,7 +342,7 @@ const drawMap = function(courseType) {
         style: style,
         onEachFeature: onEachFeature
     }).addTo(map);
-    var legend = L.control({position: 'bottomright'});
+    var legend = L.control({ position: 'bottomright' });
     legend.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'info legend'),
             grades = [0, 10, 20, 50, 100, 200, 500, 1000],
@@ -348,4 +360,4 @@ const drawMap = function(courseType) {
     };
     legend.addTo(map);
 }
-window.onload = drawMap;
+window.onload = () => { drawMap('all')};

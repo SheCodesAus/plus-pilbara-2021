@@ -27,6 +27,11 @@ class IndexView(generic.ListView):
                         'alumni_mentor': Participant.objects.all().filter(in_mentor="yes", studentcourse__location__state="WA", studentcourse__location__region__contains="Perth").count(), # ....
                     },
                 },
+                'SA': {
+                    'regional': {
+                        '1 day': 10
+                    }
+                }
         }
         json_data = json.dumps(shecodes_statedata)
 
