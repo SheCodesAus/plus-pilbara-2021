@@ -1,10 +1,5 @@
 console.log(statedata)
 let stateCounts;
-// function filterMap(allcoursefilterMap) {
-//  // does some math and gets numbers from the context data
-//  statedata['WA']['SA']['NT']['QLD']['NSW']['VIC']['ACT']['TAS']
-//  // update the map
-// }
 
 // DATA TO BE DISPLAYED ON OUTPUT BOX IN TOP RIGHT OF MAP
 
@@ -119,31 +114,397 @@ function regionalalumni_mentorWA() {
     return statedata['WA']['regional']['alumni_mentor']
 }
 
-
-// State total all courses
-
+//  SA Total hover -  All courses course button - map output box when selected ALL COURSES filter and hovering over SA
 function totalSA() {
     return statedata['SA']['regional']['1 day'] + statedata['SA']['regional']['flash'] + statedata['SA']['regional']['plus'] + statedata['SA']['regional']['alumni_mentor'] + statedata['SA']['metro']['1 day'] + statedata['SA']['metro']['flash'] + statedata['SA']['metro']['plus'] + statedata['SA']['metro']['alumni_mentor']
 }
+
+function metroallcoursesSA() {
+    return metroworkshopSA() + metroflashSA() + metroplusSA() + metroalumni_mentorSA()
+}
+
+function regionalallcoursesSA() {
+    return regionalworkshopSA() + regionalflashSA() + regionalplusSA() + regionalalumni_mentorSA()
+}
+
+//  SA hover -  workshop course button - map output box when selected WORKSHOP filter and hovering over SA
+function workshopSA() {
+    return statedata['SA']['regional']['1 day'] + statedata['SA']['metro']['1 day']
+}
+function metroworkshopSA() {
+    return statedata['SA']['metro']['1 day']
+}
+function regionalworkshopSA() {
+    return statedata['SA']['regional']['1 day']
+}
+
+// SA hover -  flash course button - map output box when selected FLASH filter and hovering over SA
+function flashSA() {
+    return statedata['SA']['regional']['flash'] + statedata['SA']['metro']['flash']
+}
+function metroflashSA() {
+    return statedata['SA']['metro']['flash']
+}
+function regionalflashSA() {
+    return statedata['SA']['regional']['flash']
+}
+
+// SA hover -  plus course button - map output box when selected PLUS filter and hovering over SA
+function plusSA() {
+    return statedata['SA']['regional']['plus'] + statedata['SA']['metro']['plus']
+}
+function metroplusSA() {
+    return statedata['SA']['metro']['plus']
+}
+function regionalplusSA() {
+    return statedata['SA']['regional']['plus']
+}
+// SA hover -  alumi mentor course button - map output box when selected ALUMNI MENTOR filter and hovering over SA
+function alumni_mentorSA() {
+    return statedata['SA']['regional']['alumni_mentor'] + statedata['SA']['metro']['alumni_mentor']
+}
+function metroalumni_mentorSA() {
+    return statedata['SA']['metro']['alumni_mentor']
+}
+function regionalalumni_mentorSA() {
+    return statedata['SA']['regional']['alumni_mentor']
+}
+
+//  NT Total hover -  All courses course button - map output box when selected ALL COURSES filter and hovering over NT
 function totalNT() {
     return statedata['NT']['regional']['1 day'] + statedata['NT']['regional']['flash'] + statedata['NT']['regional']['plus'] + statedata['NT']['regional']['alumni_mentor'] + statedata['NT']['metro']['1 day'] + statedata['NT']['metro']['flash'] + statedata['NT']['metro']['plus'] + statedata['NT']['metro']['alumni_mentor']
 }
+
+function metroallcoursesNT() {
+    return metroworkshopNT() + metroflashNT() + metroplusNT() + metroalumni_mentorNT()
+}
+
+function regionalallcoursesNT() {
+    return regionalworkshopNT() + regionalflashNT() + regionalplusNT() + regionalalumni_mentorNT()
+}
+
+//  NT hover -  workshop course button - map output box when selected WORKSHOP filter and hovering over NT
+function workshopNT() {
+    return statedata['NT']['regional']['1 day'] + statedata['NT']['metro']['1 day']
+}
+function metroworkshopNT() {
+    return statedata['NT']['metro']['1 day']
+}
+function regionalworkshopNT() {
+    return statedata['NT']['regional']['1 day']
+}
+
+// NT hover -  flash course button - map output box when selected FLASH filter and hovering over NT
+function flashNT() {
+    return statedata['NT']['regional']['flash'] + statedata['NT']['metro']['flash']
+}
+function metroflashNT() {
+    return statedata['NT']['metro']['flash']
+}
+function regionalflashNT() {
+    return statedata['NT']['regional']['flash']
+}
+
+// NT hover -  plus course button - map output box when selected PLUS filter and hovering over NT
+function plusNT() {
+    return statedata['NT']['regional']['plus'] + statedata['NT']['metro']['plus']
+}
+function metroplusNT() {
+    return statedata['NT']['metro']['plus']
+}
+function regionalplusNT() {
+    return statedata['NT']['regional']['plus']
+}
+// NT hover -  alumi mentor course button - map output box when selected ALUMNI MENTOR filter and hovering over NT
+function alumni_mentorNT() {
+    return statedata['NT']['regional']['alumni_mentor'] + statedata['NT']['metro']['alumni_mentor']
+}
+function metroalumni_mentorNT() {
+    return statedata['NT']['metro']['alumni_mentor']
+}
+function regionalalumni_mentorNT() {
+    return statedata['NT']['regional']['alumni_mentor']
+}
+
+//  QLD Total hover -  All courses course button - map output box when selected ALL COURSES filter and hovering over QLD
 function totalQLD() {
     return statedata['QLD']['regional']['1 day'] + statedata['QLD']['regional']['flash'] + statedata['QLD']['regional']['plus'] + statedata['QLD']['regional']['alumni_mentor'] + statedata['QLD']['metro']['1 day'] + statedata['QLD']['metro']['flash'] + statedata['QLD']['metro']['plus'] + statedata['QLD']['metro']['alumni_mentor']
 }
+
+function metroallcoursesQLD() {
+    return metroworkshopQLD() + metroflashQLD() + metroplusQLD() + metroalumni_mentorQLD()
+}
+
+function regionalallcoursesQLD() {
+    return regionalworkshopQLD() + regionalflashQLD() + regionalplusQLD() + regionalalumni_mentorQLD()
+}
+
+//  QLD hover -  workshop course button - map output box when selected WORKSHOP filter and hovering over QLD
+function workshopQLD() {
+    return statedata['QLD']['regional']['1 day'] + statedata['QLD']['metro']['1 day']
+}
+function metroworkshopQLD() {
+    return statedata['QLD']['metro']['1 day']
+}
+function regionalworkshopQLD() {
+    return statedata['QLD']['regional']['1 day']
+}
+
+// QLD hover -  flash course button - map output box when selected FLASH filter and hovering over QLD
+function flashQLD() {
+    return statedata['QLD']['regional']['flash'] + statedata['QLD']['metro']['flash']
+}
+function metroflashQLD() {
+    return statedata['QLD']['metro']['flash']
+}
+function regionalflashQLD() {
+    return statedata['QLD']['regional']['flash']
+}
+
+// QLD hover -  plus course button - map output box when selected PLUS filter and hovering over QLD
+function plusQLD() {
+    return statedata['QLD']['regional']['plus'] + statedata['QLD']['metro']['plus']
+}
+function metroplusQLD() {
+    return statedata['QLD']['metro']['plus']
+}
+function regionalplusQLD() {
+    return statedata['QLD']['regional']['plus']
+}
+// QLD hover -  alumi mentor course button - map output box when selected ALUMNI MENTOR filter and hovering over QLD
+function alumni_mentorQLD() {
+    return statedata['QLD']['regional']['alumni_mentor'] + statedata['QLD']['metro']['alumni_mentor']
+}
+function metroalumni_mentorQLD() {
+    return statedata['QLD']['metro']['alumni_mentor']
+}
+function regionalalumni_mentorQLD() {
+    return statedata['QLD']['regional']['alumni_mentor']
+}
+
+//  NSW Total hover -  All courses course button - map output box when selected ALL COURSES filter and hovering over NSW
 function totalNSW() {
     return statedata['NSW']['regional']['1 day'] + statedata['NSW']['regional']['flash'] + statedata['NSW']['regional']['plus'] + statedata['NSW']['regional']['alumni_mentor'] + statedata['NSW']['metro']['1 day'] + statedata['NSW']['metro']['flash'] + statedata['NSW']['metro']['plus'] + statedata['NSW']['metro']['alumni_mentor']
 }
+
+function metroallcoursesNSW() {
+    return metroworkshopNSW() + metroflashNSW() + metroplusNSW() + metroalumni_mentorNSW()
+}
+
+function regionalallcoursesNSW() {
+    return regionalworkshopNSW() + regionalflashNSW() + regionalplusNSW() + regionalalumni_mentorNSW()
+}
+
+//  NSW hover -  workshop course button - map output box when selected WORKSHOP filter and hovering over NSW
+function workshopNSW() {
+    return statedata['NSW']['regional']['1 day'] + statedata['NSW']['metro']['1 day']
+}
+function metroworkshopNSW() {
+    return statedata['NSW']['metro']['1 day']
+}
+function regionalworkshopNSW() {
+    return statedata['NSW']['regional']['1 day']
+}
+
+// NSW hover -  flash course button - map output box when selected FLASH filter and hovering over NSW
+function flashNSW() {
+    return statedata['NSW']['regional']['flash'] + statedata['NSW']['metro']['flash']
+}
+function metroflashNSW() {
+    return statedata['NSW']['metro']['flash']
+}
+function regionalflashNSW() {
+    return statedata['NSW']['regional']['flash']
+}
+
+// NSW hover -  plus course button - map output box when selected PLUS filter and hovering over NSW
+function plusNSW() {
+    return statedata['NSW']['regional']['plus'] + statedata['NSW']['metro']['plus']
+}
+function metroplusNSW() {
+    return statedata['NSW']['metro']['plus']
+}
+function regionalplusNSW() {
+    return statedata['NSW']['regional']['plus']
+}
+// NSW hover -  alumi mentor course button - map output box when selected ALUMNI MENTOR filter and hovering over NSW
+function alumni_mentorNSW() {
+    return statedata['NSW']['regional']['alumni_mentor'] + statedata['NSW']['metro']['alumni_mentor']
+}
+function metroalumni_mentorNSW() {
+    return statedata['NSW']['metro']['alumni_mentor']
+}
+function regionalalumni_mentorNSW() {
+    return statedata['NSW']['regional']['alumni_mentor']
+}
+
+//  VIC Total hover -  All courses course button - map output box when selected ALL COURSES filter and hovering over VIC
 function totalVIC() {
     return statedata['VIC']['regional']['1 day'] + statedata['VIC']['regional']['flash'] + statedata['VIC']['regional']['plus'] + statedata['VIC']['regional']['alumni_mentor'] + statedata['VIC']['metro']['1 day'] + statedata['VIC']['metro']['flash'] + statedata['VIC']['metro']['plus'] + statedata['VIC']['metro']['alumni_mentor']
 }
+
+function metroallcoursesVIC() {
+    return metroworkshopVIC() + metroflashVIC() + metroplusVIC() + metroalumni_mentorVIC()
+}
+
+function regionalallcoursesVIC() {
+    return regionalworkshopVIC() + regionalflashVIC() + regionalplusVIC() + regionalalumni_mentorVIC()
+}
+
+//  VIC hover -  workshop course button - map output box when selected WORKSHOP filter and hovering over VIC
+function workshopVIC() {
+    return statedata['VIC']['regional']['1 day'] + statedata['VIC']['metro']['1 day']
+}
+function metroworkshopVIC() {
+    return statedata['VIC']['metro']['1 day']
+}
+function regionalworkshopVIC() {
+    return statedata['VIC']['regional']['1 day']
+}
+
+// VIC hover -  flash course button - map output box when selected FLASH filter and hovering over VIC
+function flashVIC() {
+    return statedata['VIC']['regional']['flash'] + statedata['VIC']['metro']['flash']
+}
+function metroflashVIC() {
+    return statedata['VIC']['metro']['flash']
+}
+function regionalflashVIC() {
+    return statedata['VIC']['regional']['flash']
+}
+
+// VIC hover -  plus course button - map output box when selected PLUS filter and hovering over VIC
+function plusVIC() {
+    return statedata['VIC']['regional']['plus'] + statedata['VIC']['metro']['plus']
+}
+function metroplusVIC() {
+    return statedata['VIC']['metro']['plus']
+}
+function regionalplusVIC() {
+    return statedata['VIC']['regional']['plus']
+}
+// VIC hover -  alumi mentor course button - map output box when selected ALUMNI MENTOR filter and hovering over VIC
+function alumni_mentorVIC() {
+    return statedata['VIC']['regional']['alumni_mentor'] + statedata['VIC']['metro']['alumni_mentor']
+}
+function metroalumni_mentorVIC() {
+    return statedata['VIC']['metro']['alumni_mentor']
+}
+function regionalalumni_mentorVIC() {
+    return statedata['VIC']['regional']['alumni_mentor']
+}
+
+//  ACT Total hover -  All courses course button - map output box when selected ALL COURSES filter and hovering over ACT
 function totalACT() {
     return statedata['ACT']['regional']['1 day'] + statedata['ACT']['regional']['flash'] + statedata['ACT']['regional']['plus'] + statedata['ACT']['regional']['alumni_mentor'] + statedata['ACT']['metro']['1 day'] + statedata['ACT']['metro']['flash'] + statedata['ACT']['metro']['plus'] + statedata['ACT']['metro']['alumni_mentor']
 }
+
+function metroallcoursesACT() {
+    return metroworkshopACT() + metroflashACT() + metroplusACT() + metroalumni_mentorACT()
+}
+
+function regionalallcoursesACT() {
+    return regionalworkshopACT() + regionalflashACT() + regionalplusACT() + regionalalumni_mentorACT()
+}
+
+//  ACT hover -  workshop course button - map output box when selected WORKSHOP filter and hovering over ACT
+function workshopACT() {
+    return statedata['ACT']['regional']['1 day'] + statedata['ACT']['metro']['1 day']
+}
+function metroworkshopACT() {
+    return statedata['ACT']['metro']['1 day']
+}
+function regionalworkshopACT() {
+    return statedata['ACT']['regional']['1 day']
+}
+
+// ACT hover -  flash course button - map output box when selected FLASH filter and hovering over ACT
+function flashACT() {
+    return statedata['ACT']['regional']['flash'] + statedata['ACT']['metro']['flash']
+}
+function metroflashACT() {
+    return statedata['ACT']['metro']['flash']
+}
+function regionalflashACT() {
+    return statedata['ACT']['regional']['flash']
+}
+
+// ACT hover -  plus course button - map output box when selected PLUS filter and hovering over ACT
+function plusACT() {
+    return statedata['ACT']['regional']['plus'] + statedata['ACT']['metro']['plus']
+}
+function metroplusACT() {
+    return statedata['ACT']['metro']['plus']
+}
+function regionalplusACT() {
+    return statedata['ACT']['regional']['plus']
+}
+// ACT hover -  alumi mentor course button - map output box when selected ALUMNI MENTOR filter and hovering over ACT
+function alumni_mentorACT() {
+    return statedata['ACT']['regional']['alumni_mentor'] + statedata['ACT']['metro']['alumni_mentor']
+}
+function metroalumni_mentorACT() {
+    return statedata['ACT']['metro']['alumni_mentor']
+}
+function regionalalumni_mentorACT() {
+    return statedata['ACT']['regional']['alumni_mentor']
+}
+
+//  TAS Total hover -  All courses course button - map output box when selected ALL COURSES filter and hovering over TAS
 function totalTAS() {
     return statedata['TAS']['regional']['1 day'] + statedata['TAS']['regional']['flash'] + statedata['TAS']['regional']['plus'] + statedata['TAS']['regional']['alumni_mentor'] + statedata['TAS']['metro']['1 day'] + statedata['TAS']['metro']['flash'] + statedata['TAS']['metro']['plus'] + statedata['TAS']['metro']['alumni_mentor']
 }
 
+function metroallcoursesTAS() {
+    return metroworkshopTAS() + metroflashTAS() + metroplusTAS() + metroalumni_mentorTAS()
+}
+
+function regionalallcoursesTAS() {
+    return regionalworkshopTAS() + regionalflashTAS() + regionalplusTAS() + regionalalumni_mentorTAS()
+}
+
+//  TAS hover -  workshop course button - map output box when selected WORKSHOP filter and hovering over TAS
+function workshopTAS() {
+    return statedata['TAS']['regional']['1 day'] + statedata['TAS']['metro']['1 day']
+}
+function metroworkshopTAS() {
+    return statedata['TAS']['metro']['1 day']
+}
+function regionalworkshopTAS() {
+    return statedata['TAS']['regional']['1 day']
+}
+
+// TAS hover -  flash course button - map output box when selected FLASH filter and hovering over TAS
+function flashTAS() {
+    return statedata['TAS']['regional']['flash'] + statedata['TAS']['metro']['flash']
+}
+function metroflashTAS() {
+    return statedata['TAS']['metro']['flash']
+}
+function regionalflashTAS() {
+    return statedata['TAS']['regional']['flash']
+}
+
+// TAS hover -  plus course button - map output box when selected PLUS filter and hovering over TAS
+function plusTAS() {
+    return statedata['TAS']['regional']['plus'] + statedata['TAS']['metro']['plus']
+}
+function metroplusTAS() {
+    return statedata['TAS']['metro']['plus']
+}
+function regionalplusTAS() {
+    return statedata['TAS']['regional']['plus']
+}
+// TAS hover -  alumi mentor course button - map output box when selected ALUMNI MENTOR filter and hovering over TAS
+function alumni_mentorTAS() {
+    return statedata['TAS']['regional']['alumni_mentor'] + statedata['TAS']['metro']['alumni_mentor']
+}
+function metroalumni_mentorTAS() {
+    return statedata['TAS']['metro']['alumni_mentor']
+}
+function regionalalumni_mentorTAS() {
+    return statedata['TAS']['regional']['alumni_mentor']
+}
 
 const drawMap = function (courseType) {
     var map = L.map('map').setView([-27.833, 133.583], 4);
@@ -211,18 +572,57 @@ const drawMap = function (courseType) {
     if (courseType == 'all') {
         // call the function taht counts all  numbers
         metrostateCounts.WA = metroallcoursesWA()
+        metrostateCounts.SA = metroallcoursesSA()
+        metrostateCounts.NT = metroallcoursesNT()
+        metrostateCounts.QLD = metroallcoursesQLD()
+        metrostateCounts.NSW = metroallcoursesNSW()
+        metrostateCounts.VIC = metroallcoursesVIC()
+        metrostateCounts.ACT = metroallcoursesACT()
+        metrostateCounts.TAS = metroallcoursesTAS()
+        
+
     };
     if (courseType == '1 day') {
         metrostateCounts.WA = metroworkshopWA()
+        metrostateCounts.SA = metroworkshopSA()
+        metrostateCounts.NT = metroworkshopNT()
+        metrostateCounts.QLD = metroworkshopQLD()
+        metrostateCounts.NSW = metroworkshopNSW()
+        metrostateCounts.VIC = metroworkshopVIC()
+        metrostateCounts.ACT = metroworkshopACT()
+        metrostateCounts.TAS = metroworkshopTAS()
     };
     if (courseType == 'flash') {
         metrostateCounts.WA = metroflashWA()
+        metrostateCounts.SA = metroflashSA()
+        metrostateCounts.NT = metroflashNT()
+        metrostateCounts.QLD = metroflashQLD()
+        metrostateCounts.NSW = metroflashNSW()
+        metrostateCounts.VIC = metroflashVIC()
+        metrostateCounts.ACT = metroflashACT()
+        metrostateCounts.TAS = metroflashTAS()
     };
     if (courseType == 'plus') {
         metrostateCounts.WA = metroplusWA()
+        metrostateCounts.SA = metroplusSA()
+        metrostateCounts.NT = metroplusNT()
+        metrostateCounts.QLD = metroplusQLD()
+        metrostateCounts.NSW = metroplusNSW()
+        metrostateCounts.VIC = metroplusVIC()
+        metrostateCounts.ACT = metroplusACT()
+        metrostateCounts.TAS = metroplusTAS()
+
     };
     if (courseType == 'alumni_mentor') {
         metrostateCounts.WA = metroalumni_mentorWA()
+        metrostateCounts.SA = metroalumni_mentorSA()
+        metrostateCounts.NT = metroalumni_mentorNT()
+        metrostateCounts.QLD = metroalumni_mentorQLD()
+        metrostateCounts.NSW = metroalumni_mentorNSW()
+        metrostateCounts.VIC = metroalumni_mentorVIC()
+        metrostateCounts.ACT = metroalumni_mentorACT()
+        metrostateCounts.TAS = metroalumni_mentorTAS()
+
     };
 
     // let regionalstateCounts = {
@@ -253,11 +653,6 @@ const drawMap = function (courseType) {
     // };
     // output box rules
 
-  
-
-
-
-
 
     // control that shows state info on hover
     var info = L.control();
@@ -277,9 +672,20 @@ const drawMap = function (courseType) {
         const regional = courseType === 'all'? sum(statedata[props.STATE_NAME].regional) : statedata[props.STATE_NAME].regional[courseType];
         const metro =  courseType === 'all'? sum(statedata[props.STATE_NAME].metro):statedata[props.STATE_NAME].metro[courseType]; // TODO same as above
         
-        this._div.innerHTML = props.STATE_NAME + '<h4>SheCodes Participants = </h4>' + count +
+        this._div.innerHTML = props.STATE_NAME + '<h4>Total SheCodes Participants = </h4>' + count +
          '<b>' + '<h4>Metro Participants = </h4>' + metro + '</b>' + '<h4>Regional Participants = </h4>' + regional;
     };
+   
+    // info.update = function (props) {
+    // if (!props) return;
+    // const count = stateCounts[props.STATE_NAME]
+    // const regional = courseType === '1 day'? sum(statedata[props.STATE_NAME].regional) : statedata[props.STATE_NAME].regional[courseType];
+    // const metro =  courseType === '1 day'? sum(statedata[props.STATE_NAME].metro):statedata[props.STATE_NAME].metro[courseType]; // TODO same as above
+    
+    // this._div.innerHTML = props.STATE_NAME + '<h4>Total 1 day Course Participants = </h4>' + count +
+    //  '<b>' + '<h4>Metro Participants = </h4>' + metro + '</b>' + '<h4>Regional Participants = </h4>' + regional;
+    // };
+
     // info.update = function (props) {
     //     this._div.innerHTML = '<h4>Australian SheCodes Participants</h4>' + (props ?
     //         '<b>' + STATE_NAME + '</b><br />' + participant_number + 'SheCodes Participants'

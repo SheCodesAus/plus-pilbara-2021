@@ -147,6 +147,7 @@ body {
     color:black;
     font-size: 18px;
     line-height: 1.6;
+    text-align: center;
 }
 
 .btn-group {
@@ -212,6 +213,14 @@ button {
     /* float: left; */
 }
 
+button:hover {
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+button:focus {
+    border: 4px solid black;
+}
 
 #allcourse-map{
     color: #fff;
