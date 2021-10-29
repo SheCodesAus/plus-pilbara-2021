@@ -1,6 +1,4 @@
 {% load static %}
-
-
 <!doctype html>
 
 <html lang="en">
@@ -16,14 +14,11 @@
     </head>
 
     <body>
-        <header>
-            <div id="header-text">
-                <a id="header-link" href="{% url 'swc:index' %}">
-                    <h1>She Who Codes</h1>
-                    <p class="header_paragraph">Subtitle</p>
-                </a>
+        <header class="header">
+            <div>
+                <img id='banner' src="{% static 'swc/images/header.gif' %}">
+                {% include './nav.html' %}<!-- includes nav on every page -->
             </div>
-            {% include './nav.html' %}<!-- includes nav on every page -->
         </header>
 
         <!-- content blocks here -->

@@ -14,6 +14,7 @@ urlpatterns = [
     path('add-participant/', views.AddParticipantView.as_view(), name='participantView'),
     path('participant-interview/', views.ParticipantInterviewView.as_view(), name='participantInterview'),
     path('enrol-student/', views.StudentEnrollmentView.as_view(), name='StudentEnrollmentsForm'),
+
 ]
 
 
