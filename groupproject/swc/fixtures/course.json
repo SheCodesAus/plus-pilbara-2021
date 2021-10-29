@@ -4,10 +4,9 @@
         "pk": 1,
         "fields": {
             "program": "Flash",
-            "date_started": "2021-10-14T11:08:32Z",
-            "date_completed": "2021-10-14T11:08:35Z",
-            "location": 4,
-            "language": []
+            "language": [],
+            "course_bio": "words go here",
+            "course_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
         }
     },
     {
@@ -15,10 +14,9 @@
         "pk": 2,
         "fields": {
             "program": "Plus",
-            "date_started": "2021-09-01T12:00:00Z",
-            "date_completed": "2021-09-03T12:00:00Z",
-            "location": 3,
-            "language": []
+            "language": [],
+            "course_bio": "words go here",
+            "course_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
         }
     },
     {
@@ -26,10 +24,9 @@
         "pk": 3,
         "fields": {
             "program": "Plus",
-            "date_started": "2021-04-01T12:00:00Z",
-            "date_completed": "2021-11-02T00:00:00Z",
-            "location": 1,
-            "language": []
+            "language": [],
+            "course_bio": "words go here",
+            "course_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
         }
     },
     {
@@ -37,10 +34,9 @@
         "pk": 4,
         "fields": {
             "program": "Flash",
-            "date_started": "2021-12-06T06:00:00Z",
-            "date_completed": "2021-12-08T12:00:00Z",
-            "location": 2,
-            "language": []
+            "language": [],
+            "course_bio": "words go here",
+            "course_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
         }
     },
     {
@@ -48,13 +44,12 @@
         "pk": 5,
         "fields": {
             "program": "Workshop",
-            "date_started": "2021-08-28T08:00:00Z",
-            "date_completed": "2021-08-28T17:00:00Z",
-            "location": 5,
             "language": [
                 3,
                 4
-            ]
+            ],
+            "course_bio": "words go here",
+            "course_img": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
         }
     }
 ]

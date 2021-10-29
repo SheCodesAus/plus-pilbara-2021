@@ -1,24 +1,41 @@
-h1  {
-    color: #;
-    font-size: ;
-    font:railway; 
-    margin-bottom: .;
-    text-align: center;
-    text-decoration: underline;
-  }
-  
-  table {
-    margin: .;
-    width: ;
-  }
-  
-  th {
-    padding: ;
-  }
-  
-  td {
-    background-color ;
-    border: 1px ;
-    padding-left: .5em;
-    padding-right: .5em;
-  }
+.participant-pic {
+  height: 110px;
+  width: 110px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.participant-badge {
+  height: 110px;
+}
+
+.story-wrapper {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.alumni-card {
+  max-width: 95%;
+  border-radius: 25px;
+  border-top: grey;
+  border-top-width: 20px;
+  background-color: rgb(224, 223, 223);
+}
+
+#alumni-hero {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.participant-bio {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}

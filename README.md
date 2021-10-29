@@ -23,25 +23,32 @@ python3 manage.py loaddata sponsors
 8. KeyStatistics
 python3 manage.py loaddata keystatistics
 9. ParticipantROI
-python3 manage.py loaddata participantROI
+python3 manage.py loaddata participantroi
 10. SponsorROI
-python3 manage.py loaddata sponsorROI
+python3 manage.py loaddata sponsorroi
+11. StudentCourse
+python3 manage.py loaddata studentcourse
 
 She codes Pathway colour
 1. One day workshop 
 rgb(212, 99, 151)
+HEX : d46397
 
 2. Flash
 rgb(167, 70, 144)
+HEX : a74690
 
 3. Plus
 rgb(119, 46, 132)
+HEX : 772e84
 
 4. Internships and opportunities
 rgb(70, 30, 115)
+HEX : 461e73
 
 5. Mentor
 rgb(12, 18, 94)
+HEX : 0c125e
 
 She codes colour on website
 Yellow text
