@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm, fields, models
-from .models import Location, Language, Course, Participant, Schedule, Sponsors, Completion_status, KeyStatistics, ParticipantROI
+from .models import Participant,StudentCourse,ParticipantROI
 
 class ParticipantForm(ModelForm):
     class Meta:
@@ -11,3 +11,8 @@ class ParticipantInterviewForm(ModelForm):
     class Meta:
         model = ParticipantROI
         fields = ['participant','course','better_equipped','more_confident','pursue_tech_career','another_course','interested_mentor']
+
+class StudentEnrollmentsForm(ModelForm):
+    class Meta:
+        model = StudentCourse
+        fields = ['student','course','location']

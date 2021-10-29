@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models import fields
 from django.db.models.deletion import CASCADE
+from django.utils import timezone
 
 GENDER_CHOICES = [
 ('F','Female'),
@@ -44,6 +45,13 @@ INDUSTRIES = [
 ('OT', 'OTHER'),
 ]
 
+ENROL_CHOICES = [
+    ('E', 'ENROLLED'),
+    ('N', 'NOT YET COMPLETE'),
+    ('Q', 'CANCELLED'),
+    ('C', 'COMPLETE'),
+]
+
 class Location(models.Model):
     state = models.CharField(max_length=5, choices=STATE_CHOICES)
     region = models.CharField(max_length=300)
@@ -61,17 +69,19 @@ class Language(models.Model):
 class Course(models.Model):
     program = models.CharField(max_length=50)
     language = models.ManyToManyField(Language)
-    date_started = models.DateTimeField()
-    date_completed = models.DateTimeField()
-    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    course_bio = models.TextField()
+    course_img = models.URLField()
+
     def __str__(self):
         return self.program
-
-
+    
+    def course_language(self):
+        return ",".join([str(p) for p in self.language.all()])  
 
 class Completion_status(models.Model):
-    completion_date = models.DateTimeField()
-    completion_result = models.CharField(max_length=50)
+    commencement_date = models.DateTimeField(default=timezone.now())
+    completion_date = models.DateTimeField(default=timezone.now())
+    completion_result = models.CharField(max_length=50, choices=ENROL_CHOICES)
     def __str__(self):
         return self.completion_result
 
@@ -93,27 +103,38 @@ class Participant(models.Model):
     def __str__(self):
         return self.first_name
 
-class StudentCourse(models.Model):
-    student = models.ForeignKey(Participant, on_delete=models.CASCADE)
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    completion_status = models.ForeignKey(Completion_status, on_delete=models.CASCADE)
-    def __str__(self):
-        return self.student.first_name 
-    
-    def course_enrolled(self):
-        return ",".join([str(p) for p in self.course.all()])
-
-    def get_result(self):
-        return ",".join([str(p) for p in self.student.all()])
-    
 
 class Schedule(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     course = models.ManyToManyField(Course)
     language = models.ManyToManyField(Language)
-    start_date = models.DateTimeField()
+    start_date = models.DateTimeField(default=timezone.now())
     def __str__(self):
         return self.location.region 
+
+class StudentCourse(models.Model):
+    student = models.ForeignKey(Participant, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    completion_status = models.ForeignKey(Completion_status, on_delete=models.CASCADE)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.student.first_name 
+
+    def student_name(self):
+        return self.student.first_name + " " + self.student.last_name    
+
+    def course_location(self):
+        return self.location.region
+    
+    def course_enrolled(self):
+        return self.course.program
+
+    def get_result(self):
+        return self.completion_status.completion_result
+    
+    def get_complete_date(self):
+        return self.completion_status.completion_date
+    
 
 class Sponsors(models.Model):
     sponsor_name = models.CharField(max_length=50)
@@ -127,7 +148,7 @@ class Sponsors(models.Model):
 class KeyStatistics(models.Model):
     social_reach = models.IntegerField()
     participation_target = models.IntegerField()
-    def __str__(self):
+    def __int__(self):
         return self.social_reach
 
 class ParticipantROI(models.Model):
