@@ -3,6 +3,16 @@
 
 {% block stylesheets %}
 <link rel="stylesheet" type="text/css" href="{% static 'swc/index.css' %}">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script type="text/javascript"> const statedata = {{ jsonData | safe }}; </script>
+  <script type="text/javascript" src="{% static 'swc/states.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'swc/map-scripts.js' %}"></script>
+ 
 {% endblock %}
 
 {% block content %}
@@ -19,32 +29,46 @@
 </div>
 
 
-  <div id="Heatmap-filter-buttons">
-    
+<div class="container-heatmap">
+  <div class="map_blurb">
+    <p><strong class="blurb_title">Key demographics</strong> <br>Through our programs, we're able to reach women from all across Australia, including regional communities.
+    <br><br> Explore our outreach throughout Australia! <br> Filter by course and hover over each state to see our participant numbers.</p>
   </div>
-  
-  <div id="Heatmap">
-    HEATMAP
+ <div class="map-container">
+    <div class="btn-group">
+      <button type="button" id="allcourse-map" class="btn btn-map" onclick="drawMap('all')">All courses</button>
+      <button type="button" id="One-day-map" class="btn btn-map" onclick="drawMap('1 day')">One-day Workshops</button>
+      <button type="button" id="flash-map" class="btn btn-map" onclick="drawMap('flash')">Flash program</button>
+      <button type="button" id="plus-map" class="btn btn-map" onclick="drawMap('plus')">Plus program</button>
+      <button type="button" id="alumni-map" class="btn btn-map" onclick="drawMap('alumni_mentor')">Alumni mentors</button>
+    </div>
+    <div id="map"></div>
   </div>
-
-<div class="container-1">
+</div>
+<div class="container-panel">
   <div class="panel-pathways">
     <h3 class="panel-title">Pathways</h3>
-    <p> She Codes pathway is a sustainable model for people to transition from beginner level to job-ready developer, while building community, capability and structural change.</p>
+    <p class="panel_text"> She Codes pathway is a sustainable model for people to transition from beginner level to job-ready developer, while building community, capability and structural change.</p>
     <a class="Panel_button" href="url 'swc:pathways' ">Find out more</a>
   </div>
 
   <div class="panel-alumni">
     <h3 class="panel-title">Alumni</h3>
-    <p>Alumni are supported in finding internships and career strengthening opportunities post-program, and are encouraged to return as mentors to share their passion with future cohorts.</p>
+    <p class="panel_text">Alumni are supported in finding internships and career strengthening opportunities post-program, and are encouraged to return as mentors to share their passion with future cohorts.</p>
     <a class="Panel_button" href="{% url 'swc:participant' %}">Find out more</a>
   </div>
 
   <div class="panel-sponsors">
     <h3 class="panel-title">Partner with us</h3>
-    <p>We work with incredible organisations to support women in the tech industry through our weekend workshop, one week intensive program or our six-month course.</p>
+    <p class="panel_text">We work with incredible organisations to support women in the tech industry through our weekend workshop, one week intensive program or our six-month course.</p>
     <a class="Panel_button" href="{% url 'swc:sponsors' %}">Find out more</a>
   </div>
 </div>
 
   {% endblock %}
+
+
+
+
+
+
