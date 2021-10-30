@@ -100,8 +100,11 @@ class Participant(models.Model):
     in_mentor = models.CharField(max_length=30) 
     language = models.ManyToManyField(Language)
     industry = models.CharField(max_length=50, choices=INDUSTRIES)
+    learnerpath = models.ManyToManyField(Course, through='StudentCourse')
     def __str__(self):
         return self.first_name
+
+    
 
 
 class Schedule(models.Model):
