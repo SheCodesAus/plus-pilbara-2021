@@ -78,6 +78,22 @@ h5 {
     background: linear-gradient(to bottom,#f2f2f2 23%,#000 23% 80%);
 }
 
+#footer-rightc {
+   text-align: center;
+}
+
+.para {
+    display: flex;
+    align-items: baseline;
+    align-content: space-between;
+    justify-content: space-evenly;
+}
+
+.footer-text {
+    margin: 20px;
+    width: 40%;
+}
+
 .logo {
     display: block;
     margin-left: auto;
@@ -93,13 +109,6 @@ h5 {
 .flags {
     max-height: 30px;
     width: auto;
-}
-
-.para {
-    display: flex;
-    align-items: baseline;
-    align-content: space-between;
-    justify-content: space-evenly;
 }
 
 @media (min-width:500px){
