@@ -103,6 +103,7 @@ class Participant(models.Model):
     def __str__(self):
         return self.first_name
 
+
 class Schedule(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     course = models.ManyToManyField(Course)
