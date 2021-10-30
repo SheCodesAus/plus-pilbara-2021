@@ -39,8 +39,16 @@ p {
     margin-inline-end: 0px;
 }
 
+h5 {
+    display: flex;
+    justify-content: space-evenly;
+    color: #f2f2f2;
+    font-family: system-ui, sans-serif;
+    text-align: center;
+}
+
 #banner {
-    width: 1500px;
+    width: 100%;
     height: auto;
     display: flex;
 }
@@ -67,7 +75,7 @@ p {
 }
 
 #footer {
-    background: linear-gradient(to bottom,#f2f2f2 25%,#000 25% 80%);
+    background: linear-gradient(to bottom,#f2f2f2 23%,#000 23% 80%);
 }
 
 .logo {
@@ -89,8 +97,9 @@ p {
 
 .para {
     display: flex;
+    align-items: baseline;
+    align-content: space-between;
     justify-content: space-evenly;
-    color: #f2f2f2;
 }
 
 @media (min-width:500px){

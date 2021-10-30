@@ -5,11 +5,11 @@
         {% if request.user.is_authenticated %}
             <a href="">{{ user.username }}. Welcome back !<a></a>
             <a href="{% url 'swc:pathways' %}">Pathways</a>
-            <a href="{% url 'swc:alumni' %}">Alumni</a>
+            <a href="{% url 'swc:participant' %}">Alumni</a>
             <a href="{% url 'swc:sponsors' %}">Sponsors</a>
         {% else %}
             <a href="{% url 'swc:pathways' %}">Pathways</a>
-            <a href="{% url 'swc:alumni' %}">Alumni</a>
+            <a href="{% url 'swc:participant' %}">Alumni</a>
             <a href="{% url 'swc:sponsors' %}">Sponsors</a>
         {% endif %}
     </div>
