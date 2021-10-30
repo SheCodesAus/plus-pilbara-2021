@@ -125,7 +125,7 @@ div {
   color:white;
   text-align: center;
 }
-h2 {
+/* h2 {
   display: block;
   font-size: 1.5em;
   margin-block-start: 0.83em;
@@ -133,7 +133,7 @@ h2 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
-}
+} */
 .cont_box2 .inner_wrap {
   min-height: 804px;
   background: #fff;
@@ -170,13 +170,13 @@ h2 {
   color: rgb(101, 62, 151);
   text-align: left;
 }
-p {
+/* p {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-}
+} */
 
 .cont_box2 .btn_type9 {
   margin: 40px auto 0;

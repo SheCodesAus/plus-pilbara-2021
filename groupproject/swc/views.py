@@ -144,6 +144,10 @@ class IndexView(generic.ListView):
         json_data = json.dumps(shecodes_statedata)
 
         context = { "jsonData": json_data }
+
+        context['statsones'] = Participant.objects.count()
+        context['stattwo'] = (context['statsones']/30)*100
+
         return context
 
 class PathwayView(generic.ListView):
