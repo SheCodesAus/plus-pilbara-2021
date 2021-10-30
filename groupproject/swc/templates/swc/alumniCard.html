@@ -5,8 +5,13 @@
         <h3>About {{ participant.first_name }}</h3>
             <h5 class="participant-bio">{{ participant.bio }}</h4>
             
-            <li class="participant-languges">{{ language }}</li>
+            <ul>
+                {% for language in participant.language.all %}
+                <li class="participant-languges">{{ language }}</li>
+                {% endfor %}
+            </ul>
 
+            {{ participant.language.count}}
 
     {% else %}
     {% endif %}
