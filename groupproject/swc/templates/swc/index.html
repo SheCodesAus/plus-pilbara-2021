@@ -3,6 +3,7 @@
 
 {% block stylesheets %}
 <link rel="stylesheet" type="text/css" href="{% static 'swc/index.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'swc/meter.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -25,7 +26,7 @@
           <h2>100k Participants by 2025</h2>
       </div>
       <div class="meter">
-          <span style="width: 100%"></span>
+          <span style="width: {{ stat }}"></span>
       </div>
     </div>
   </div>
