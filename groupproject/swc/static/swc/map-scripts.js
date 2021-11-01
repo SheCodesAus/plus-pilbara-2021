@@ -525,129 +525,56 @@ function getStateCounts() {
     if (courseType == 'all') {
         // call the function taht counts all  numbers
         stateCounts.WA = totalWA(),
-            stateCounts.SA = totalSA(),
-            stateCounts.NT = totalNT(),
-            stateCounts.QLD = totalQLD(),
-            stateCounts.NSW = totalNSW(),
-            stateCounts.VIC = totalVIC(),
-            stateCounts.ACT = totalACT(),
-            stateCounts.TAS = totalTAS()
+        stateCounts.SA = totalSA(),
+        stateCounts.NT = totalNT(),
+        stateCounts.QLD = totalQLD(),
+        stateCounts.NSW = totalNSW(),
+        stateCounts.VIC = totalVIC(),
+        stateCounts.ACT = totalACT(),
+        stateCounts.TAS = totalTAS()
     };
     if (courseType == '1 day') {
         stateCounts.WA = workshopWA(),
-            stateCounts.SA = workshopSA(),
-            stateCounts.NT = workshopNT(),
-            stateCounts.QLD = workshopQLD(),
-            stateCounts.NSW = workshopNSW(),
-            stateCounts.VIC = workshopVIC(),
-            stateCounts.ACT = workshopACT(),
-            stateCounts.TAS = workshopTAS()
+        stateCounts.SA = workshopSA(),
+        stateCounts.NT = workshopNT(),
+        stateCounts.QLD = workshopQLD(),
+        stateCounts.NSW = workshopNSW(),
+        stateCounts.VIC = workshopVIC(),
+        stateCounts.ACT = workshopACT(),
+        stateCounts.TAS = workshopTAS()
     };
     if (courseType == 'flash') {
         stateCounts.WA = flashWA()
+        stateCounts.SA = flashSA(),
+        stateCounts.NT = flashNT(),
+        stateCounts.QLD = flashQLD(),
+        stateCounts.NSW = flashNSW(),
+        stateCounts.VIC = flashVIC(),
+        stateCounts.ACT = flashACT(),
+        stateCounts.TAS = flashTAS()
     };
     if (courseType == 'plus') {
         stateCounts.WA = plusWA()
+        stateCounts.SA = plusSA(),
+        stateCounts.NT = plusNT(),
+        stateCounts.QLD = plusQLD(),
+        stateCounts.NSW = plusNSW(),
+        stateCounts.VIC = plusVIC(),
+        stateCounts.ACT = plusACT(),
+        stateCounts.TAS = plusTAS()
     };
     if (courseType == 'alumni_mentor') {
         stateCounts.WA = alumni_mentorWA()
+        stateCounts.SA = alumni_mentorSA(),
+        stateCounts.NT = alumni_mentorNT(),
+        stateCounts.QLD = alumni_mentorQLD(),
+        stateCounts.NSW = alumni_mentorNSW(),
+        stateCounts.VIC = alumni_mentorVIC(),
+        stateCounts.ACT = alumni_mentorACT(),
+        stateCounts.TAS = alumni_mentorTAS()
     };
 
     return stateCounts
-
-    // let metrostateCounts = {
-    //     WA: 0,
-    //     SA: 0,
-    //     NT: 0,
-    //     QLD: 0,
-    //     NSW: 0,
-    //     VIC: 0,
-    //     ACT: 0,
-    //     TAS: 0,
-    // }
-    // if (courseType == 'all') {
-    //     // call the function taht counts all  numbers
-    //     metrostateCounts.WA = metroallcoursesWA()
-    //     metrostateCounts.SA = metroallcoursesSA()
-    //     metrostateCounts.NT = metroallcoursesNT()
-    //     metrostateCounts.QLD = metroallcoursesQLD()
-    //     metrostateCounts.NSW = metroallcoursesNSW()
-    //     metrostateCounts.VIC = metroallcoursesVIC()
-    //     metrostateCounts.ACT = metroallcoursesACT()
-    //     metrostateCounts.TAS = metroallcoursesTAS()
-        
-
-    // };
-    // if (courseType == '1 day') {
-    //     metrostateCounts.WA = metroworkshopWA()
-    //     metrostateCounts.SA = metroworkshopSA()
-    //     metrostateCounts.NT = metroworkshopNT()
-    //     metrostateCounts.QLD = metroworkshopQLD()
-    //     metrostateCounts.NSW = metroworkshopNSW()
-    //     metrostateCounts.VIC = metroworkshopVIC()
-    //     metrostateCounts.ACT = metroworkshopACT()
-    //     metrostateCounts.TAS = metroworkshopTAS()
-    // };
-    // if (courseType == 'flash') {
-    //     metrostateCounts.WA = metroflashWA()
-    //     metrostateCounts.SA = metroflashSA()
-    //     metrostateCounts.NT = metroflashNT()
-    //     metrostateCounts.QLD = metroflashQLD()
-    //     metrostateCounts.NSW = metroflashNSW()
-    //     metrostateCounts.VIC = metroflashVIC()
-    //     metrostateCounts.ACT = metroflashACT()
-    //     metrostateCounts.TAS = metroflashTAS()
-    // };
-    // if (courseType == 'plus') {
-    //     metrostateCounts.WA = metroplusWA()
-    //     metrostateCounts.SA = metroplusSA()
-    //     metrostateCounts.NT = metroplusNT()
-    //     metrostateCounts.QLD = metroplusQLD()
-    //     metrostateCounts.NSW = metroplusNSW()
-    //     metrostateCounts.VIC = metroplusVIC()
-    //     metrostateCounts.ACT = metroplusACT()
-    //     metrostateCounts.TAS = metroplusTAS()
-
-    // };
-    // if (courseType == 'alumni_mentor') {
-    //     metrostateCounts.WA = metroalumni_mentorWA()
-    //     metrostateCounts.SA = metroalumni_mentorSA()
-    //     metrostateCounts.NT = metroalumni_mentorNT()
-    //     metrostateCounts.QLD = metroalumni_mentorQLD()
-    //     metrostateCounts.NSW = metroalumni_mentorNSW()
-    //     metrostateCounts.VIC = metroalumni_mentorVIC()
-    //     metrostateCounts.ACT = metroalumni_mentorACT()
-    //     metrostateCounts.TAS = metroalumni_mentorTAS()
-
-    // };
-
-    // let regionalstateCounts = {
-    //     WA: 0,
-    //     SA: 0,
-    //     NT: 0,
-    //     QLD: 0,
-    //     NSW: 0,
-    //     VIC: 0,
-    //     ACT: 0,
-    //     TAS: 0,
-    // }
-    // if (courseType == 'all') {
-    //     // call the function taht counts all  numbers
-    //     regionalstateCounts.WA = regionalallcoursesWA()
-    // };
-    // if (courseType == '1 day') {
-    //     regionalstateCounts.WA = regionalworkshopWA()
-    // };
-    // if (courseType == 'flash') {
-    //     regionalstateCounts.WA = regionalflashWA()
-    // };
-    // if (courseType == 'plus') {
-    //     regionalstateCounts.WA = regionalplusWA()
-    // };
-    // if (courseType == 'alumni_mentor') {
-    //     regionalstateCounts.WA = regionalalumni_mentorWA()
-    // };
-    // output box rules
 }
 
 const drawMap = function () {
@@ -684,22 +611,7 @@ const drawMap = function () {
          '<b>' + '<h4>Metro Participants = </h4>' + metro + '</b>' + '<h4>Regional Participants = </h4>' + regional;
     };
    
-    // info.update = function (props) {
-    // if (!props) return;
-    // const count = stateCounts[props.STATE_NAME]
-    // const regional = courseType === '1 day'? sum(statedata[props.STATE_NAME].regional) : statedata[props.STATE_NAME].regional[courseType];
-    // const metro =  courseType === '1 day'? sum(statedata[props.STATE_NAME].metro):statedata[props.STATE_NAME].metro[courseType]; // TODO same as above
-    
-    // this._div.innerHTML = props.STATE_NAME + '<h4>Total 1 day Course Participants = </h4>' + count +
-    //  '<b>' + '<h4>Metro Participants = </h4>' + metro + '</b>' + '<h4>Regional Participants = </h4>' + regional;
-    // };
-
-    // info.update = function (props) {
-    //     this._div.innerHTML = '<h4>Australian SheCodes Participants</h4>' + (props ?
-    //         '<b>' + STATE_NAME + '</b><br />' + participant_number + 'SheCodes Participants'
-    //         : 'Hover over a state');
-    // };
-
+ 
     info.addTo(map);
 
     // get color depending on population density value
