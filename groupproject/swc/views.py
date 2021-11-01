@@ -155,6 +155,11 @@ class PathwayView(generic.ListView):
     template_name = 'swc/pathways.html'
     context_object_name = 'pathways'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['course'] = Course.objects.all()
+        return context
+
 class AlumniView(generic.ListView):
     model = Participant
     template_name = 'swc/alumni.html'

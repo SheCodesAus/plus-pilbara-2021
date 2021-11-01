@@ -110,6 +110,24 @@ h5 {
     max-height: 30px;
     width: auto;
 }
+#hello {
+    font-family: 'Bad Script', cursive;
+    text-align: left;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+#welcome{
+    text-align: left;
+    margin-left:150px;
+    color: #f59818;
+}
+
+#goal {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
 
 @media (min-width:500px){
     .grid {
