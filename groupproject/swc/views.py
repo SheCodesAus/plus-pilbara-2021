@@ -155,8 +155,13 @@ class PathwayView(generic.ListView):
     def get_context_data(self, **kwargs):
         context= super().get_context_data(**kwargs)
 
-        context['statsones'] = Participant.objects.count()
-        context['stattwo'] = (context['statsones']/30)*100
+        context['coursecount'] = Participant.objects.count()
+        context['programcounter'] = Course.objects.values('program', 'course_img').annotate(students=Count('studentcourse'))
+        coursedata = Course.objects.values('program', 'course_img').annotate(students=Count('studentcourse'))
+        context['programcounter2'] = { course['program']: course for course in coursedata}
+        context['languagecounter'] = Course.objects.values('language').annotate(students=Count('studentcourse'))
+
+        # context['flash_participant_count'] = Participant.objects.filter(learnerpath__program='Flash').count()
 
         return context
 
@@ -204,6 +209,3 @@ class SponsorView(generic.ListView):
         context['upskilling'] = Participant.objects.filter(tech_life_balance__contains='working').count()
 
         return context 
-
-    
-

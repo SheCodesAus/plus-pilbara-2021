@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block stylesheets %}
-<!-- <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}"> -->
+<!-- <link rel="stylesheet" type="text/cs" href="{% static 'styles.css' %}"> -->
 {% endblock %}
 
 {% block content %}
@@ -20,11 +20,26 @@
 
 <div id="pathways">
     <div class="pathways-boxes" id="workshop">
-        <h2>Workshop</h2>
+        {{ programcounter2}}
+        <h2>Workshop {{ programcounter2.Workshop }}</h2>
+        <img src="{{ programcounter2.Workshop.course_img }}"/>
+        <h2>Workshop {{ programcounter2.Workshop.students }}</h2>
+
+
+
         <div>
+
             
-            {% for lan in language.all %}
-            <img class="sponsor-img" src="{{ lan.profile_pic }}">
+            {% for course in programcounter %}
+            <h3>hi</h3>
+            <h3> {{ course.program }} </h3>
+
+
+            <h3> {{ course.students }} </h3>
+
+            <h3> {{ course.course_img }} </h3>
+            <!-- <img src="{{ course.course_img }}"> -->
+            
             {% endfor %}
 
         </div>
