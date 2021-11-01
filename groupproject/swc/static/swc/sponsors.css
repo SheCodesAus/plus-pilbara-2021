@@ -85,10 +85,6 @@
 }
 
 
-
-
-
-
   /* Sponsor contact form */
 #sponsorContactUscontainer.bg {
   background:  rgb(101, 62, 151);
@@ -139,15 +135,18 @@ div {
   background: #fff;
   text-align: center;
 }
+
 .sign_up_area {
   padding: 6px 166px 57px;
 }
+
 .sign_up_area .sub_tit {
   padding: 33px 0 0;
   font-size: 19px;
   text-align: left;
   font-weight: 500;
 }
+
 .sub_tit {
   display: block;
   font-size: 1.17em;
@@ -157,19 +156,23 @@ div {
   margin-inline-end: 0px;
   font-weight: bold;
 }
+
 .sign_up_area .input_area {
   margin-top: 10px;
 }
+
 .cont_box2 .input_area {
   position: relative;
   text-align: center;
 }
+
 .sign_up_area .agree_txt {
   padding: 20px 0 2px;
   font-size: 16px;
   color: rgb(101, 62, 151);
   text-align: left;
 }
+
 /* p {
   display: block;
   margin-block-start: 1em;
@@ -182,6 +185,7 @@ div {
   margin: 40px auto 0;
   color: white;
 }
+
 .btn_type9 {
   display: inline-block;
   vertical-align: top;
@@ -195,10 +199,12 @@ div {
   border-radius: 26px;
   cursor: pointer;
 }
+
 .btn_type8.v4, .btn_type9 {
   height: 48px;
   line-height: 48px;
 }
+
 .sign_up_area .bg_line {
   display: block;
   position: relative;
@@ -206,6 +212,7 @@ div {
   margin: 52px 0 45px;
   background: #eaeaea;
 }
+
 .sign_up_area .bg_line .inner {
   position: absolute;
   top: -10px;
