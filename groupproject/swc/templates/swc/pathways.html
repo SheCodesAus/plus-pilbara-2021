@@ -18,15 +18,27 @@
     <img id="hero-pathway" src="https://rachelburford.github.io/images/pathwayherograph.png"></img>
 </div>
 
+<div> 
+     <div class="sponsorwrapcontainer">
+    {% for course in programcounter2 %}
+    {% include "swc/pathwaysCard.html" with course=coursedata.Workshop position=forloop.counter %}
+    {% endfor %}
+    </div>
+</div>
+
+{% comment %} 
+
 <div id="pathways">
     <div class="pathways-boxes" id="workshop">
         {{ programcounter2}}
         <h2>Workshop {{ programcounter2.Workshop }}</h2>
         <img src="{{ programcounter2.Workshop.course_img }}"/>
         <h2>Workshop {{ programcounter2.Workshop.students }}</h2>
+    </div>
+</div> {% endcomment %}
 
 
-
+{% comment %} 
         <div>
 
             
@@ -131,7 +143,7 @@
     </div>
 </div>
 
-
+ {% endcomment %}
 
 
 {% endblock %}
