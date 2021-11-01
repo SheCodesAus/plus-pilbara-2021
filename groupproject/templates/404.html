@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block stylesheets %}
-<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-{% endblock%}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'swc/alumni.css' %}">
+{% endblock %}
+{% block content %}
 
-<img>
-
-<h1>Sorry we aren't quite ready for you yet </h1>
-<h2>Currently underconstruction </h2>
-
-
+<div>
+    <img id='banner' src="{% static 'swc/images/SheCodes404.png' %}">
+</div>
