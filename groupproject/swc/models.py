@@ -63,6 +63,7 @@ class Location(models.Model):
 class Language(models.Model):
     name = models.CharField(max_length=50)
     constraned_by = models.CharField(max_length=50)
+    profile_pic = models.URLField()
     def __str__(self):
         return self.name 
 

@@ -1,10 +1,11 @@
-Sorry we aren't quite ready for you yet (this is our Error 404 page)
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheets %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'swc/alumni.css' %}">
+{% endblock %}
+{% block content %}
 
-
-
-
-
-
-
-/insert image of queenie in piccadily circus/
-/custom 404 pgae w/css nice little 'sorry we aren't quite ready for you'/
+<div>
+    <img id='banner' src="{% static 'swc/images/SheCodes404.png' %}">
+</div>
