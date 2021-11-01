@@ -622,8 +622,8 @@ const drawMap = function () {
                     d > 100 ? '#8c96c6' :
                         d > 50 ? '#9ebcda' :
                             d > 20 ? '#bfd3e6' :
-                                d > 10 ? '#fce197' :
-                                    '#f7fcfd';
+                                d > 10 ? '#e0ecf4' :
+                                    '#fff0c7';
     }
     function style(feature) {
         const stateCounts = getStateCounts();
