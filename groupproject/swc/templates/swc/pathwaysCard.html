@@ -22,9 +22,9 @@
     <div class="pathways-boxes" id="workshop">
         <h2>Workshop</h2>
         <div>
+            participant numbers donut chart {{ statsones }}
+            {% for lan in language %}
             
-            {% for lan in language.all %}
-            <img class="sponsor-img" src="{{ lan.profile_pic }}">
             {% endfor %}
 
         </div>
