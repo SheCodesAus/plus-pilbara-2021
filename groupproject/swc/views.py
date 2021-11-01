@@ -41,7 +41,6 @@ class IndexView(generic.ListView):
                         'alumni_mentor': Participant.objects.all().filter(in_mentor="yes", studentcourse__location__state="WA", studentcourse__location__region__contains="Perth").count(), # ....
                     },
                 },
-               
                 'SA': {
                     'regional': {
                         '1 day': Participant.objects.all().filter(studentcourse__course__program="Workshop", studentcourse__location__state="SA").exclude(studentcourse__location__region__contains="Adelaide").count(), # ....
