@@ -1,5 +1,8 @@
 console.log(statedata)
-let stateCounts;
+let courseType = 'all';
+let map;
+let geojson;
+let redrawLayer;
 
 // DATA TO BE DISPLAYED ON OUTPUT BOX IN TOP RIGHT OF MAP
 
@@ -506,19 +509,10 @@ function regionalalumni_mentorTAS() {
     return statedata['TAS']['regional']['alumni_mentor']
 }
 
-const drawMap = function (courseType) {
-    var map = L.map('map').setView([-27.833, 133.583], 4);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-        maxZoom: 18,
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        id: 'mapbox/light-v9',
-        tileSize: 512,
-        zoomOffset: -1
-    }).addTo(map);
-
+function getStateCounts() {
+    
     // DATA COLOUR ON MAP
-    stateCounts = {
+    const stateCounts = {
         WA: 0,
         SA: 0,
         NT: 0,
@@ -559,71 +553,73 @@ const drawMap = function (courseType) {
         stateCounts.WA = alumni_mentorWA()
     };
 
-    let metrostateCounts = {
-        WA: 0,
-        SA: 0,
-        NT: 0,
-        QLD: 0,
-        NSW: 0,
-        VIC: 0,
-        ACT: 0,
-        TAS: 0,
-    }
-    if (courseType == 'all') {
-        // call the function taht counts all  numbers
-        metrostateCounts.WA = metroallcoursesWA()
-        metrostateCounts.SA = metroallcoursesSA()
-        metrostateCounts.NT = metroallcoursesNT()
-        metrostateCounts.QLD = metroallcoursesQLD()
-        metrostateCounts.NSW = metroallcoursesNSW()
-        metrostateCounts.VIC = metroallcoursesVIC()
-        metrostateCounts.ACT = metroallcoursesACT()
-        metrostateCounts.TAS = metroallcoursesTAS()
+    return stateCounts
+
+    // let metrostateCounts = {
+    //     WA: 0,
+    //     SA: 0,
+    //     NT: 0,
+    //     QLD: 0,
+    //     NSW: 0,
+    //     VIC: 0,
+    //     ACT: 0,
+    //     TAS: 0,
+    // }
+    // if (courseType == 'all') {
+    //     // call the function taht counts all  numbers
+    //     metrostateCounts.WA = metroallcoursesWA()
+    //     metrostateCounts.SA = metroallcoursesSA()
+    //     metrostateCounts.NT = metroallcoursesNT()
+    //     metrostateCounts.QLD = metroallcoursesQLD()
+    //     metrostateCounts.NSW = metroallcoursesNSW()
+    //     metrostateCounts.VIC = metroallcoursesVIC()
+    //     metrostateCounts.ACT = metroallcoursesACT()
+    //     metrostateCounts.TAS = metroallcoursesTAS()
         
 
-    };
-    if (courseType == '1 day') {
-        metrostateCounts.WA = metroworkshopWA()
-        metrostateCounts.SA = metroworkshopSA()
-        metrostateCounts.NT = metroworkshopNT()
-        metrostateCounts.QLD = metroworkshopQLD()
-        metrostateCounts.NSW = metroworkshopNSW()
-        metrostateCounts.VIC = metroworkshopVIC()
-        metrostateCounts.ACT = metroworkshopACT()
-        metrostateCounts.TAS = metroworkshopTAS()
-    };
-    if (courseType == 'flash') {
-        metrostateCounts.WA = metroflashWA()
-        metrostateCounts.SA = metroflashSA()
-        metrostateCounts.NT = metroflashNT()
-        metrostateCounts.QLD = metroflashQLD()
-        metrostateCounts.NSW = metroflashNSW()
-        metrostateCounts.VIC = metroflashVIC()
-        metrostateCounts.ACT = metroflashACT()
-        metrostateCounts.TAS = metroflashTAS()
-    };
-    if (courseType == 'plus') {
-        metrostateCounts.WA = metroplusWA()
-        metrostateCounts.SA = metroplusSA()
-        metrostateCounts.NT = metroplusNT()
-        metrostateCounts.QLD = metroplusQLD()
-        metrostateCounts.NSW = metroplusNSW()
-        metrostateCounts.VIC = metroplusVIC()
-        metrostateCounts.ACT = metroplusACT()
-        metrostateCounts.TAS = metroplusTAS()
+    // };
+    // if (courseType == '1 day') {
+    //     metrostateCounts.WA = metroworkshopWA()
+    //     metrostateCounts.SA = metroworkshopSA()
+    //     metrostateCounts.NT = metroworkshopNT()
+    //     metrostateCounts.QLD = metroworkshopQLD()
+    //     metrostateCounts.NSW = metroworkshopNSW()
+    //     metrostateCounts.VIC = metroworkshopVIC()
+    //     metrostateCounts.ACT = metroworkshopACT()
+    //     metrostateCounts.TAS = metroworkshopTAS()
+    // };
+    // if (courseType == 'flash') {
+    //     metrostateCounts.WA = metroflashWA()
+    //     metrostateCounts.SA = metroflashSA()
+    //     metrostateCounts.NT = metroflashNT()
+    //     metrostateCounts.QLD = metroflashQLD()
+    //     metrostateCounts.NSW = metroflashNSW()
+    //     metrostateCounts.VIC = metroflashVIC()
+    //     metrostateCounts.ACT = metroflashACT()
+    //     metrostateCounts.TAS = metroflashTAS()
+    // };
+    // if (courseType == 'plus') {
+    //     metrostateCounts.WA = metroplusWA()
+    //     metrostateCounts.SA = metroplusSA()
+    //     metrostateCounts.NT = metroplusNT()
+    //     metrostateCounts.QLD = metroplusQLD()
+    //     metrostateCounts.NSW = metroplusNSW()
+    //     metrostateCounts.VIC = metroplusVIC()
+    //     metrostateCounts.ACT = metroplusACT()
+    //     metrostateCounts.TAS = metroplusTAS()
 
-    };
-    if (courseType == 'alumni_mentor') {
-        metrostateCounts.WA = metroalumni_mentorWA()
-        metrostateCounts.SA = metroalumni_mentorSA()
-        metrostateCounts.NT = metroalumni_mentorNT()
-        metrostateCounts.QLD = metroalumni_mentorQLD()
-        metrostateCounts.NSW = metroalumni_mentorNSW()
-        metrostateCounts.VIC = metroalumni_mentorVIC()
-        metrostateCounts.ACT = metroalumni_mentorACT()
-        metrostateCounts.TAS = metroalumni_mentorTAS()
+    // };
+    // if (courseType == 'alumni_mentor') {
+    //     metrostateCounts.WA = metroalumni_mentorWA()
+    //     metrostateCounts.SA = metroalumni_mentorSA()
+    //     metrostateCounts.NT = metroalumni_mentorNT()
+    //     metrostateCounts.QLD = metroalumni_mentorQLD()
+    //     metrostateCounts.NSW = metroalumni_mentorNSW()
+    //     metrostateCounts.VIC = metroalumni_mentorVIC()
+    //     metrostateCounts.ACT = metroalumni_mentorACT()
+    //     metrostateCounts.TAS = metroalumni_mentorTAS()
 
-    };
+    // };
 
     // let regionalstateCounts = {
     //     WA: 0,
@@ -652,7 +648,18 @@ const drawMap = function (courseType) {
     //     regionalstateCounts.WA = regionalalumni_mentorWA()
     // };
     // output box rules
+}
 
+const drawMap = function () {
+    map = L.map('map').setView([-27.833, 133.583], 4);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        id: 'mapbox/light-v9',
+        tileSize: 512,
+        zoomOffset: -1
+    }).addTo(map);
 
     // control that shows state info on hover
     var info = L.control();
@@ -668,6 +675,7 @@ const drawMap = function (courseType) {
 
     info.update = function (props) {
         if (!props) return;
+        const stateCounts = getStateCounts();
         const count = stateCounts[props.STATE_NAME]
         const regional = courseType === 'all'? sum(statedata[props.STATE_NAME].regional) : statedata[props.STATE_NAME].regional[courseType];
         const metro =  courseType === 'all'? sum(statedata[props.STATE_NAME].metro):statedata[props.STATE_NAME].metro[courseType]; // TODO same as above
@@ -706,6 +714,7 @@ const drawMap = function (courseType) {
                                     '#f7fcfd';
     }
     function style(feature) {
+        const stateCounts = getStateCounts();
         const number = stateCounts[feature.properties.STATE_NAME];
         return {
             weight: 2,
@@ -729,7 +738,6 @@ const drawMap = function (courseType) {
         }
         info.update(layer.feature.properties);
     }
-    var geojson;
     function resetHighlight(e) {
         geojson.resetStyle(e.target);
         info.update();
@@ -744,10 +752,14 @@ const drawMap = function (courseType) {
             click: zoomToFeature
         });
     }
-    geojson = L.geoJson(statesData, {
-        style: style,
-        onEachFeature: onEachFeature
-    }).addTo(map);
+    redrawLayer = () => {
+        if (geojson) { map.removeLayer(L.geoJson) }            
+        geojson = L.geoJson(statesData, {
+            style: style,
+            onEachFeature: onEachFeature
+        }).addTo(map);
+    }
+    redrawLayer();
     var legend = L.control({ position: 'bottomright' });
     legend.onAdd = function (map) {
         var div = L.DomUtil.create('div', 'info legend'),
@@ -766,4 +778,13 @@ const drawMap = function (courseType) {
     };
     legend.addTo(map);
 }
-window.onload = () => { drawMap('all')};
+
+function changeCourseType(newType) {
+    courseType = newType;
+    console.log(`New map type: ${newType}`)
+    // redraw map
+    map.invalidateSize();
+    redrawLayer();
+}
+
+window.onload = () => { drawMap()};
