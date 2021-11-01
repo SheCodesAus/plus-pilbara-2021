@@ -30,6 +30,7 @@ h3 {
     font-size: 2rem;
     margin: 0;
     font-family: system-ui, sans-serif;
+    text-align: center;
 }
 p {
     color: black;
