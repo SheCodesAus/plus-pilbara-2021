@@ -311,4 +311,8 @@ form {
   width: 100%;
 }
 
+#badges {
+  height: auto;
+  width: 15px;
+}
 /* //Sponsor contact form */

@@ -4,13 +4,14 @@
 {{ block.super }}
 <link rel="stylesheet" type="text/css" href="{% static 'swc/sponsors.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'swc/meter.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 {% endblock %}
 
 {% block content %}
 
 <!-- Enter page content -->
 
-<h1>Pathways - Sponsors Page</h1>
+<h1 id="page-title">Sponsors Page</h1>
 
 <div class="container">
     <div class="left">
@@ -47,25 +48,28 @@
     <div id="hero-container">
         <div id="participants-block" class="hero-block">
             <div class="block">
+                <img id="badges" src="{% static 'swc/images/participants.png' %}">
                 <div class="text-block">
                     <h4>{{ statsone }}</h4>
-                    <p>Participants Through SheCodes</p>
+                    <p>Participants</p>
                 </div>
             </div>
         </div>
-        <div id="location-bloc k" class="hero-block">
-            <div class="block">3212210
+        <div id="location-block" class="hero-block">
+            <div class="block">
+                <img id="badges" src="{% static 'swc/images/industries.png' %}">
             <div class="text-block">
                 <h4>{{ industries }}</h4>
-                <p>Industries SheCodes</p>
+                <p>Industries</p>
             </div>
         </div>
     </div>
     <div id="course-block" class="hero-block">
         <div class="block">
+            <img id="badges" src="{% static 'swc/images/upskilling.png' %}">
             <div class="text-block">
                 <h4>{{ upskilling }}</h4>
-                <p>Participants Upskilling Through SheCodes</p>
+                <p>Upskilling</p>
             </div>
         </div>
     </div>
