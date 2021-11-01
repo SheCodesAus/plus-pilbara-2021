@@ -1,8 +1,10 @@
 .meter {
     box-sizing: content-box;
+    width: 500px;
+    grid-column: span;
     height: 20px; /* Can be anything */
     position: relative;
-    margin: 60px 0 20px 0; /* Just for demo spacing */
+    margin: 20px 0 20px 0; /* Just for demo spacing */
     background: #555;
     border-radius: 25px;
     padding: 10px;
@@ -16,7 +18,7 @@
     border-bottom-right-radius: 8px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    background-color: rgb(43, 194, 83);
+    background-color: rgb(119, 46, 132);
     background-image: linear-gradient(
       center bottom,
       rgb(43, 194, 83) 37%,
@@ -71,17 +73,6 @@
   #page-wrap {
     width: 490px;
     margin: 80px auto;
-  }
-  body {
-    background: #333;
-    text-align: center;
-    color: #eee;
-    font-family: system-ui, sans-serif;
-  }
-  h1 {
-    font-size: 42px;
-    font-weight: 600;
-    margin: 0 0 30px;
   }
 
   pre {
