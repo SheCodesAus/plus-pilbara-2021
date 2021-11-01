@@ -145,15 +145,21 @@ class IndexView(generic.ListView):
 
         context = { "jsonData": json_data }
 
-        context['statsones'] = Participant.objects.count()
-        context['stattwo'] = (context['statsones']/30)*100
-
         return context
 
 class PathwayView(generic.ListView):
     model = Course
     template_name = 'swc/pathways.html'
     context_object_name = 'pathways'
+
+    def get_context_data(self, **kwargs):
+        context= super().get_context_data(**kwargs)
+
+        context['statsones'] = Participant.objects.count()
+        context['stattwo'] = (context['statsones']/30)*100
+
+        return context
+
 
 class AlumniView(generic.ListView):
     model = Participant
