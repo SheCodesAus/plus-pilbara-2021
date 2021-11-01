@@ -25,7 +25,7 @@
         "fields": {
             "student": 3,
             "course": 1,
-            "completion_status": 3,
+            "completion_status": 1,
             "location": 4
         }
     },
@@ -35,7 +35,7 @@
         "fields": {
             "student": 4,
             "course": 2,
-            "completion_status": 4,
+            "completion_status": 2,
             "location": 2
         }
     }
