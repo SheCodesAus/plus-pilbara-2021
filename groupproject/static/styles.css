@@ -188,3 +188,7 @@ h5 {
 #dash {
     display: flex;
   }
+
+#userloginname {
+    color: #fffff;
+}
