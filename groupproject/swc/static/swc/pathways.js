@@ -21,9 +21,6 @@ const config = {
             display: true,
             text: 'She Codes Pathways'
         }
-        legend: {
-
-        }
     }
 }};
 
