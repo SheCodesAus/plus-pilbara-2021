@@ -4,6 +4,10 @@
 {{ block.super }}
 <link rel="stylesheet" type="text/css" href="{% static 'swc/sponsors.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'swc/meter.css' %}">
+<script src='{% static 'swc/sponsors.js' %}'></script>
+<script src='{% static 'swc/slides.js' %}'></script>
+
+
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -120,10 +124,9 @@
 <h2>OUR SPONSORS</h2>
     <div class="sponsorwrapcontainer">
     {% for sponsor in sponsors %}
-    {% include "swc/sponsorCard.html" with sponsor=sponsor position=forloop.counter %}
+    {% include "swc/sliderCard.html" with sponsor=sponsor position=forloop.counter %}
     {% endfor %}
     </div>
-
 
 
 {% include "swc/sponsorsform.html" %}

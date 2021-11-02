@@ -16,7 +16,7 @@
     border-radius: 50%;
 }
 
-.sponsor-img {
+.photos {
     max-height: 150px;
     max-width: 275px;
 }
@@ -443,9 +443,8 @@ button:last-child {
   border-bottom-right-radius: 4px;
 }
 
-/* //heatmap buttons */
 #badges {
   height: auto;
-  width: 15px;
+  width: 250px;
 }
 /* //Sponsor contact form */
