@@ -25,3 +25,13 @@
   height: 350px !important;
   width: 70% !important;
 }
+
+.rightcard {
+  background: linear-gradient(45deg,#862aa3, white);
+  border-radius: 50%;
+}
+
+.leftcard {
+  background: linear-gradient(45deg, white, #862aa3);
+  border-radius: 50%;
+}

@@ -78,7 +78,7 @@ h5 {
 }
 
 #footer {
-    background: linear-gradient(to bottom,#f2f2f2 23%,#000 23% 80%);
+    background: linear-gradient(to bottom,#f2f2f2 17%,#000 17% 80%);
 }
 
 #footer-rightc {
@@ -99,6 +99,7 @@ h5 {
 
 .logo {
     display: block;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
     width: 25%;
@@ -107,6 +108,11 @@ h5 {
 .logos {
     display: flex;
     justify-content: space-evenly;
+}
+
+.shecodeslogo{
+    display: flex;
+    justify-content: center;
 }
 
 .flags {

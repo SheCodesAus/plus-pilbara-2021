@@ -324,13 +324,14 @@ form {
 }
 
 .container-heatmap{
-    margin: auto;
+    padding-top: 80px;
     width: 50%;
-   
+    margin-left: 15%;
 }
 
 .btn-group {
   display: flex;
+  width: 1200px ;
 }
 
 #map {

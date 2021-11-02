@@ -3,6 +3,7 @@
 {% block stylesheets %}
 {{ block.super }}
 <link rel="stylesheet" type="text/css" href="{% static 'swc/pathways.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
 <script type="text/javascript"> const chartdata = {{ graphjson | safe }}; </script>
 <script src='{% static 'swc/pathways.js' %}'></script>
@@ -14,7 +15,7 @@
 
 <!-- Enter page content -->
 
-<h1 id="page-title">Pathways Page</h1>
+<h1 id="page-title">Pathways</h1>
 
 <!-- insert graph of participants in programs past, present and future -->
  <div class="chartingexample">

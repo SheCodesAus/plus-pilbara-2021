@@ -3,7 +3,7 @@
     <div class="topnav">
         <a href="{% url 'swc:index' %}">Home</a>
         {% if request.user.is_authenticated %}
-            <a href="">Hello {{ user.username }} !<a></a>
+            <p> Hello {{ user.username }} !</p>
             <a href="{% url 'swc:pathways' %}">Pathways</a>
             <a href="{% url 'swc:participant' %}">Alumni</a>
             <a href="{% url 'swc:sponsors' %}">Sponsors</a>
