@@ -1,10 +1,6 @@
-const labels = [
-    'Workshop',
-    'Flash',
-    'Plus',
-    'Internship',
-    'Mentor',
-];
+console.log(chartdata)
+
+const labels = Object.keys(chartdata);
 
 const data = {
     labels: labels,
@@ -12,15 +8,21 @@ const data = {
         label: 'My First Dataset',
         backgroundColor: 'rgb(255,99,132)',
         borderColor: 'rgb(255,99,132)',
-        data: [0,10,5,2,20,30,45],
+        data: Object.values(chartdata),
     }]
 };
 
 const config = {
-    type: 'line',
+    type: 'bar',
     data: data,
-    options: {}
-};
+    options: {
+        plugins: {
+        title: {
+            display: true,
+            text: 'She Codes Pathways'
+        }
+    }
+}};
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const myChart = new Chart(

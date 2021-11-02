@@ -160,7 +160,9 @@ class PathwayView(generic.ListView):
         context= super().get_context_data(**kwargs)
 
         context['coursecount'] = Participant.objects.count()
-        context['programcounter'] = Course.objects.values('program', 'course_img').annotate(students=Count('studentcourse'))
+        graphdata = Course.objects.values('program').annotate(students=Count('studentcourse'))
+        graphdict = { course['program']: course['students'] for course in graphdata } 
+        context['graphjson'] = json.dumps(graphdict)
         
         coursedata = Course.objects.values('program', 'course_img', 'course_bio').annotate(students=Count('studentcourse'))
         context['programcounter2'] = { course['program']: course for course in coursedata}

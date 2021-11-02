@@ -4,6 +4,7 @@
 {{ block.super }}
 <link rel="stylesheet" type="text/css" href="{% static 'swc/pathways.css' %}">
 <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<script type="text/javascript"> const chartdata = {{ graphjson | safe }}; </script>
 <script src='{% static 'swc/pathways.js' %}'></script>
 
 {% endblock %}
@@ -31,6 +32,8 @@
  <div class="chartingexample">
     <canvas id="myChart"></canvas>
 </div>
+
+{{ graphjson }}
 
 
 {% comment %} <div id="pathways">
