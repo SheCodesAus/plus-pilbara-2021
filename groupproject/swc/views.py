@@ -219,7 +219,7 @@ class SponsorView(generic.ListView):
         context['statsone'] = Participant.objects.count()
         context['stat'] = (context['statsone']/30)*100
         context['industries'] = Participant.objects.values_list('industry', flat=True).distinct().count()
-        context['industries'] = Participant.objects.values_list('tech_life_balance', flat=True).distinct().count()
+        context['upskilling'] = Participant.objects.values_list('tech_life_balance', flat=True).distinct().count()
 
         # industrydata = Participant.objects.values('industry', 'course_img', 'course_bio').annotate(students=Count('studentcourse'))
         # context['programcounter2'] = { course['program']: course for course in industrydata}
