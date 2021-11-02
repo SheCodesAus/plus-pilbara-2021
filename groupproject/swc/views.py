@@ -149,6 +149,9 @@ class IndexView(generic.ListView):
         json_data=get_heatmapdata()
         context = { "jsonData": json_data }
 
+        context['statsone'] = Participant.objects.count()
+        context['stat'] = (context['statsone']/100)*100
+
         return context
 
 class PathwayView(generic.ListView):
