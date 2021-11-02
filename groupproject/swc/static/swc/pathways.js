@@ -5,7 +5,7 @@ const labels = Object.keys(chartdata);
 const data = {
     labels: labels,
     datasets: [{
-        label: 'My First Dataset',
+        label: 'She Codes Participants',
         backgroundColor: 'rgb(255,99,132)',
         borderColor: 'rgb(255,99,132)',
         data: Object.values(chartdata),
@@ -20,6 +20,9 @@ const config = {
         title: {
             display: true,
             text: 'She Codes Pathways'
+        }
+        legend: {
+
         }
     }
 }};
