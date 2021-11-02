@@ -162,7 +162,7 @@ class PathwayView(generic.ListView):
         context['coursecount'] = Participant.objects.count()
         context['programcounter'] = Course.objects.values('program', 'course_img').annotate(students=Count('studentcourse'))
         
-        coursedata = Course.objects.values('program', 'course_img').annotate(students=Count('studentcourse'))
+        coursedata = Course.objects.values('program', 'course_img', 'course_bio').annotate(students=Count('studentcourse'))
         context['programcounter2'] = { course['program']: course for course in coursedata}
 
         context['languagecounter'] = Course.objects.values('language').annotate(students=Count('studentcourse'))

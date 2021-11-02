@@ -9,7 +9,6 @@
 {% block content %}
 
 
-
 <!-- Enter page content -->
 
 <h1>Pathways - Learners Page</h1>
@@ -20,25 +19,19 @@
 </div>
 
 <div id="temp">
-    <div class="coursecontainer" id="ws">
-    {% include "swc/pathwaysCard.html" with course=programcounter2.Workshop %}
-    </div>
-    <div class="coursecontainer" id="fl">
+    {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Workshop %}
     {% include "swc/pathwaysCard.html" with course=programcounter2.Flash %}
-    </div>
-    <div class="coursecontainer" id="pl">
-    {% include "swc/pathwaysCard.html" with course=programcounter2.Plus %}
-    </div>
-    <div class="coursecontainer" id="it">
+    {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Plus %}
     {% include "swc/pathwaysCard.html" with course=programcounter2.Internship %}
-    </div>
-    <div class="coursecontainer" id="mt">
-    {% include "swc/pathwaysCard.html" with course=programcounter2.Mentor %}
-    </div>
-
-    </div>
+    {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Mentor %}
 </div>
 
+       {% comment %} <div>
+        <h2 class = "floatleft">Hi</h2>
+        </div>
+        <div>
+        <canvas id="myChart"></canvas>
+        </div> {% endcomment %}
 
 
 {% comment %} <div id="pathways">
@@ -158,5 +151,5 @@
 
  {% endcomment %}
 
-
+<script src='https://cdn.jsdelivr.net/npm/chart.js'></script> 
 {% endblock %}
