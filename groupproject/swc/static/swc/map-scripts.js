@@ -601,7 +601,15 @@ const drawMap = function () {
     }
 
     info.update = function (props) {
-        if (!props) return;
+        if (!props) {
+            const regional = sum(Object.values(statedata).map(o => courseType === 'all' ? sum(o.regional) : o.regional[courseType]))
+            const metro = sum(Object.values(statedata).map(o => courseType === 'all' ? sum(o.metro) : o.metro[courseType]))
+            const count = regional + metro
+            console.log({regional, metro, count})
+            this._div.innerHTML = 'Australia' + '<h4>Total SheCodes Participants = </h4>' + count +
+            '<b>' + '<h4>Metro Participants = </h4>' + metro + '</b>' + '<h4>Regional Participants = </h4>' + regional;
+            return;
+        }
         const stateCounts = getStateCounts();
         const count = stateCounts[props.STATE_NAME]
         const regional = courseType === 'all'? sum(statedata[props.STATE_NAME].regional) : statedata[props.STATE_NAME].regional[courseType];
@@ -616,6 +624,8 @@ const drawMap = function () {
 
     // get color depending on population density value
     function getColor(d) {
+        // d = d * 100
+        // d=d +50
         return d > 1000 ? '#6e016b' :
             d > 500 ? '#88419d' :
                 d > 200 ? '#8c6bb1' :
@@ -670,6 +680,7 @@ const drawMap = function () {
             style: style,
             onEachFeature: onEachFeature
         }).addTo(map);
+        info.update();
     }
     redrawLayer();
     var legend = L.control({ position: 'bottomright' });
@@ -691,12 +702,14 @@ const drawMap = function () {
     legend.addTo(map);
 }
 
-function changeCourseType(newType) {
+function changeCourseType(newType, button) {
     courseType = newType;
     console.log(`New map type: ${newType}`)
     // redraw map
     map.invalidateSize();
     redrawLayer();
+    document.querySelectorAll('button').forEach(button => button.classList.remove('selected'))
+    button.classList.add('selected')
 }
 
 window.onload = () => { drawMap()};

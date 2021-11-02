@@ -1,5 +1,27 @@
-.container {
-    display: flex; /* or inline-flex */
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+#coursegrid {
+  padding-top: 125px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.courseimg img {
+  height: 150px;
+}
+ .courseimg {
+   justify-self: center;
+ }
+
+.courseheader {
+  align-self: center;
+}
+
+.chartingexample {
+}
+
+#myChart {
+  align-self: center;
+  margin-left: 15%;
+  height: 350px !important;
+  width: 70% !important;
+}

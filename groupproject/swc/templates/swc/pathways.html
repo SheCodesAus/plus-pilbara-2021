@@ -1,28 +1,62 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block stylesheets %}
-<!-- <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}"> -->
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'swc/pathways.css' %}">
+<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<script type="text/javascript"> const chartdata = {{ graphjson | safe }}; </script>
+<script src='{% static 'swc/pathways.js' %}'></script>
+
 {% endblock %}
 
 {% block content %}
 
 
-
 <!-- Enter page content -->
 
-<h1>Pathways - Learners Page</h1>
+<h1 id="page-title">Pathways Page</h1>
 
 <!-- insert graph of participants in programs past, present and future -->
-<div id="pathways-graph"> 
-    <img id="hero-pathway" src="https://rachelburford.github.io/images/pathwayherograph.png"></img>
+ <div class="chartingexample">
+    <canvas id="myChart"></canvas>
 </div>
 
-<div id="pathways">
+<div id="coursegrid">
+    {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Workshop %}
+    {% include "swc/pathwaysCard.html" with course=programcounter2.Flash %}
+    {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Plus %}
+    {% include "swc/pathwaysCard.html" with course=programcounter2.Internship %}
+    {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Mentor %}
+</div>
+
+
+
+{% comment %} <div id="pathways">
     <div class="pathways-boxes" id="workshop">
-        <h2>Workshop</h2>
+        {{ programcounter2}}
+        <h2>Workshop {{ programcounter2.Workshop }}</h2>
+        <img src="{{ programcounter2.Workshop.course_img }}"/>
+        <h2>Workshop {{ programcounter2.Workshop.students }}</h2>
+    </div>
+</div> {% endcomment %}
+
+
+{% comment %} 
         <div>
-            participant numbers donut chart
+
+            
+            {% for course in programcounter %}
+            <h3>hi</h3>
+            <h3> {{ course.program }} </h3>
+
+
+            <h3> {{ course.students }} </h3>
+
+            <h3> {{ course.course_img }} </h3>
+            <!-- <img src="{{ course.course_img }}"> -->
+            
+            {% endfor %}
+
         </div>
         <p>
             Fall in love with tech at our one day workshop
@@ -69,6 +103,13 @@
 <div id="pathways-line">
     <div class="pathways-icon" id="workshop-icon">
         <h2>Workshop</h2>
+        <div>
+            <div class="story-wrapper">
+                {% for course in courses %}
+                {% include "swc/courseCard.html" with course=course position=forloop.counter %}
+                {% endfor %}
+            </div>
+        </div>
     </div>
     <div class="pathways-icon" id="flash-icon">
         <h2>Flash</h2>
@@ -112,7 +153,7 @@
     </div>
 </div>
 
+ {% endcomment %}
 
-
-
+ 
 {% endblock %}

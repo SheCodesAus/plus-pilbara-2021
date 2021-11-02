@@ -1,4 +1,5 @@
 window.onload = function () {
+    drawMap()
     // create new elements
     let speechBubbleElement = document.createElement("div");
     speechBubbleElement.classList.add("speech-bubble");
@@ -17,4 +18,7 @@ function showMessage() {
     let name = document.getElementById("name").value;
     let messageBox = document.getElementById("message-box");
     messageBox.innerText = message + " - " + name;
-}
+};
+
+
+

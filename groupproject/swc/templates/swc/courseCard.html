@@ -1,0 +1,11 @@
+<!-- <div class="sponsor-card" id="sponsor-card-{{ position }}">
+        {% if position < 5 %}
+            <img class="sponsor-img" src="{{ sponsor.logo_url }}">
+        {% endif %}
+</div> -->
+
+<div>
+    {% for course in courses %}
+        <img class="sponsor-img" src="{{ course.course_img }}">
+    {% endfor %}
+</div>
