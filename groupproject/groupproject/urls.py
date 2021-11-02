@@ -20,5 +20,6 @@ from django.urls.conf import include
 urlpatterns = [
     path('swc/', include('swc.urls', 'swc')),
     path('admin/', admin.site.urls),
+    
 ]
 

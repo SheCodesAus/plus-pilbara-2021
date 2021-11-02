@@ -77,6 +77,10 @@ h5 {
     color: #f2f2f2;
 }
 
+#userloginname {
+    color: #ffffff;
+}
+
 #footer {
     background: linear-gradient(to bottom,#f2f2f2 17%,#000 17% 80%);
 }
@@ -187,8 +191,7 @@ h5 {
 
 #dash {
     display: flex;
-  }
-
-#userloginname {
-    color: #fffff;
 }
+
+
+
