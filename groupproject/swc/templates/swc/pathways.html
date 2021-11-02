@@ -3,6 +3,8 @@
 {% block stylesheets %}
 {{ block.super }}
 <link rel="stylesheet" type="text/css" href="{% static 'swc/pathways.css' %}">
+<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<script src='{% static 'swc/pathways.js' %}'></script>
 
 {% endblock %}
 
@@ -26,12 +28,9 @@
     {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Mentor %}
 </div>
 
-       {% comment %} <div>
-        <h2 class = "floatleft">Hi</h2>
-        </div>
-        <div>
-        <canvas id="myChart"></canvas>
-        </div> {% endcomment %}
+ <div class="chartingexample">
+    <canvas id="myChart"></canvas>
+</div>
 
 
 {% comment %} <div id="pathways">
@@ -151,5 +150,5 @@
 
  {% endcomment %}
 
-<script src='https://cdn.jsdelivr.net/npm/chart.js'></script> 
+ 
 {% endblock %}

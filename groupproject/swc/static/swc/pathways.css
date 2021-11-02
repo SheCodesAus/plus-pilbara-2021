@@ -14,3 +14,11 @@
 .courseheader {
   align-self: center;
 }
+
+.chartingexample {
+  
+}
+
+#myChart {
+  height: 750px;
+}
