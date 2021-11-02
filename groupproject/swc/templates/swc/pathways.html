@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block stylesheets %}
-<!-- <link rel="stylesheet" type="text/cs" href="{% static 'styles.css' %}"> -->
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'swc/pathways.css' %}">
+
 {% endblock %}
 
 {% block content %}
@@ -18,15 +19,22 @@
     <img id="hero-pathway" src="https://rachelburford.github.io/images/pathwayherograph.png"></img>
 </div>
 
-<div> 
-     <div class="sponsorwrapcontainer">
-    
+<div id="temp">
+    <div class="coursecontainer" id="ws">
     {% include "swc/pathwaysCard.html" with course=programcounter2.Workshop %}
+    </div>
+    <div class="coursecontainer" id="fl">
     {% include "swc/pathwaysCard.html" with course=programcounter2.Flash %}
+    </div>
+    <div class="coursecontainer" id="pl">
     {% include "swc/pathwaysCard.html" with course=programcounter2.Plus %}
+    </div>
+    <div class="coursecontainer" id="it">
     {% include "swc/pathwaysCard.html" with course=programcounter2.Internship %}
+    </div>
+    <div class="coursecontainer" id="mt">
     {% include "swc/pathwaysCard.html" with course=programcounter2.Mentor %}
-    {% comment %} {{ programcounter2.Workshop }} {% endcomment %}
+    </div>
 
     </div>
 </div>

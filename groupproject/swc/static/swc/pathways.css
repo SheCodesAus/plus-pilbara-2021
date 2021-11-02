@@ -1,5 +1,31 @@
-.container {
-    display: flex; /* or inline-flex */
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+#temp {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+#ws {
+  margin-left: 150px;
+  grid-column-start: 1
+}
+
+#fl {
+  grid-column-start: 3
+}
+
+
+#pl {
+  grid-column-start: 1
+}
+
+#it {
+  grid-column-start: 3
+}
+
+#mt {
+  grid-column-start: 1
+}
+
+.courseimg {
+  height: 150px;
+}
