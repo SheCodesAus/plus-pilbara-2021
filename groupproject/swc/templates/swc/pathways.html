@@ -20,15 +20,16 @@
 
 <div> 
      <div class="sponsorwrapcontainer">
-    {% for course in programcounter2 %}
-    {% include "swc/pathwaysCard.html" with course=coursedata.Workshop position=forloop.counter %}
-    {% endfor %}
+    
+    {% include "swc/pathwaysCard.html" with course=programcounter2.Workshop %}
+    {% comment %} {{ programcounter2.Workshop }} {% endcomment %}
+
     </div>
 </div>
 
-{% comment %} 
 
-<div id="pathways">
+
+{% comment %} <div id="pathways">
     <div class="pathways-boxes" id="workshop">
         {{ programcounter2}}
         <h2>Workshop {{ programcounter2.Workshop }}</h2>
