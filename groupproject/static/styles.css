@@ -1,6 +1,8 @@
 body {
     background-color: #f3edf3;
     font-family: system-ui, sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 #header-text {
@@ -28,6 +30,7 @@ h3 {
     font-size: 2rem;
     margin: 0;
     font-family: system-ui, sans-serif;
+    text-align: center;
 }
 p {
     color: black;
@@ -64,8 +67,8 @@ h5 {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    font-size: 15px;
-    padding: 10px;
+    font-size: 1rem;
+    padding: 0.8rem;
     flex: 1;
 }
   
@@ -110,6 +113,53 @@ h5 {
     max-height: 30px;
     width: auto;
 }
+#hello {
+    font-family: 'Bad Script', cursive;
+    text-align: left;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+#hello-1 {
+    font-family: 'Bad Script', cursive;
+    text-align: centre;
+    margin-left: auto;
+    margin-top: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+#welcome {
+    text-align: left;
+    margin-left:150px;
+    color: #f59818;
+}
+
+#page-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#goal {
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+#badges {
+    height: auto;
+    width: 250px;
+}
+
+.text-block{
+    text-align: center;
+}
+
+.hero-block {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 @media (min-width:500px){
     .grid {
@@ -124,5 +174,7 @@ h5 {
 }
 
 @media (min-width:1200px){
-
+    html {
+        font-size: 25px;
+      }
 }

@@ -14,7 +14,7 @@
 
 <!-- Enter page content -->
 
-<h1>Pathways - Learners Page</h1>
+<h1 id="page-title">Pathways Page</h1>
 
 <!-- insert graph of participants in programs past, present and future -->
  <div class="chartingexample">
@@ -103,6 +103,13 @@
 <div id="pathways-line">
     <div class="pathways-icon" id="workshop-icon">
         <h2>Workshop</h2>
+        <div>
+            <div class="story-wrapper">
+                {% for course in courses %}
+                {% include "swc/courseCard.html" with course=course position=forloop.counter %}
+                {% endfor %}
+            </div>
+        </div>
     </div>
     <div class="pathways-icon" id="flash-icon">
         <h2>Flash</h2>
