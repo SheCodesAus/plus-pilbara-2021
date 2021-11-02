@@ -10,9 +10,9 @@
                 <li class="participant-languges">{{ language }}</li>
                 {% endfor %}
             </ul>
-
-            {{ participant.language.count}}
-
+            <div>
+                <p> {{ participant.first_name }} codes {{ participant.language.count}} languages</p>
+            </div>
     {% else %}
     {% endif %}
 </div>
