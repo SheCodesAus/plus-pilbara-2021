@@ -4,7 +4,7 @@
 {{ block.super }}
 <link rel="stylesheet" type="text/css" href="{% static 'swc/sponsors.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'swc/meter.css' %}">
-
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
   crossorigin=""/>
@@ -23,56 +23,36 @@
 <h1 id="page-title">Sponsors Page</h1>
 
 <div class="container">
-    <div class="left">
-        <p> SheCodes Sponsors </p>
-
-    <div class="center">
-    
-    <p> SheCodes Sponsorship Benefits </p>
-
-    <img src="XXXXXXXXX" width="400" height="267" alt="XXXXXX" />
+    <div id="text">
+        <p>
+            We work with incredible organisations to support women in the tech industry through our weekend workshop, one week intensive program or our six-month course.
+        </p>
+        <h3>Why would I sponsor?</h3>
+        <br>
+        <p>Australia is facing a massive skills gap in technology, with 200,000 more workers estimated to be needed in tech by 2025. Modelling finds that increasing diversity in the technology workforce would grow Australia's economy by 1.8 billion each year on average.
+            With 75% of the fastest growing jobs requiring technical skills, and only 29% of technical roles held by women, we knew there was a gap in the market to support individuals to both prepare for the future of work, and increase their technical skills to be job-ready. 
+            Now more than ever we are seeing the need to double down on the investment in STEM education, by building the pipeline of talent to fill the technical jobs of the future. Since the pandemic in 2020 we are seeing a 30% increase in salaries in tech, and a skills shortage is already evident in many locations around Australia.
+            If you’re looking to build technical capability and diversity in your team while building positive brand association, and providing upskilling opportunities to attract and retain staff, discover our She Codes partnership options
+        </p>
+        <br>
+        <h3>Whats the benefit?</h3>
+        <br>
+        <ul>
+            <li>With our one-for-one approach, you are continuously creating a pool of women from the community hat are culture-aligned, skills-aligned and have a positive brand association with your organisation.</li>
+            <li>Upskill your team, and increase internal capability from other parts of the business including HR, site based employees, and administrative staff, immediately solving your technical recruitment challenges.</li>
+            <li>Foster an internal culture of diversity.</li>
+            <li>Recognition as an industry player leading the charge on diversity.</li>
+            <li>Brand association with a much loved Australian brand</li>
+            <li>Highly active and engaged community</li>
+            <li>More than just a coding program; increasing confidence, communication skills and community building</li>
+        </ul>
+        <p>On average, 33% of our community changed roles into a tech related field as a result of attending a She Codes program. Workshop attendees are least likely to career change, with 15% of attendees switching careers post program. Flash alumni are 57% likely to investigate a career change, with nearly 70% of Plus alumni switching careers post program.</p>
+        <br>
     </div>
-
-    <div class="right">
-
-    <p>
-        We work with incredible organisations to support women in the tech industry through our weekend workshop, one week intensive program or our six-month course.
-    <br><br>
-    Whats the benefit?
-    <p>
-        •	With our one-for-one approach, you are continuously creating a pool of women from the community hat are culture-aligned, skills-aligned and have a positive brand association with your organisation.
-        •	Upskill your team, and increase internal capability from other parts of the business including HR, site based employees, and administrative staff, immediately solving your technical recruitment challenges.
-        •	Foster an internal culture of diversity.
-        •	Recognition as an industry player leading the charge on diversity.
-        •	Brand association with a much loved Australian brand
-        •	Highly active and engaged community
-        •	More than just a coding program; increasing confidence, communication skills and community building
-
-        On average, 33% of our community changed roles into a tech related field as a result of attending a She Codes program. Workshop attendees are least likely to career change, with 15% of attendees switching careers post program. Flash alumni are 57% likely to investigate a career change, with nearly 70% of Plus alumni switching careers post program.
-    </p>
-
-    <br>
-    Why would I sponsor?<br>
-    <p>
-        Australia is facing a massive skills gap in technology, with 200,000 more workers estimated to be needed in tech by 2025. Modelling finds that increasing diversity in the technology workforce would grow Australia's economy by 1.8 billion each year on average.
-        With 75% of the fastest growing jobs requiring technical skills, and only 29% of technical roles held by women, we knew there was a gap in the market to support individuals to both prepare for the future of work, and increase their technical skills to be job-ready. 
-        Now more than ever we are seeing the need to double down on the investment in STEM education, by building the pipeline of talent to fill the technical jobs of the future. Since the pandemic in 2020 we are seeing a 30% increase in salaries in tech, and a skills shortage is already evident in many locations around Australia.
-        If you’re looking to build technical capability and diversity in your team while building positive brand association, and providing upskilling opportunities to attract and retain staff, discover our She Codes partnership options
-    </p>
-    Who else has sponsored? <br>
-    <p>
-        SheCodes has engaged tech driven partners for our suite of programs. To date, some of these partners include: BHP, Bunnings, Spacecubed, Purposeful, Visagio, Pilbara Development Commission, Pollinators, meshpoints, Albany iHub, Pilbara Business Centre, Maker & Co, Y Hub, Web Business Hub, Virtual Gaming Worlds, RAC, New Industries WA, Murdoch University, Robert Walters.
-    </p>
-    What regions are involved? <br>
-    <p>
-        To date, almost 5,000 individuals, from all walks of life, have participated in SheCodes.
-        Our program participants come from a variety of backgrounds, with the most commonly cited from Professional & Technical (21%), Mining (15%) and Media & Technology (18%) 
-        Currently, our programs are operating in Port Hedland, WA: 121, Karratha, WA: 42, Geraldton, WA: 93, Bunbury, WA: 173, Yanchep, WA: 69, Perth, WA: 3484, Albany, WA: 29, Adelaide, SA: 54 and Brisbane, QLD: 637
-    </p>
 </div>
+    <div>
+        <img id="dash" src="{% static 'swc/images/sponsordashboard.png' %}">
     </div> 
-        </p></div>70
-        </div> 
 
     <div id="hero-container">
         <div id="participants-block" class="hero-block">

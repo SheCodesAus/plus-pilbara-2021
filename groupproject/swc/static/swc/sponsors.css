@@ -337,8 +337,6 @@ form {
    
 }
 
-
-
 .btn-group {
   display: flex;
 }
@@ -346,6 +344,10 @@ form {
 #map {
   height: 600px;
   aspect-ratio: 2;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-bottom: 10px;
 }
 
 .info {
@@ -446,6 +448,17 @@ button:last-child {
 /* //heatmap buttons */
 #badges {
   height: auto;
-  width: 15px;
+  width: 250px;
 }
-/* //Sponsor contact form */
+
+#dash {
+  margin-right: auto;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+#text {
+  margin-left: 50px;
+  margin-right: 50px;
+}
