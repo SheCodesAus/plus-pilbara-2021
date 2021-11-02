@@ -457,3 +457,8 @@ button:last-child {
   margin-left: 50px;
   margin-right: 50px;
 }
+
+#bio-container {
+  display: flex;
+  justify-content: center;
+}
