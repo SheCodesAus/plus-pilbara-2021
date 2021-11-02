@@ -178,3 +178,7 @@ h5 {
         font-size: 25px;
       }
 }
+
+#dash {
+    display: flex;
+  }

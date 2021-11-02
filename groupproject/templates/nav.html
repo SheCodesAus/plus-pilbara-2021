@@ -7,7 +7,7 @@
             <a href="{% url 'swc:pathways' %}">Pathways</a>
             <a href="{% url 'swc:participant' %}">Alumni</a>
             <a href="{% url 'swc:sponsors' %}">Sponsors</a>
-            <a href="">Log out</a>
+            <a href="{% url 'swc:index' %}">Log out</a>
         {% else %}
             <a href="{% url 'swc:pathways' %}">Pathways</a>
             <a href="{% url 'swc:participant' %}">Alumni</a>

@@ -219,3 +219,7 @@ class SponsorView(generic.ListView):
         context['upskilling'] = Participant.objects.filter(tech_life_balance__contains='working').count()
 
         return context 
+
+class logOutView():
+    success_url = reverse_lazy('swc:index')
+

@@ -18,7 +18,6 @@
 
 .photos {
     max-height: 150px;
-    max-width: 275px;
 }
 
 .square {
@@ -50,16 +49,9 @@
   width: 50%;
 }
 
-.sponsorwrapcontainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-}
-
-
-.sponsor-card {
+/* .sponsor-card {
     max-width: 280px;
-}
+} */
 
 #hero-container {
     display: grid;
@@ -337,8 +329,6 @@ form {
    
 }
 
-
-
 .btn-group {
   display: flex;
 }
@@ -346,6 +336,10 @@ form {
 #map {
   height: 600px;
   aspect-ratio: 2;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-bottom: 10px;
 }
 
 .info {
@@ -447,4 +441,15 @@ button:last-child {
   height: auto;
   width: 250px;
 }
-/* //Sponsor contact form */
+
+#dash {
+  margin-right: auto;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+#text {
+  margin-left: 50px;
+  margin-right: 50px;
+}
