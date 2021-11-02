@@ -17,11 +17,11 @@
 <h1>Pathways - Learners Page</h1>
 
 <!-- insert graph of participants in programs past, present and future -->
-<div id="pathways-graph"> 
-    <img id="hero-pathway" src="https://rachelburford.github.io/images/pathwayherograph.png"></img>
+ <div class="chartingexample">
+    <canvas id="myChart"></canvas>
 </div>
 
-<div id="temp">
+<div id="coursegrid">
     {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Workshop %}
     {% include "swc/pathwaysCard.html" with course=programcounter2.Flash %}
     {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Plus %}
@@ -29,11 +29,6 @@
     {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Mentor %}
 </div>
 
- <div class="chartingexample">
-    <canvas id="myChart"></canvas>
-</div>
-
-{{ graphjson }}
 
 
 {% comment %} <div id="pathways">

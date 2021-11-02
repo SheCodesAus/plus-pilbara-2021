@@ -1,4 +1,5 @@
-#temp {
+#coursegrid {
+  padding-top: 125px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -16,9 +17,11 @@
 }
 
 .chartingexample {
-  
 }
 
 #myChart {
-  height: 750px;
+  align-self: center;
+  margin-left: 15%;
+  height: 350px !important;
+  width: 70% !important;
 }
