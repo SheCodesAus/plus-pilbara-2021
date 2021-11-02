@@ -18,7 +18,6 @@
 
 .photos {
     max-height: 150px;
-    max-width: 275px;
 }
 
 .square {
@@ -50,16 +49,9 @@
   width: 50%;
 }
 
-.sponsorwrapcontainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-}
-
-
-.sponsor-card {
+/* .sponsor-card {
     max-width: 280px;
-}
+} */
 
 #hero-container {
     display: grid;

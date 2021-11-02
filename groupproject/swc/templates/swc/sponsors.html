@@ -5,6 +5,8 @@
 <link rel="stylesheet" type="text/css" href="{% static 'swc/sponsors.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'swc/meter.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'swc/slides.css' %}">
+
 <script src='{% static 'swc/sponsors.js' %}'></script>
 <script src='{% static 'swc/slides.js' %}'></script>
 
@@ -104,9 +106,13 @@
                 
 <h2>OUR SPONSORS</h2>
     <div class="sponsorwrapcontainer">
+    <div id="bio-container">
+    <div id="slides" class="slideshow-container">
     {% for sponsor in sponsors %}
     {% include "swc/sliderCard.html" with sponsor=sponsor position=forloop.counter %}
     {% endfor %}
+    </div>
+    </div>
     </div>
 
 

@@ -1,27 +1,8 @@
 * {box-sizing:border-box}
 
-#bio-container {
-  background-image: url("https://rachelburford.github.io/images/dark_panel.png");
-  height: 600px;
-  width: 100%;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-
-.float-left {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
-  grid-column-start: 1;
-  color: aliceblue;
-}
-
 #slides {
   grid-column-start: 2;
 }
-
 
 #content-image {
   background-position: center;
@@ -45,15 +26,6 @@
 /* Hide the images by default */
 .mySlides {
   display: none;
-}
-.photos {
-  height: 490px;
-  width: 490px;
-  object-fit: cover;
-  object-position: 10% 20%;
-  border: 2px solid black;
-  border-radius: 50%;
-  filter: grayscale(100%);
 }
 
 #control-buttons {
