@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block stylesheets %}
-<!-- <link rel="stylesheet" type="text/cs" href="{% static 'styles.css' %}"> -->
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'swc/pathways.css' %}">
+<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<script type="text/javascript"> const chartdata = {{ graphjson | safe }}; </script>
+<script src='{% static 'swc/pathways.js' %}'></script>
+
 {% endblock %}
 
 {% block content %}
-
 
 
 <!-- Enter page content -->
@@ -18,17 +21,22 @@
     <img id="hero-pathway" src="https://rachelburford.github.io/images/pathwayherograph.png"></img>
 </div>
 
-<div> 
-     <div class="sponsorwrapcontainer">
-    {% for course in programcounter2 %}
-    {% include "swc/pathwaysCard.html" with course=coursedata.Workshop position=forloop.counter %}
-    {% endfor %}
-    </div>
+<div id="temp">
+    {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Workshop %}
+    {% include "swc/pathwaysCard.html" with course=programcounter2.Flash %}
+    {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Plus %}
+    {% include "swc/pathwaysCard.html" with course=programcounter2.Internship %}
+    {% include "swc/pathwaysCardLeft.html" with course=programcounter2.Mentor %}
 </div>
 
-{% comment %} 
+ <div class="chartingexample">
+    <canvas id="myChart"></canvas>
+</div>
 
-<div id="pathways">
+{{ graphjson }}
+
+
+{% comment %} <div id="pathways">
     <div class="pathways-boxes" id="workshop">
         {{ programcounter2}}
         <h2>Workshop {{ programcounter2.Workshop }}</h2>
@@ -145,5 +153,5 @@
 
  {% endcomment %}
 
-
+ 
 {% endblock %}
